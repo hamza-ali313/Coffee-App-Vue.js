@@ -1,0 +1,285 @@
+$primary: #6f4e37;
+$secondary: #c4a484;
+$theme_g: #919b4c;
+$theme_o: #d08a44;
+$btn: "DramaturgSC";
+$sub_title_font: "DaughterDemoRegular";
+
+
+@import "bootstrap/scss/bootstrap";
+@import "bootstrap-icons/font/bootstrap-icons.css";
+
+
+@font-face {
+    font-family: "TitilliumWeb-SemiBold";
+    src: url(../fonts/TitilliumWeb-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: "TitilliumWeb-Bold";
+    src: url(../fonts/TitilliumWeb-Bold.ttf);
+}
+
+@font-face {
+    font-family: "TitilliumWeb-Regular";
+    src: url(../fonts/TitilliumWeb-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Dramaturg";
+    src: url(../fonts/Dramaturg.otf);
+}
+
+@font-face {
+    font-family: "Dramaturg";
+    src: url(../fonts/Dramaturg.otf);
+}
+
+@font-face {
+    font-family: "DramaturgA";
+    src: url(../fonts/DramaturgA.otf);
+}
+
+@font-face {
+    font-family: "DramaturgB";
+    src: url(../fonts/DramaturgB.otf);
+}
+
+@font-face {
+    font-family: "DramaturgSC";
+    src: url(../fonts/DramaturgSC.otf);
+}
+
+@font-face {
+    font-family: "DaughterDemoRegular";
+    src: url(../fonts/DaughterDemoRegular.ttf);
+}
+
+.DramaturgSC {
+    font-family: "DramaturgSC";
+}
+.dropdown-card {
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    height: 170px;
+    width: 186px;
+    padding: 10px 0 0 0;
+    position: relative;
+    font-family: "TitilliumWeb-SemiBold";
+}
+
+.dropdown-card img {
+    width: 130px;
+    height: 90px;
+    object-fit: contain;
+}
+
+.dropdown-card p {
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#app {
+    width: 100%;
+}
+
+.dropdown-card:hover {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 12px;
+    background-color: #fff !important;
+}
+
+.dropdown-card::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    border-radius: 5px;
+    background-color: $theme_g;
+    opacity: 0;
+    transition: 0.3s ease;
+}
+
+.dropdown-card:hover::before {
+    opacity: 1;
+}
+
+/* Triangle */
+.mega-dropdown::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    /* move above box */
+    left: 50px;
+    /* adjust position */
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #eaeaea;
+    /* same as background */
+}
+
+.mega-dropdown {
+    position: absolute;
+    top: 40px;
+    left: -60px;
+    width: 1000px;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.9);
+    /* FIXED */
+    border-radius: 9px;
+    display: inline-flex;
+    gap: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    z-index: 50;
+    // opacity: 0.9;
+    margin: 40px 0 0 0;
+    padding: 0;
+}
+
+
+
+
+
+// Header css start 
+.nav-link {
+    font-family: "TitilliumWeb-SemiBold";
+    font-size: 15px;
+
+}
+
+.d-bg {
+    background-image: url(/src/assets/images/nav_bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 127px;
+}
+
+.ht {
+    width: 1150px;
+}
+
+.h-icons i {
+    color: #fff;
+    font-size: 12px;
+}
+
+.order-btn {
+    font-size: 52px;
+    color: #fff;
+    font-family: $btn;
+    color: #fff;
+    border: none;
+    font-weight: 300;
+    cursor: pointer;
+    background-image: url("@/assets/images/onav.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-color: transparent;
+}
+
+
+// Hero Section css start
+.hero-title {
+    font-family: $btn;
+    font-size: 140px;
+    line-height: 80px;
+}
+
+.hero-subtitle {
+    font-family: $sub_title_font;
+    color: #919b4c;
+    font-size: 33px;
+    line-height: 45px;
+    position: relative;
+}
+
+.hero-subtitle::before {
+    content: "";
+    position: absolute;
+    top: -40px;
+    left: -80px;
+    width: 70px;
+    height: 60px;
+    background-image: url(/src/assets/images/leaf.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.hero-text {
+    width: 60%;
+}
+
+p {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 500;
+    font-family: "TitilliumWeb-SemiBold";
+}
+
+// Menu Button Css start
+.menu-btn {
+    color: #fff;
+    border: none;
+    font-weight: 800;
+    cursor: pointer !important;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-color: transparent;
+    font-family: $btn;
+    text-transform: uppercase;
+    font-size: 62px;
+    line-height: 20px;
+}
+
+.menu-btn i {
+    font-size: 28px;
+    margin: 0 6px 0 0;
+    font-weight: 800;
+}
+
+.hero-content {
+    height: 843px;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    justify-content: center;
+}
+
+//   Menu Button Css end
+
+
+// Section Heading Css start
+.sec_heading h2 {
+    font-family: $btn;
+    font-size: 130px;
+    line-height: 80px;
+    color: #000;
+}
+
+.sec_heading h3 {
+    font-size: 40px;
+    line-height: 20px;
+    font-family: "DaughterDemoRegular";
+    color: #d08a44;
+}
+
+.sec_heading p {
+    font-weight: 400;
+    width: 30%;
+    margin: 0 auto;
+}
+
+.sec_heading .leaf img {
+    width: 50px;
+}
+
+// Section Heading Css end
