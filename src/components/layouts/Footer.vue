@@ -45,7 +45,7 @@
 
         <!-- Explore -->
         <div class="col-md-2 text-start">
-          <h5>EXPLORE</h5>
+          <h5>Working</h5>
           <ul class="list-unstyled">
             <li><a href="#">Menu</a></li>
             <li><a href="#">Whats On</a></li>
