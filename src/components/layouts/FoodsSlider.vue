@@ -1,21 +1,13 @@
 <template>
-  <SecHeading
-    main_h="Food And Drink"
+  <SecHeading main_h="Food And Drink"
     description="Our menu is thoughtfully made, seasonal and always evolving. We care for quality ingredients, local sourcing, and delight in flavour."
-    :leafImage="False"
-  />
+    :showLeaf="false" />
   <div class="food-slider container position-relative">
     <!-- Left Arrow -->
     <div class="nav-btn left" @click="slidePrev"><img :src="prev" /></div>
 
     <!-- Swiper -->
-    <Swiper
-      :slides-per-view="4"
-      :space-between="20"
-      :loop="true"
-      :breakpoints="breakpoints"
-      @swiper="setSwiper"
-    >
+    <Swiper :slides-per-view="4" :space-between="20" :loop="true" :breakpoints="breakpoints" @swiper="setSwiper">
       <SwiperSlide v-for="item in items" :key="item.title">
         <div class="card-box">
           <img :src="item.image" />
@@ -157,6 +149,7 @@ const breakpoints = {
   cursor: pointer;
   z-index: 10;
 }
+
 .nav-btn img {
   width: 60px;
 }

@@ -1,14 +1,20 @@
 <template>
-  <footer class="footer-section text-white">
+  <footer class="footer-section text-white" :class="{ 'bg_green': hasBg }">
     <div class="container">
+      <h1 class="larg_f">come in, stay a while</h1>
+      <div class="sec_heading text-center py-4">
+        <h2 style="color: #fff; margin: 0">join our community</h2>
+        <p style="width: unset">
+          Be the first one to know about our limited editions and special offers.
+        </p>
+      </div>
       <!-- Newsletter -->
-      <div class="newsletter d-flex align-items-center justify-content-between">
-        <div class="input-wrapper d-flex align-items-center">
-          <span class="icon">✉</span>
+      <div class="newsletter">
+        <div class="input-wrapper">
+          <i class="bi bi-envelope-fill"></i>
           <input type="text" placeholder="type your email..." />
+          <button class="submit-btn">SUBMIT</button>
         </div>
-
-        <button class="submit-btn">SUBMIT</button>
       </div>
 
       <!-- Main Footer -->
@@ -46,24 +52,64 @@
         <!-- Explore -->
         <div class="col-md-2 text-start">
           <h5>Working</h5>
-          <ul class="list-unstyled">
-            <li><a href="#">Menu</a></li>
-            <li><a href="#">Whats On</a></li>
-            <li><a href="#">Our Story</a></li>
-            <li><a href="#">Our Local Community</a></li>
+          <ul class="">
+            <li>
+              <a href="#">
+                <p>Menu</p>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <p>Whats On</p>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <p>Our Story</p>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <p>Our Local Community</p>
+              </a>
+            </li>
           </ul>
         </div>
 
         <!-- Quick Links -->
         <div class="col-md-2 text-start">
           <h5>QUICK LINKS</h5>
-          <ul class="list-unstyled">
-            <li><a href="#">Contact us</a></li>
-            <li><a href="#">Art at Dee</a></li>
-            <li><a href="#">Blog & Shop</a></li>
-            <li><a href="#">Locations</a></li>
-            <li><a href="#">FAQ’s</a></li>
-            <li><a href="#">Careers</a></li>
+          <ul class="">
+            <li>
+              <a href="#">
+                <p>Contact us</p>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <p>Art at Dee</p>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <p>Blog & Shop</p>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <p>Locations</p>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <p>FAQ’s</p>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <p>Careers</p>
+              </a>
+            </li>
           </ul>
         </div>
       </div>
@@ -81,10 +127,61 @@
   </footer>
 </template>
 
+<script setup>
+const props = defineProps({
+  hasBg: {
+    type: Boolean,
+    default: true
+  }
+});
+</script>
 <style>
+@font-face {
+  font-family: "TitilliumWeb-Italic";
+  src: url(../fonts/TitilliumWeb-Italic.ttf);
+}
+
+@font-face {
+  font-family: "DramaturgA";
+  src: url(../fonts/DramaturgA.otf);
+}
+
+@font-face {
+  font-family: "DramaturgB";
+  src: url(../fonts/DramaturgB.otf);
+}
+
+@font-face {
+  font-family: "Dramaturg";
+  src: url(../fonts/Dramaturg.otf);
+}
+
+@font-face {
+  font-family: "DaughterDemoRegular";
+  src: url(../fonts/DaughterDemoRegular.ttf);
+}
+
+@font-face {
+  font-family: "TitilliumWeb-Light";
+  src: url(../fonts/TitilliumWeb-Light.ttf);
+}
+
+@font-face {
+  font-family: "DramaturgSC";
+  src: url(../fonts/DramaturgSC.otf);
+}
+
+.bg_green {
+  background-color: #2a4b1f;
+  padding: 0 0 0 0 !important;
+}
+
 .footer-section {
-  background: linear-gradient(135deg, #2e5b2f, #234a25);
-  padding: 60px 0;
+  background-image: url("@/assets/images/footbg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 200px 0 0 0;
   font-family: sans-serif;
 
   .newsletter {
@@ -92,12 +189,16 @@
     margin-bottom: 40px;
 
     .input-wrapper {
-      flex: 1;
-      background: url("@/assets/images/input-bg.png") no-repeat center;
-      background-size: cover;
-      border-radius: 50px;
-      padding: 15px 20px;
-      max-width: 800px;
+      border: none;
+      background: url(/src/assets/images/inputbg.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      outline: none;
+      width: 100%;
+      color: #333;
+      height: 80px;
+      position: relative;
 
       .icon {
         margin-right: 10px;
@@ -106,25 +207,38 @@
 
       input {
         border: none;
-        background: transparent;
         outline: none;
-        width: 100%;
+        width: 80%;
         color: #333;
+        position: absolute;
+        top: 33%;
+        left: 6%;
+        font-weight: 500;
+        font-family: "TitilliumWeb-Italic";
+        background: transparent;
 
         &::placeholder {
-          color: #777;
+          color: #000;
+          background: transparent !important;
+          font-weight: 500;
+          font-family: "TitilliumWeb-Italic";
         }
       }
     }
 
     .submit-btn {
-      background: #d48b4f;
+      background-image: url(/src/assets/images/obtnbg.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
       border: none;
-      padding: 12px 30px;
-      border-radius: 50px;
+      padding: 17px 51px;
       color: white;
+      position: absolute;
+      top: 15%;
+      right: 1px;
       font-weight: 600;
-      margin-left: 15px;
+      background-color: transparent;
     }
   }
 
@@ -133,9 +247,7 @@
   }
 
   .desc {
-    font-size: 14px;
-    line-height: 1.6;
-    max-width: 250px;
+    max-width: 350px;
   }
 
   h5 {
@@ -158,22 +270,53 @@
     }
   }
 
-  .social span {
-    display: inline-flex;
-    width: 35px;
-    height: 35px;
-    background: #f3e6d8;
-    color: #333;
-    border-radius: 50%;
+  .social li a {
+    border: 1px solid #fff;
+    height: 30px;
+    width: 30px;
+    display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: 10px;
-    cursor: pointer;
+    border-radius: 30px;
+    background: #fff;
+    color: #d08a44;
   }
 
   .footer-bottom {
     border-top: 1px solid rgba(255, 255, 255, 0.2);
     font-size: 13px;
   }
+}
+
+.footer-bottom p,
+.footer-bottom span {
+  font-family: "TitilliumWeb-Light";
+}
+
+footer .container {
+  max-width: 1150px;
+}
+
+footer a p {
+  color: #ffff;
+}
+
+h5 {
+  font-family: "DramaturgSC" !important;
+  font-size: 54px;
+  line-height: 40px;
+}
+
+.input-wrapper i {
+  position: absolute;
+  top: 32%;
+  left: 3%;
+  font-size: 24px;
+}
+
+.larg_f {
+  font-family: "DaughterDemoRegular";
+  text-transform: capitalize;
+  font-size: 70px;
 }
 </style>

@@ -16,8 +16,18 @@ $sub_title_font: "DaughterDemoRegular";
 }
 
 @font-face {
+    font-family: "TitilliumWeb-Light";
+    src: url(../fonts/TitilliumWeb-Light.ttf);
+}
+
+@font-face {
     font-family: "TitilliumWeb-Bold";
     src: url(../fonts/TitilliumWeb-Bold.ttf);
+}
+
+@font-face {
+    font-family: "TitilliumWeb-Italic";
+    src: url(../fonts/TitilliumWeb-Italic.ttf);
 }
 
 @font-face {
@@ -30,10 +40,6 @@ $sub_title_font: "DaughterDemoRegular";
     src: url(../fonts/Dramaturg.otf);
 }
 
-@font-face {
-    font-family: "Dramaturg";
-    src: url(../fonts/Dramaturg.otf);
-}
 
 @font-face {
     font-family: "DramaturgA";
@@ -58,6 +64,7 @@ $sub_title_font: "DaughterDemoRegular";
 .DramaturgSC {
     font-family: "DramaturgSC";
 }
+
 .dropdown-card {
     text-align: center;
     cursor: pointer;
@@ -224,6 +231,10 @@ p {
     font-family: "TitilliumWeb-SemiBold";
 }
 
+h6 {
+    font-family: "TitilliumWeb-SemiBold"
+}
+
 // Menu Button Css start
 .menu-btn {
     color: #fff;
@@ -270,6 +281,7 @@ p {
     line-height: 20px;
     font-family: "DaughterDemoRegular";
     color: #d08a44;
+    text-transform: capitalize;
 }
 
 .sec_heading p {

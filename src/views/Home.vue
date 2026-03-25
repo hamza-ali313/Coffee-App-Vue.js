@@ -7,7 +7,8 @@
   <Gallery />
   <TestimonialSlider />
   <SmallTestimonialSlider />
-  <Footer />
+  <Visitus />
+  <Footer :hasBg="true"/>
 </template>
 
 <script setup>
@@ -19,5 +20,6 @@ import OurLocal from "../components/layouts/OurLocal.vue";
 import Gallery from "../components/layouts/Gallery.vue";
 import TestimonialSlider from "../components/layouts/TestimonialSlider.vue";
 import SmallTestimonialSlider from "../components/layouts/SmallTestimonialSlider.vue";
+import Visitus from "../components/layouts/Visitus.vue";
 import Footer from "../components/layouts/Footer.vue";
 </script>
