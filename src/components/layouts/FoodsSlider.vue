@@ -2,22 +2,14 @@
   <SecHeading main_h="Food And Drink"
     description="Our menu is thoughtfully made, seasonal and always evolving. We care for quality ingredients, local sourcing, and delight in flavour."
     :showLeaf="false" />
-  <div class="food-slider container position-relative">
+  <div class="slider container position-relative">
     <!-- Left Arrow -->
     <div class="nav-btn left" @click="slidePrev"><img :src="prev" /></div>
 
     <!-- Swiper -->
     <Swiper :slides-per-view="4" :space-between="20" :loop="true" :breakpoints="breakpoints" @swiper="setSwiper">
       <SwiperSlide v-for="item in items" :key="item.title">
-        <div class="card-box">
-          <img :src="item.image" />
-
-          <div class="overlay">
-            <h5>{{ item.title }}</h5>
-            <p>{{ item.desc }}</p>
-            <span>{{ item.cta }}</span>
-          </div>
-        </div>
+        <FoodCard :title="item.title" :desc="item.desc" :cta="item.cta" :image="item.image" />
       </SwiperSlide>
     </Swiper>
 
@@ -28,7 +20,9 @@
     Whether you’re stopping in for a quick coffee or settling in for a longer meal,
     there’s something here to come back to.
   </p>
-  <GButton btntxt="explore the menu" icon="bi bi-list-task" />
+  <div class="text-center">
+    <GButton btntxt="explore the menu" icon="bi bi-list-task" />
+  </div>
 </template>
 
 <script setup>
@@ -45,6 +39,7 @@ import Fslid4 from "@/assets/images/Fslid4.png";
 import nxt from "@/assets/images/nxt.png";
 import prev from "@/assets/images/prev.png";
 import GButton from "../ui/GButton.vue";
+import FoodCard from "../ui/FoodCard.vue";
 
 const swiperInstance = ref(null);
 
@@ -101,64 +96,6 @@ const breakpoints = {
 };
 </script>
 
-<style scoped>
-.food-slider {
-  margin-top: 50px;
-}
+<style scoped lang="scss">
 
-/* CARD */
-.card-box {
-  position: relative;
-  border-radius: 9px;
-  overflow: hidden;
-}
-
-.card-box img {
-  width: 100%;
-  height: 400px;
-  object-fit: cover;
-}
-
-/* OVERLAY */
-.overlay {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  padding: 20px;
-  color: white;
-  text-align: start;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
-}
-
-.overlay h5 {
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
-.overlay span {
-  font-size: 12px;
-  display: block;
-  margin-top: 10px;
-}
-
-/* NAV BUTTONS */
-.nav-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  cursor: pointer;
-  z-index: 10;
-}
-
-.nav-btn img {
-  width: 60px;
-}
-
-.nav-btn.left {
-  left: -80px;
-}
-
-.nav-btn.right {
-  right: -80px;
-}
 </style>

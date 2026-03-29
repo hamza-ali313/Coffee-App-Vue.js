@@ -86,87 +86,9 @@ defineProps({
 </script>
 
 <style scoped lang="scss">
-@font-face {
-  font-family: "DramaturgSC";
-  src: url(../fonts/DramaturgSC.otf);
-}
-.event-card {
-  background: #fff;
-  border-radius: 12px;
-  overflow: hidden;
-}
+// Event card specific styles - main styles in global SCSS
+// Only component-specific overrides here
 
-/* IMAGE */
-.img-box {
-  position: relative;
-}
-
-.img-box img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-}
-
-/* DATE BADGE */
-.date-badge {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  background: #fff;
-  padding: 6px 10px;
-  border-radius: 6px;
-  text-align: center;
-  font-weight: bold;
-}
-
-.date-badge {
-  font-family: "DramaturgSC";
-  color: #d08a44;
-  font-size: 39px;
-  line-height: 19px;
-}
-.date-badge span {
-  color: #919b4c;
-  font-size: 49px;
-}
-
-/* TAG */
-.tag {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background: #fff;
-  padding: 5px 10px;
-  border-radius: 20px;
-  font-size: 12px;
-}
-
-/* TITLE OVERLAY */
-.title-overlay {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  padding: 15px;
-  color: #fff;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
-}
-
-/* CONTENT */
-.content {
-  padding: 45px 10px;
-  background-image: url(/src/assets/images/wavy.png);
-  margin: -20px 0 0 0;
-  position: relative;
-}
-
-.info {
-  margin: 10px 0;
-  text-align: justify;
-}
-.info p {
-  margin: 0;
-  line-height: 17px;
-}
 .menu-btn {
   padding: 11px 39px;
   font-size: 38px;

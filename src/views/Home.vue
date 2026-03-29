@@ -8,7 +8,9 @@
   <TestimonialSlider />
   <SmallTestimonialSlider />
   <Visitus />
-  <Footer :hasBg="true"/>
+  <FilteredEventSection />
+  <CalenderWrapper />
+  <Footer :hasBg="true" />
 </template>
 
 <script setup>
@@ -22,4 +24,6 @@ import TestimonialSlider from "../components/layouts/TestimonialSlider.vue";
 import SmallTestimonialSlider from "../components/layouts/SmallTestimonialSlider.vue";
 import Visitus from "../components/layouts/Visitus.vue";
 import Footer from "../components/layouts/Footer.vue";
+import CalenderWrapper from "../components/layouts/CalenderWrapper.vue";
+import FilteredEventSection from "../components/layouts/FilteredEventSection.vue";
 </script>

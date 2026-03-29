@@ -1,0 +1,62 @@
+// ==========================================
+// FONT FACE DECLARATIONS
+// All fonts consolidated in one place
+// ==========================================
+
+@font-face {
+  font-family: "TitilliumWeb-SemiBold";
+  src: url(../fonts/TitilliumWeb-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: "TitilliumWeb-Light";
+  src: url(../fonts/TitilliumWeb-Light.ttf);
+}
+
+@font-face {
+  font-family: "TitilliumWeb-Bold";
+  src: url(../fonts/TitilliumWeb-Bold.ttf);
+}
+
+@font-face {
+  font-family: "TitilliumWeb-Italic";
+  src: url(../fonts/TitilliumWeb-Italic.ttf);
+}
+
+@font-face {
+  font-family: "TitilliumWeb-Regular";
+  src: url(../fonts/TitilliumWeb-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Dramaturg";
+  src: url(../fonts/Dramaturg.otf);
+}
+
+@font-face {
+  font-family: "DramaturgA";
+  src: url(../fonts/DramaturgA.otf);
+}
+
+@font-face {
+  font-family: "DramaturgB";
+  src: url(../fonts/DramaturgB.otf);
+}
+
+@font-face {
+  font-family: "DramaturgSC";
+  src: url(../fonts/DramaturgSC.otf);
+}
+
+@font-face {
+  font-family: "DaughterDemoRegular";
+  src: url(../fonts/DaughterDemoRegular.ttf);
+}
+
+// ==========================================
+// FONT UTILITY CLASSES
+// ==========================================
+
+.DramaturgSC {
+  font-family: "DramaturgSC";
+}

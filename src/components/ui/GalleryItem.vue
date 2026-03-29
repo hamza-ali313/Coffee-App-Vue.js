@@ -11,24 +11,27 @@ defineProps({
 });
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+// GalleryItem specific styles - main styles in global SCSS
+// Only component-specific overrides here
+
 .gallery-item {
   border-radius: 16px;
   overflow: hidden;
-}
 
-.gallery-item.short {
-  height: 280px;
-}
+  &.short {
+    height: 280px;
+  }
 
-.gallery-item.tall {
-  height: 460px;
-}
+  &.tall {
+    height: 460px;
+  }
 
-.gallery-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }
 
 .move-up {

@@ -57,7 +57,7 @@
             <a class="nav-link">Visit Dee</a>
           </li>
           <li class="nav-item">
-            <button class="btn order-btn" style="font-family: 'DramaturgSC'">
+            <button class="btn order-btn">
               ORDER AHEAD
             </button>
           </li>
@@ -119,4 +119,6 @@ const foodItems = [
 ];
 </script>
 
-<style scoped></style>
+<style scoped lang="scss">
+// Header specific styles - main styles in global SCSS
+</style>

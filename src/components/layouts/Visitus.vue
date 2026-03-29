@@ -43,69 +43,51 @@ import leafImg from "../../assets/images/leaf.png";
 
 </script>
 
-<style scoped>
-.visitus-sec {
-    position: relative;
-    padding: 169px 20px 230px 100px;
-    z-index: 1;
-}
+<style scoped lang="scss">
+// Visitus specific styles - main styles in global SCSS
+// Only component-specific overrides here
 
-/* background image layer */
 .visitus-sec {
-    position: relative;
-    padding: 169px 20px 230px 100px;
-    z-index: 1;
+  position: relative;
+  padding: 169px 20px 230px 100px;
+  z-index: 1;
 }
 
 /* background image layer */
 .visitus-sec::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-image: url("@/assets/images/visitus.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    z-index: 1;
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("@/assets/images/visitus.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
 }
 
 /* green block */
 .visitus-sec::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 200px;
-    background: #2a4b1f;
-    z-index: -1;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  background: #2a4b1f;
+  z-index: -1;
 }
 
 .sec_heading .description {
-    width: 40%;
-    margin: unset !important;
+  width: 40%;
+  margin: unset !important;
 }
 
 .sec_heading h3 {
-    width: 45% !important;
-    line-height: 40px !important;
+  width: 45% !important;
+  line-height: 40px !important;
 }
 
 .sec_heading {
-    text-align: left !important;
-}
-
-/* .visitus-sec {
-    background-image: url("@/assets/images/visitus.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    padding: 169px 20px 230px 100px;
-    position: relative;
-    z-index: 1;
-} */
-
-.menu-btn {
-    /* padding: 21px 15px; */
+  text-align: left !important;
 }
 </style>

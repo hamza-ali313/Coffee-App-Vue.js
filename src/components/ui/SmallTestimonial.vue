@@ -35,62 +35,6 @@ defineProps({
 </script>
 
 <style scoped>
-.testimonial-card {
-  background: #ffffff99;
-  border-radius: 7px;
-  border: 1px solid #00000014;
-  min-height: 220px;
-  transition: 0.3s;
-  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-}
-
-.testimonial-card:hover {
-  transform: translateY(-5px);
-}
-
-/* USER IMAGE */
-.user-img {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-/* TEXT */
-.testimonial-text {
-  font-size: 34px;
-  color: #555;
-  line-height: 21px;
-  text-align: left;
-  font-family: "DramaturgSC";
-}
-
-/* ⭐ RATING (same as yours) */
-.star-wrapper {
-  position: relative;
-  display: inline-block;
-  line-height: 1;
-}
-
-.stars-bg,
-.stars-fill {
-  display: flex;
-  gap: 2px;
-}
-
-.stars-bg i {
-  color: #ddd;
-}
-
-.stars-fill {
-  position: absolute;
-  top: 0;
-  left: 0;
-  overflow: hidden;
-  white-space: nowrap;
-}
-
-.stars-fill i {
-  color: #ffc107;
-}
+/* // Small testimonial specific styles - main styles in global SCSS */
+/* // Only component-specific overrides here */
 </style>

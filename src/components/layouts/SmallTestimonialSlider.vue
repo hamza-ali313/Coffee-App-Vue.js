@@ -1,39 +1,26 @@
 <template>
   <div class="testimonial-wrapper py-5">
     <!-- 🔼 TOP SLIDER (LEFT DIRECTION) -->
-    <Swiper
-      :slides-per-view="4"
-      :space-between="20"
-      :loop="true"
-      :speed="5000"
-      :allow-touch-move="false"
-      :autoplay="{
+    <Swiper :slides-per-view="4" :modules="[Autoplay]" :space-between="20" :loop="true" :speed="5000"
+      :allow-touch-move="false" :autoplay="{
         delay: 0,
         disableOnInteraction: false,
         reverseDirection: false,
-      }"
-      class="mb-4"
-    >
+      }" class="mb-4">
       <SwiperSlide v-for="(item, index) in testimonials" :key="'top' + index">
         <SmallTestimonial :data="item" />
       </SwiperSlide>
     </Swiper>
 
     <!-- 🔽 BOTTOM SLIDER (RIGHT DIRECTION) -->
-    <!-- :modules="[Autoplay]" -->
 
-    <Swiper
-      :slides-per-view="4"
-      :space-between="20"
-      :loop="true"
-      :speed="5000"
-      :allow-touch-move="false"
-      :autoplay="{
+
+    <Swiper :slides-per-view="4" :modules="[Autoplay]" :space-between="20" :loop="true" :speed="5000"
+      :allow-touch-move="false" :autoplay="{
         delay: 0,
         disableOnInteraction: false,
         reverseDirection: true,
-      }"
-    >
+      }">
       <SwiperSlide v-for="(item, index) in testimonials" :key="'bottom' + index">
         <SmallTestimonial :data="item" />
       </SwiperSlide>
@@ -48,6 +35,13 @@ import SmallTestimonial from "../ui/SmallTestimonial.vue";
 import user from "../../assets/images/user.png";
 // DATA
 const testimonials = [
+  {
+    name: "Jonathan Doe",
+    rating: 5,
+    text:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit... Lorem ipsum dolor sit amet, consectetur adipiscing elit... Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+    image: user,
+  },
   {
     name: "Jonathan Doe",
     rating: 5,
@@ -86,12 +80,10 @@ const testimonials = [
 ];
 </script>
 
-<style scoped>
-/* .testimonial-wrapper {
-  overflow: hidden;
-} */
+<style scoped lang="scss">
+// SmallTestimonialSlider specific styles - main styles in global SCSS
+// Only component-specific overrides here
 
-/* smooth continuous effect */
 .swiper-wrapper {
   transition-timing-function: linear !important;
 }

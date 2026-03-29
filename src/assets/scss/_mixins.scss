@@ -1,0 +1,170 @@
+// ==========================================
+// FONT FAMILY MIXINS
+// ==========================================
+
+@mixin font-btn {
+  font-family: $btn;
+}
+
+@mixin font-sub-title {
+  font-family: $sub_title_font;
+}
+
+@mixin font-titillium-semibold {
+  font-family: $titillium-semibold;
+}
+
+@mixin font-titillium-light {
+  font-family: $titillium-light;
+}
+
+@mixin font-titillium-bold {
+  font-family: $titillium-bold;
+}
+
+@mixin font-titillium-italic {
+  font-family: $titillium-italic;
+}
+
+@mixin font-titillium-regular {
+  font-family: $titillium-regular;
+}
+
+@mixin font-dramaturg {
+  font-family: $dramaturg;
+}
+
+@mixin font-dramaturg-sc {
+  font-family: $dramaturg-sc;
+}
+
+@mixin font-daughter-demo {
+  font-family: $daughter-demo;
+}
+
+// ==========================================
+// TYPOGRAPHY MIXINS
+// ==========================================
+
+@mixin hero-title {
+  @include font-btn;
+  font-size: $font-size-hero-title;
+  line-height: $font-size-hero-title-line-height;
+}
+
+@mixin hero-subtitle {
+  @include font-sub-title;
+  font-size: $font-size-hero-subtitle;
+  line-height: $font-size-hero-subtitle-line-height;
+  color: $theme_g;
+}
+
+@mixin sec-heading {
+  @include font-btn;
+  font-size: $font-size-sec-heading;
+  line-height: $font-size-sec-heading-line-height;
+  color: $black;
+}
+
+@mixin sec-subheading {
+  font-size: $font-size-sec-subheading;
+  line-height: $font-size-sec-subheading-line-height;
+  font-family: $daughter-demo;
+  color: $theme_o;
+  text-transform: capitalize;
+}
+
+@mixin body-text {
+  font-size: $font-size-p;
+  line-height: $font-size-p-line-height;
+  font-weight: 500;
+  @include font-titillium-semibold;
+}
+
+@mixin nav-link {
+  @include font-titillium-semibold;
+  font-size: 15px;
+}
+
+// ==========================================
+// BUTTON MIXINS
+// ==========================================
+
+@mixin menu-btn {
+  @include font-btn;
+  color: $white;
+  border: none;
+  cursor: pointer !important;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-color: transparent;
+  text-transform: uppercase;
+  font-size: $font-size-btn;
+  line-height: $font-size-btn-line-height;
+
+  i {
+    font-size: $font-size-btn-icon;
+    margin: 0 6px 0 0;
+    font-weight: 800;
+  }
+}
+
+@mixin order-btn {
+  @include font-btn;
+  color: $white;
+  border: none;
+  font-weight: 300;
+  cursor: pointer;
+  background-image: $bg-order-btn;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-color: transparent;
+}
+
+// ==========================================
+// LAYOUT MIXINS
+// ==========================================
+
+@mixin section-padding {
+  padding: $spacing-section-padding 0 0 0;
+}
+
+@mixin hero-padding {
+  padding: $spacing-hero-padding 20px $spacing-hero-padding 200px;
+}
+
+@mixin container-ht {
+  max-width: 1150px;
+}
+
+// ==========================================
+// UTILITY MIXINS
+// ==========================================
+
+@mixin d-bg {
+  background-image: $bg-d-nav;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 127px;
+}
+
+@mixin leaf-decoration {
+  &::before {
+    content: "";
+    position: absolute;
+    top: -40px;
+    left: -80px;
+    width: 70px;
+    height: 60px;
+    background-image: $bg-leaf;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+@mixin transition-default {
+  transition: $transition-default;
+}

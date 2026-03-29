@@ -34,14 +34,14 @@ import GButton from "../ui/GButton.vue";
 import OButton from "../ui/OButton.vue";
 </script>
 
-<style>
+<style scoped lang="scss">
+// HomeBanner specific styles - main styles in global SCSS
 .hero-section {
   background-image: url("@/assets/images/banner.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+
   height: 1020px;
 }
+
 .hero-title,
 .hero-subtitle,
 .hero-text {

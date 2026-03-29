@@ -1,104 +1,54 @@
-$primary: #6f4e37;
-$secondary: #c4a484;
-$theme_g: #919b4c;
-$theme_o: #d08a44;
-$btn: "DramaturgSC";
-$sub_title_font: "DaughterDemoRegular";
+// ==========================================
+// MAIN SCSS ENTRY POINT
+// ==========================================
 
+// 1. Import variables first
+@import "variables";
 
+// 2. Import font faces
+@import "fonts";
+
+// 3. Import mixins
+@import "mixins";
+
+// 4. Import Bootstrap
 @import "bootstrap/scss/bootstrap";
 @import "bootstrap-icons/font/bootstrap-icons.css";
 
+// ==========================================
+// GLOBAL SHARED STYLES
+// ==========================================
 
-@font-face {
-    font-family: "TitilliumWeb-SemiBold";
-    src: url(../fonts/TitilliumWeb-SemiBold.ttf);
-}
-
-@font-face {
-    font-family: "TitilliumWeb-Light";
-    src: url(../fonts/TitilliumWeb-Light.ttf);
-}
-
-@font-face {
-    font-family: "TitilliumWeb-Bold";
-    src: url(../fonts/TitilliumWeb-Bold.ttf);
-}
-
-@font-face {
-    font-family: "TitilliumWeb-Italic";
-    src: url(../fonts/TitilliumWeb-Italic.ttf);
-}
-
-@font-face {
-    font-family: "TitilliumWeb-Regular";
-    src: url(../fonts/TitilliumWeb-Regular.ttf);
-}
-
-@font-face {
-    font-family: "Dramaturg";
-    src: url(../fonts/Dramaturg.otf);
-}
-
-
-@font-face {
-    font-family: "DramaturgA";
-    src: url(../fonts/DramaturgA.otf);
-}
-
-@font-face {
-    font-family: "DramaturgB";
-    src: url(../fonts/DramaturgB.otf);
-}
-
-@font-face {
-    font-family: "DramaturgSC";
-    src: url(../fonts/DramaturgSC.otf);
-}
-
-@font-face {
-    font-family: "DaughterDemoRegular";
-    src: url(../fonts/DaughterDemoRegular.ttf);
-}
-
-.DramaturgSC {
-    font-family: "DramaturgSC";
-}
-
+// Dropdown Card Styles (used in MegaDropdown)
 .dropdown-card {
-    text-align: center;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    height: 170px;
-    width: 186px;
-    padding: 10px 0 0 0;
-    position: relative;
-    font-family: "TitilliumWeb-SemiBold";
-}
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  height: 170px;
+  width: 186px;
+  padding: 10px 0 0 0;
+  position: relative;
+  @include font-titillium-semibold;
 
-.dropdown-card img {
+  img {
     width: 130px;
     height: 90px;
     object-fit: contain;
-}
+  }
 
-.dropdown-card p {
+  p {
     margin-top: 10px;
     font-size: 14px;
     font-weight: bold;
-}
+  }
 
-#app {
-    width: 100%;
-}
-
-.dropdown-card:hover {
+  &:hover {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     border-radius: 12px;
     background-color: #fff !important;
-}
+  }
 
-.dropdown-card::before {
+  &::before {
     content: "";
     position: absolute;
     bottom: 0;
@@ -109,189 +59,780 @@ $sub_title_font: "DaughterDemoRegular";
     background-color: $theme_g;
     opacity: 0;
     transition: 0.3s ease;
-}
+  }
 
-.dropdown-card:hover::before {
+  &:hover::before {
     opacity: 1;
+  }
 }
 
-/* Triangle */
-.mega-dropdown::before {
+// Mega Dropdown Styles
+.mega-dropdown {
+  position: absolute;
+  top: 40px;
+  left: -60px;
+  width: 1000px;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 9px;
+  display: inline-flex;
+  gap: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  z-index: 50;
+  margin: 40px 0 0 0;
+  padding: 0;
+
+  // Triangle indicator
+  &::before {
     content: "";
     position: absolute;
     top: -10px;
-    /* move above box */
     left: 50px;
-    /* adjust position */
     width: 0;
     height: 0;
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
     border-bottom: 10px solid #eaeaea;
-    /* same as background */
+  }
 }
 
-.mega-dropdown {
-    position: absolute;
-    top: 40px;
-    left: -60px;
-    width: 1000px;
-    align-items: center;
-    background: rgba(255, 255, 255, 0.9);
-    /* FIXED */
-    border-radius: 9px;
-    display: inline-flex;
-    gap: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-    z-index: 50;
-    // opacity: 0.9;
-    margin: 40px 0 0 0;
-    padding: 0;
-}
+// ==========================================
+// HEADER STYLES
+// ==========================================
 
-
-
-
-
-// Header css start 
 .nav-link {
-    font-family: "TitilliumWeb-SemiBold";
-    font-size: 15px;
-
+  @include nav-link;
 }
 
 .d-bg {
-    background-image: url(/src/assets/images/nav_bg.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 127px;
+  @include d-bg;
 }
 
 .ht {
-    width: 1150px;
+  width: 1150px;
 }
 
 .h-icons i {
-    color: #fff;
-    font-size: 12px;
+  color: $white;
+  font-size: 12px;
 }
 
 .order-btn {
-    font-size: 52px;
-    color: #fff;
-    font-family: $btn;
-    color: #fff;
-    border: none;
-    font-weight: 300;
-    cursor: pointer;
-    background-image: url("@/assets/images/onav.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    background-color: transparent;
+  @include order-btn;
+  font-size: 52px;
 }
 
+// ==========================================
+// HERO SECTION STYLES
+// ==========================================
 
-// Hero Section css start
+.hero-section {
+  background-image: $bg-hero;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 1020px;
+}
+
 .hero-title {
-    font-family: $btn;
-    font-size: 140px;
-    line-height: 80px;
+  @include hero-title;
+  text-align: start;
 }
 
 .hero-subtitle {
-    font-family: $sub_title_font;
-    color: #919b4c;
-    font-size: 33px;
-    line-height: 45px;
-    position: relative;
-}
+  @include hero-subtitle;
+  text-align: start;
+  position: relative;
 
-.hero-subtitle::before {
+  &::before {
     content: "";
     position: absolute;
     top: -40px;
     left: -80px;
     width: 70px;
     height: 60px;
-    background-image: url(/src/assets/images/leaf.png);
+    background-image: $bg-leaf;
     background-repeat: no-repeat;
     background-size: contain;
+  }
 }
 
 .hero-text {
-    width: 60%;
-}
-
-p {
-    font-size: 14px;
-    line-height: 16px;
-    font-weight: 500;
-    font-family: "TitilliumWeb-SemiBold";
-}
-
-h6 {
-    font-family: "TitilliumWeb-SemiBold"
-}
-
-// Menu Button Css start
-.menu-btn {
-    color: #fff;
-    border: none;
-    font-weight: 800;
-    cursor: pointer !important;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    background-color: transparent;
-    font-family: $btn;
-    text-transform: uppercase;
-    font-size: 62px;
-    line-height: 20px;
-}
-
-.menu-btn i {
-    font-size: 28px;
-    margin: 0 6px 0 0;
-    font-weight: 800;
+  width: 60%;
+  text-align: start;
 }
 
 .hero-content {
-    height: 843px;
-    display: flex;
-    align-items: start;
-    flex-direction: column;
-    justify-content: center;
+  height: 843px;
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  justify-content: center;
 }
 
-//   Menu Button Css end
+// ==========================================
+// SECTION HEADING STYLES
+// ==========================================
 
+.sec_heading {
+  h2 {
+    @include sec-heading;
+  }
 
-// Section Heading Css start
-.sec_heading h2 {
-    font-family: $btn;
-    font-size: 130px;
-    line-height: 80px;
-    color: #000;
-}
+  h3 {
+    @include sec-subheading;
+  }
 
-.sec_heading h3 {
-    font-size: 40px;
-    line-height: 20px;
-    font-family: "DaughterDemoRegular";
-    color: #d08a44;
-    text-transform: capitalize;
-}
-
-.sec_heading p {
+  p {
     font-weight: 400;
     width: 30%;
     margin: 0 auto;
-}
+  }
 
-.sec_heading .leaf img {
+  .leaf img {
     width: 50px;
+  }
 }
 
-// Section Heading Css end
+// ==========================================
+// COMMON PARAGRAPH STYLES
+// ==========================================
+
+p {
+  @include body-text;
+}
+
+h6 {
+  @include font-titillium-semibold;
+}
+
+// ==========================================
+// MENU BUTTON STYLES
+// ==========================================
+
+.menu-btn {
+  @include menu-btn;
+}
+
+// ==========================================
+// FOOD SLIDER STYLES
+// ==========================================
+
+.slider {
+  margin-top: 50px;
+
+  .card-box {
+    position: relative;
+    border-radius: 9px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+    }
+  }
+
+  .overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    color: $white;
+    text-align: start;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+
+    h5 {
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    span {
+      font-size: 12px;
+      display: block;
+      margin-top: 10px;
+    }
+  }
+
+  .nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 10;
+
+    img {
+      width: 60px;
+    }
+
+    &.left {
+      left: -80px;
+    }
+
+    &.right {
+      right: -80px;
+    }
+  }
+}
+
+// ==========================================
+// OUR STORY STYLES
+// ==========================================
+
+.our_story {
+  &.text-start {
+    background-image: $bg-our-story;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 340px 20px 340px 200px;
+
+    h2,
+    p {
+      color: $white;
+    }
+
+    p {
+      margin: 0 0 20px 0;
+    }
+  }
+
+  &.text-center {
+    background-image: $bg-local-community;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 620px;
+    padding: 50px 0 0 0;
+
+    p {
+      width: 40%;
+    }
+  }
+
+  .menu-btn {
+    padding: 21px 15px;
+  }
+}
+
+// ==========================================
+// GALLERY STYLES
+// ==========================================
+
+.gallery-item {
+  border-radius: 16px;
+  overflow: hidden;
+
+  &.short {
+    height: 280px;
+  }
+
+  &.tall {
+    height: 460px;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.move-up {
+  margin: -180px 0 0 0;
+}
+
+// ==========================================
+// VISIT US STYLES
+// ==========================================
+
+.visitus-sec {
+  position: relative;
+  padding: 169px 20px 230px 100px;
+  z-index: 1;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: $bg-visitus;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background: $green-dark;
+    z-index: -1;
+  }
+
+  .sec_heading {
+    .description {
+      width: 40%;
+      margin: unset !important;
+    }
+
+    h3 {
+      width: 45% !important;
+      line-height: 40px !important;
+    }
+
+    text-align: left !important;
+  }
+}
+
+// ==========================================
+// TESTIMONIAL SLIDER STYLES
+// ==========================================
+
+.testi_slider {
+  margin-top: 50px;
+  position: relative;
+
+  .nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 10;
+
+    img {
+      width: 60px;
+    }
+
+    &.left {
+      left: -80px;
+    }
+
+    &.right {
+      right: -80px;
+    }
+  }
+}
+
+.testimonial-wrapper {
+  .swiper-wrapper {
+    transition-timing-function: linear !important;
+  }
+}
+
+// ==========================================
+// EVENT CARD STYLES
+// ==========================================
+
+.event-card {
+  background: $white;
+  border-radius: 12px;
+  overflow: hidden;
+
+  .img-box {
+    position: relative;
+
+    img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    .date-badge {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: $white;
+      padding: 6px 10px;
+      border-radius: 6px;
+      text-align: center;
+      font-weight: bold;
+      @include font-dramaturg-sc;
+      color: $theme_o;
+      font-size: 39px;
+      line-height: 19px;
+
+      span {
+        color: $theme_g;
+        font-size: 49px;
+      }
+    }
+
+    .tag {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: $white;
+      padding: 5px 10px;
+      border-radius: 20px;
+      font-size: 12px;
+    }
+
+    .title-overlay {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      padding: 15px;
+      color: $white;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+    }
+  }
+
+  .content {
+    padding: 45px 10px;
+    background-image: $bg-wavy;
+    margin: -20px 0 0 0;
+    position: relative;
+  }
+
+  .info {
+    margin: 10px 0;
+    text-align: justify;
+
+    p {
+      margin: 0;
+      line-height: 17px;
+    }
+  }
+
+  .menu-btn {
+    padding: 11px 39px;
+    font-size: 38px;
+  }
+}
+
+// ==========================================
+// TESTIMONIAL CARD STYLES
+// ==========================================
+
+.testimonial-card {
+  background: $white;
+  border-radius: 16px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+  img {
+    width: 340px;
+    height: 380px;
+    border-radius: 12px;
+    overflow: hidden;
+    object-fit: cover;
+  }
+
+  .stars {
+    color: #ff9f1c;
+    letter-spacing: 2px;
+    font-size: 32px;
+  }
+
+  .star-wrapper {
+    position: relative;
+    display: inline-block;
+    line-height: 1;
+  }
+
+  .stars-bg,
+  .stars-fill {
+    display: flex;
+    gap: 2px;
+  }
+
+  .stars-bg i {
+    color: #ddd;
+  }
+
+  .stars-fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .stars-fill i {
+    color: #ffc107;
+  }
+
+  .text {
+    font-size: 14px;
+    color: #555;
+  }
+
+  .logo img {
+    width: 30px;
+  }
+
+  .txt {
+    @include font-dramaturg-sc;
+    font-size: 52px;
+    line-height: 31px;
+  }
+}
+
+// Small Testimonial Card
+.testimonial-card {
+  background: #ffffff99;
+  border-radius: 7px;
+  border: 1px solid #00000014;
+  min-height: 220px;
+  transition: 0.3s;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+  .user-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .testimonial-text {
+    font-size: 34px;
+    color: #090707;
+    line-height: 21px;
+    text-align: left;
+    @include font-dramaturg-sc;
+  }
+}
+
+// ==========================================
+// FOOTER STYLES
+// ==========================================
+
+.footer-section {
+  @include section-padding;
+  background-image: $bg-footer;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  font-family: sans-serif;
+
+  &.bg_green {
+    background-color: $green-dark;
+    padding: 0 0 0 0 !important;
+  }
+
+  .newsletter {
+    background: transparent;
+    margin-bottom: 40px;
+
+    .input-wrapper {
+      border: none;
+      background: $bg-input;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      outline: none;
+      width: 100%;
+      color: #333;
+      height: 80px;
+      position: relative;
+
+      .icon {
+        margin-right: 10px;
+        font-size: 18px;
+      }
+
+      input {
+        border: none;
+        outline: none;
+        width: 80%;
+        color: #333;
+        position: absolute;
+        top: 33%;
+        left: 6%;
+        font-weight: 500;
+        @include font-titillium-italic;
+        background: transparent;
+
+        &::placeholder {
+          color: #000;
+          background: transparent !important;
+          font-weight: 500;
+          @include font-titillium-italic;
+        }
+      }
+
+      i {
+        position: absolute;
+        top: 32%;
+        left: 3%;
+        font-size: 24px;
+      }
+    }
+
+    .submit-btn {
+      background-image: $bg-obtnbg;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      border: none;
+      padding: 17px 51px;
+      color: $white;
+      position: absolute;
+      top: 15%;
+      right: 1px;
+      font-weight: 600;
+      background-color: transparent;
+    }
+  }
+
+  .logo {
+    width: 120px;
+  }
+
+  .desc {
+    max-width: 350px;
+  }
+
+  h5 {
+    @include font-dramaturg-sc;
+    font-size: 54px;
+    line-height: 40px;
+    margin-bottom: 15px;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      margin-bottom: 8px;
+      cursor: pointer;
+      font-size: 14px;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .social li a {
+    border: 1px solid $white;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    background: $white;
+    color: $theme_o;
+  }
+
+  .footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 13px;
+
+    p,
+    span {
+      @include font-titillium-light;
+    }
+  }
+
+  .container {
+    max-width: 1150px;
+  }
+
+  a p {
+    color: $white;
+  }
+
+  .larg_f {
+    @include font-daughter-demo;
+    text-transform: capitalize;
+    font-size: 70px;
+  }
+}
+
+// ==========================================
+// APP CONTAINER
+// ==========================================
+
+#app {
+  width: 100%;
+}
+
+// Calender Css start
+.calendar-wrapper {
+  background: #fbfbfb;
+  padding: 40px !important;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin: 0 0 30px 0;
+}
+
+/* Month title */
+.calendar-month h5 {
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+/* Week header */
+.week-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  font-size: 12px;
+  color: #888;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+/* GRID (IMPORTANT) */
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+/* CELL */
+.calendar-cell {
+  height: 38px;
+  font-size: 13px;
+  color: #444;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  border: 1px solid #e6e6e6;
+  background: #fff;
+}
+
+/* EMPTY CELLS */
+.calendar-cell.empty {
+  background: transparent;
+  border: none;
+}
+
+/* ACTIVE DAY (green like design) */
+.calendar-cell.active {
+  background: #8f9b4f;
+  color: #fff;
+  font-weight: 500;
+}
+
+/* EVENT ICON */
+.event-icon {
+  position: absolute;
+  bottom: 2px;
+  right: 4px;
+  font-size: 12px;
+}
+
+.divider-line {
+  width: 1px;
+  height: 220px;
+  background: repeating-linear-gradient(to bottom,
+      #ccc,
+      #ccc 4px,
+      transparent 4px,
+      transparent 8px);
+  margin: 0 auto;
+}
+
+// Calender Css end

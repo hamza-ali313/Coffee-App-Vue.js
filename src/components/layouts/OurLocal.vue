@@ -25,18 +25,10 @@
 import OButton from "../ui/OButton.vue";
 </script>
 
-<style scoped>
-.our_story {
-  background-image: url(/src/assets/images/LocalCom.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  height: 620px;
-  padding: 50px 0 0 0;
-}
-p {
-  width: 40%;
-}
+<style scoped lang="scss">
+// OurLocal specific styles - main styles in global SCSS
+// Only component-specific overrides here
+
 .menu-btn {
   padding: 21px 15px;
 }

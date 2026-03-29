@@ -1,0 +1,81 @@
+// ==========================================
+// COLOR VARIABLES
+// ==========================================
+$primary: #6f4e37;
+$secondary: #c4a484;
+$theme_g: #919b4c;
+$theme_o: #d08a44;
+$white: #fff;
+$black: #000;
+$green-dark: #2a4b1f;
+
+// ==========================================
+// FONT FAMILY VARIABLES
+// ==========================================
+$btn: "DramaturgSC";
+$sub_title_font: "DaughterDemoRegular";
+$titillium-semibold: "TitilliumWeb-SemiBold";
+$titillium-light: "TitilliumWeb-Light";
+$titillium-bold: "TitilliumWeb-Bold";
+$titillium-italic: "TitilliumWeb-Italic";
+$titillium-regular: "TitilliumWeb-Regular";
+$dramaturg: "Dramaturg";
+$dramaturg-a: "DramaturgA";
+$dramaturg-b: "DramaturgB";
+$dramaturg-sc: "DramaturgSC";
+$daughter-demo: "DaughterDemoRegular";
+
+// ==========================================
+// FONT SIZE VARIABLES
+// ==========================================
+$font-size-hero-title: 140px;
+$font-size-hero-title-line-height: 80px;
+$font-size-hero-subtitle: 33px;
+$font-size-hero-subtitle-line-height: 45px;
+$font-size-sec-heading: 130px;
+$font-size-sec-heading-line-height: 80px;
+$font-size-sec-subheading: 40px;
+$font-size-sec-subheading-line-height: 20px;
+$font-size-btn: 62px;
+$font-size-btn-line-height: 20px;
+$font-size-btn-icon: 28px;
+$font-size-p: 14px;
+$font-size-p-line-height: 16px;
+
+// ==========================================
+// SPACING VARIABLES
+// ==========================================
+$spacing-hero-padding: 340px;
+$spacing-section-padding: 200px;
+
+// ==========================================
+// BACKGROUND IMAGES
+// ==========================================
+$bg-d-nav: url(/src/assets/images/nav_bg.png);
+$bg-leaf: url(/src/assets/images/leaf.png);
+$bg-hero: url(@/assets/images/banner.png);
+$bg-our-story: url(@/assets/images/OurStory.png);
+$bg-local-community: url(/src/assets/images/LocalCom.png);
+$bg-visitus: url(@/assets/images/visitus.png);
+$bg-footer: url(@/assets/images/footbg.png);
+$bg-input: url(/src/assets/images/inputbg.png);
+$bg-order-btn: url("@/assets/images/onav.png");
+$bg-g-btn: url("@/assets/images/greenGbtn.png");
+$bg-o-btn: url("@/assets/images/Obtnbg.png");
+$bg-menu-btn: url("@/assets/images/greenGbtn.png");
+$bg-wavy: url(/src/assets/images/wavy.png);
+$bg-obtnbg: url(/src/assets/images/obtnbg.png);
+
+// ==========================================
+// TRANSITION VARIABLES
+// ==========================================
+$transition-default: 0.3s ease;
+$transition-slow: 0.5s ease;
+
+// ==========================================
+// Z-INDEX VARIABLES
+// ==========================================
+$z-dropdown: 50;
+$z-nav-btn: 10;
+$z-hero-base: 0;
+$z-hero-framework: 1;

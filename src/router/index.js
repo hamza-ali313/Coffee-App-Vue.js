@@ -1,8 +1,10 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '@/views/Home.vue'
+import Dish from '@/views/Dish.vue'
 
 const routes = [
-  { path: '/', component: Home }
+  { path: '/home' , component: Home },
+  { path: '/' , component: Dish }
 ]
 
 const router = createRouter({

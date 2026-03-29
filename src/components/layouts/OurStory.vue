@@ -22,24 +22,20 @@
 import OButton from "../ui/OButton.vue";
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+// OurStory specific styles - main styles in global SCSS
+// Only component-specific overrides here
+
 h2,
 p {
   color: #fff;
 }
+
 p {
   margin: 0 0 20px 0;
 }
 
-.our_story {
-  background-image: url("@/assets/images/OurStory.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  padding: 340px 20px 340px 200px;
-}
-
 .menu-btn {
-    padding: 21px 15px;
+  padding: 21px 15px;
 }
 </style>
