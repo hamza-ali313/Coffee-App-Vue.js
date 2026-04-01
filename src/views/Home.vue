@@ -8,8 +8,7 @@
   <TestimonialSlider />
   <SmallTestimonialSlider />
   <Visitus />
-  <FilteredEventSection />
-  <CalenderWrapper />
+ 
   <Footer :hasBg="true" />
 </template>
 

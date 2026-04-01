@@ -1,4 +1,13 @@
 <template>
+    <div class="filtersec sec_heading text-center py-4 px-3">
+        <h2 class="position-relative d-inline">
+            Upcoming Events
+        </h2>
+        <p style="padding:unset" class="text-center">
+            Alongside good food and coffee, we host a rotating programme of community events in Barnes,
+            gatherings and exhibitions that reflect the people and ideas around us.
+        </p>
+    </div>
     <div :class="['events-wrapper', { 'with-bg': selectedCategory === 'All Events' }]">
         <div class="container py-4">
             <!-- FILTER TABS -->
@@ -14,7 +23,7 @@
 
             <!-- EVENT GRID -->
             <div class="row g-4">
-                <div v-for="event in filteredEvents" :key="event.id" class="col-md-6 col-lg-3">
+                <div v-for="event in filteredEvents" :key="event.id" class="col-md-4 col-lg-3">
                     <EventCard v-bind="event" />
                 </div>
             </div>
@@ -118,6 +127,22 @@ const filteredEvents = computed(() => {
     }
 }
 
+.filtersec.sec_heading p {
+    width: 45%;
+}
+
+.filtersec.sec_heading h2::after {
+    content: "";
+    position: absolute;
+    background-image: url(/src/assets/images/rightleaf.png);
+    background-repeat: no-repeat;
+    top: -27px;
+    right: -63px;
+    background-size: contain;
+    width: 65px;
+    height: 70px;
+}
+
 .filter-bar {
     display: flex;
     flex-wrap: wrap;
@@ -148,15 +173,6 @@ const filteredEvents = computed(() => {
         color: #000;
     }
 
-    /* &::after {
-        content: "";
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        width: 2px;
-        height: 20px;
-    } */
-
     &.active {
         background-image: url('@/assets/images/onav.png');
         background-repeat: no-repeat;
@@ -164,10 +180,6 @@ const filteredEvents = computed(() => {
         background-position: center;
         color: #fff;
         font-weight: 500;
-        /* 
-        .divider {
-            display: none;
-        } */
     }
 }
 </style>

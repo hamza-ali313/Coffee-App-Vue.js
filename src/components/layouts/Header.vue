@@ -8,32 +8,22 @@
     </div>
     <nav class="navbar navbar-expand-lg py-2 rounded-5 px-3 d-bg">
       <!-- TOGGLE BUTTON for mobile -->
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarContent"
-        aria-controls="navbarContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+        aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
       <!-- NAV LINKS -->
-      <div
-        class="collapse navbar-collapse d-flex align-items-center justify-content-between"
-        id="navbarContent"
-      >
-        <ul class="navbar-nav nav-left d-flex align-items-center gap-4">
+      <div class="collapse navbar-collapse d-flex align-items-center justify-content-between" id="navbarContent">
+        <ul class="navbar-nav nav-left d-flex align-items-center gap-1">
           <!-- SIMPLE LINK -->
           <li class="nav-item">
-            <a class="nav-link" @click.prevent="go('/')">Home</a>
+            <router-link to="/" class="nav-link">Home</router-link>
           </li>
 
           <!-- DROPDOWN -->
           <li class="nav-item dropdown" @click="toggleMenu('food')">
-            <a class="nav-link" href="#" role="button"> Food & Drink </a>
+            <router-link to="/FoodsDrinks" class="nav-link">Food & Drinks</router-link>
 
             <div v-if="activeMenu === 'food'">
               <MegaDropdown :items="foodItems" @navigate="go" />
@@ -41,26 +31,30 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link">What’s On</a>
+            <router-link to="/whatsonevent" class="nav-link">What’s On</router-link>
           </li>
           <li class="nav-item">
-            <a class="nav-link">Community</a>
+            <router-link to="/item-details" class="nav-link">Community</router-link>
           </li>
         </ul>
 
         <!-- RIGHT SIDE -->
-        <ul class="navbar-nav nav-right d-flex align-items-center gap-4">
-          <li class="nav-item">
-            <a class="nav-link">About Us</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link">Visit Dee</a>
-          </li>
-          <li class="nav-item">
-            <button class="btn order-btn">
-              ORDER AHEAD
-            </button>
-          </li>
+        <ul class="navbar-nav nav-right d-flex align-items-center justify-content-between gap-5">
+          <ul class="d-flex align-items-center gap-1">
+            <li class="nav-item">
+              <router-link to="/about" class="nav-link">About Us</router-link>
+            </li>
+            <li class="nav-item">
+              <router-link to="/visit" class="nav-link">Visit Dee</router-link>
+            </li>
+          </ul>
+          <ul class="position-relative nav_order">
+            <li class="nav-item">
+              <router-link to="/orderahead">
+                <button class="btn order-btn">ORDER AHEAD</button>
+              </router-link>
+            </li>
+          </ul>
         </ul>
       </div>
     </nav>
@@ -120,5 +114,21 @@ const foodItems = [
 </script>
 
 <style scoped lang="scss">
-// Header specific styles - main styles in global SCSS
+.nav_order::before {
+  content: "";
+  position: absolute;
+  top: 27%;
+  left: 0px;
+  width: 2px;
+  height: 30px;
+  background: #ccc;
+}
+
+.router-link-active {
+  background-image: url('@/assets/images/gnav.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  color: #fff;
+}
 </style>

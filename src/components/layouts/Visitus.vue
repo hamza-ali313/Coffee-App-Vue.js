@@ -1,39 +1,39 @@
 <template>
-    <div class="visitus-sec">
-        <div class="container position-relative z-2">
-            <div class="sec_heading py-4">
-                <!-- Leaf + Heading -->
-                <span class="leaf">
-                    <img :src="leafImg" alt="leaf" />
-                </span>
-                <h2>Visit Us</h2>
-                <h3>step inside, grab a coffee, take a breath</h3>
-                <!-- Description -->
-                <p class="description">
-                    You’ll find us on 153 Church Road in Barnes, close to local green spaces and riverside walks. We’re
-                    easy to reach on foot or by bike, and well placed for a relaxed stop before or after exploring the
-                    area.
-                </p>
-            </div>
-            <div class="text-start">
-                <h6>Address</h6>
-                <p>
-                    <i class="bi bi-geo-alt-fill" style="color: #919b4c; padding: 0 10px 0 0"></i>
-                    153 Church Road, Barnes, London SW13 9HR
-                </p>
-                <h6>Opening hours</h6>
-                <p>
-                    <i class="bi bi-clock-fill" style="color: #919b4c; padding: 0 10px 0 0"></i>
-                    Open every day from 7am to 5pm (Kitchen closes at 4pm)
-                </p>
-            </div>
-            <!-- BUTTONS -->
-            <div class="d-flex gap-3 mt-4">
-                <GButton btntxt="See Our Menu" />
-                <OButton btntxt="Vist Us" />
-            </div>
-        </div>
+  <div class="visitus-sec">
+    <div class="container position-relative z-2">
+      <div class="sec_heading py-4">
+        <!-- Leaf + Heading -->
+        <span class="leaf">
+          <img :src="leafImg" alt="leaf" />
+        </span>
+        <h2>Visit Us</h2>
+        <h3>step inside<span>,</span> grab a coffee<span>,</span> take a breath</h3>
+        <!-- Description -->
+        <p class="description">
+          You’ll find us on 153 Church Road in Barnes, close to local green spaces and riverside walks. We’re
+          easy to reach on foot or by bike, and well placed for a relaxed stop before or after exploring the
+          area.
+        </p>
+      </div>
+      <div class="text-start">
+        <h6>Address</h6>
+        <p>
+          <i class="bi bi-geo-alt-fill" style="color: #919b4c; padding: 0 10px 0 0"></i>
+          153 Church Road, Barnes, London SW13 9HR
+        </p>
+        <h6>Opening hours</h6>
+        <p>
+          <i class="bi bi-clock-fill" style="color: #919b4c; padding: 0 10px 0 0"></i>
+          Open every day from 7am to 5pm (Kitchen closes at 4pm)
+        </p>
+      </div>
+      <!-- BUTTONS -->
+      <div class="d-flex gap-3 mt-4">
+        <GButton btntxt="See Our Menu" />
+        <OButton btntxt="Vist Us" />
+      </div>
     </div>
+  </div>
 </template>
 
 <script setup>

@@ -102,6 +102,7 @@
 
 .nav-link {
   @include nav-link;
+  width: 100px;
 }
 
 .d-bg {
@@ -112,6 +113,10 @@
   width: 1150px;
 }
 
+li {
+  list-style-type: none;
+}
+
 .h-icons i {
   color: $white;
   font-size: 12px;
@@ -120,6 +125,7 @@
 .order-btn {
   @include order-btn;
   font-size: 52px;
+  padding: 0px 33px;
 }
 
 // ==========================================
@@ -181,6 +187,10 @@
 
   h3 {
     @include sec-subheading;
+
+    span {
+      font-family: none;
+    }
   }
 
   p {
@@ -429,7 +439,7 @@ h6 {
 
 .event-card {
   background: $white;
-  border-radius: 12px;
+  border-radius: 10px 10px 2px 2px;
   overflow: hidden;
 
   .img-box {
@@ -484,8 +494,12 @@ h6 {
   .content {
     padding: 45px 10px;
     background-image: $bg-wavy;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     margin: -20px 0 0 0;
     position: relative;
+
   }
 
   .info {
@@ -746,6 +760,11 @@ h6 {
     @include font-daughter-demo;
     text-transform: capitalize;
     font-size: 70px;
+    text-align: center;
+
+    span {
+      font-family: none;
+    }
   }
 }
 
@@ -759,18 +778,18 @@ h6 {
 
 // Calender Css start
 .calendar-wrapper {
-  background: #fbfbfb;
+  background: #fff;
   padding: 40px !important;
-  border-radius: 10px;
+  border-radius: 9px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   margin: 0 0 30px 0;
 }
 
 /* Month title */
 .calendar-month h5 {
-  text-align: center;
-  font-weight: 500;
-  margin-bottom: 15px;
+  font-weight: lighter;
+  font-family: sans-serif;
+  font-size: 25px;
 }
 
 /* Week header */
@@ -781,6 +800,7 @@ h6 {
   color: #888;
   margin-bottom: 8px;
   text-align: center;
+  text-transform: uppercase;
 }
 
 /* GRID (IMPORTANT) */
@@ -791,16 +811,12 @@ h6 {
 
 /* CELL */
 .calendar-cell {
-  height: 38px;
+  height: 50px;
+  padding: 0 0 0 8px;
   font-size: 13px;
   color: #444;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   position: relative;
-
   border: 1px solid #e6e6e6;
-  background: #fff;
 }
 
 /* EMPTY CELLS */
@@ -819,20 +835,77 @@ h6 {
 /* EVENT ICON */
 .event-icon {
   position: absolute;
-  bottom: 2px;
-  right: 4px;
-  font-size: 12px;
+  top: 8px;
+  right: 14px;
+  width: 20px;
+
+}
+
+.event-icon img {
+  width: 25px;
 }
 
 .divider-line {
   width: 1px;
-  height: 220px;
-  background: repeating-linear-gradient(to bottom,
-      #ccc,
-      #ccc 4px,
-      transparent 4px,
-      transparent 8px);
   margin: 0 auto;
 }
 
+.divider-line img {
+  width: 8px;
+}
+
 // Calender Css end
+
+.bg_pink {
+  background-image: url('../images/Orderahead_bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+
+// Filter css start
+
+.filter-item {
+  position: relative;
+  font-size: 14px;
+  color: #444;
+  cursor: pointer;
+  padding: 6px 14px;
+  transition: all 0.25s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 143px;
+  height: 42px;
+
+  .divider {
+    margin-left: 12px;
+    color: #999;
+  }
+
+  &:hover {
+    color: #000;
+  }
+
+  &.active {
+    background-image: url('@/assets/images/onav.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    font-weight: 500;
+  }
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  /* This transitions the background color to transparent over a long time */
+  -webkit-transition: background-color 50000s ease-in-out 0s;
+  transition: background-color 50000s ease-in-out 0s;
+
+  /* This changes the text color if the browser tries to make it black */
+  -webkit-text-fill-color: #333 !important;
+}

@@ -1,7 +1,7 @@
 <template>
   <footer class="footer-section text-white" :class="{ 'bg_green': hasBg }">
     <div class="container">
-      <h1 class="larg_f">come in, stay a while</h1>
+      <h1 class="larg_f">come in<span>,</span> stay a while</h1>
       <div class="sec_heading text-center py-4">
         <h2 style="color: #fff; margin: 0">join our community</h2>
         <p style="width: unset">
@@ -138,5 +138,4 @@ const props = defineProps({
 
 <style scoped lang="scss">
 // Footer-specific overrides only
-// Main styles are in global SCSS
-</style>
+// Main styles are in global SCSS</style>

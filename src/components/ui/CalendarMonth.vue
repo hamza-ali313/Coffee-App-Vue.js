@@ -1,8 +1,6 @@
 <template>
     <div class="calendar-month">
-        <h5 class="text-center mb-3">
-            {{ monthName }} {{ year }}
-        </h5>
+        <h5 class="text-center mb-3">{{ monthName }} {{ year }}</h5>
 
         <!-- Week Days -->
         <div class="week-days">
@@ -15,12 +13,12 @@
         <div class="calendar-grid">
             <div v-for="(day, index) in calendarDays" :key="index" class="calendar-cell" :class="{
                 empty: !day,
-                active: highlighted.includes(day)
+                active: highlighted.includes(day),
             }">
                 <span v-if="day">{{ day }}</span>
 
                 <span v-if="events[day]" class="event-icon">
-                    {{ events[day] }}
+                    <img :src="events[day]" />
                 </span>
             </div>
         </div>
@@ -30,13 +28,22 @@
 <script setup>
 import { computed } from "vue";
 import CalendarCell from "./CalendarCell.vue";
+import pngwing from "../../assets/images/pngwing.png";
 
 const props = defineProps({
     month: Number,
     year: Number,
 });
 
-const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+const daysOfWeek = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+];
 
 function getDaysInMonth(year, month) {
     return new Date(year, month + 1, 0).getDate();
@@ -64,7 +71,7 @@ const monthName = new Date(props.year, props.month).toLocaleString("default", {
 // 🎯 Example Data
 const highlighted = [10, 27];
 const events = {
-    27: "🍒",
-    18: "🍒",
+    27: pngwing,
+    18: pngwing,
 };
 </script>
