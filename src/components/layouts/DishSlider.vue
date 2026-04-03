@@ -1,9 +1,11 @@
 <template>
-    <Swiper class="dish-slider" :slides-per-view="'auto'" :space-between="8" :centeredSlides="true" :loop="true">
-        <SwiperSlide v-for="(img, index) in sliderImages" :key="index" class="slide">
-            <img :src="img" />
-        </SwiperSlide>
-    </Swiper>
+    <div class="dishslidesec">
+        <Swiper class="dish-slider" :slides-per-view="1.5" :space-between="8" :centeredSlides="true" :loop="true">
+            <SwiperSlide v-for="(img, index) in sliderImages" :key="index" class="slide">
+                <img :src="img" />
+            </SwiperSlide>
+        </Swiper>
+    </div>
 </template>
 
 <script setup>
@@ -20,7 +22,7 @@ defineProps({
 
 <style scoped lang="scss">
 .swiper {
-    overflow: unset;
+    overflow: hidden;
 }
 
 .dish-slider {
@@ -44,5 +46,21 @@ defineProps({
     border-radius: 10px;
     height: 400px;
     object-fit: cover;
+}
+
+.dishslidesec {
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        background-image: url("@/assets/images/dishslideaft.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        top: -80px;
+        right: 0;
+        width: 210px;
+        height: 150px;
+    }
 }
 </style>

@@ -13,7 +13,7 @@
         <div class="input-wrapper">
           <i class="bi bi-envelope-fill"></i>
           <input type="text" placeholder="type your email..." />
-          <button class="submit-btn">SUBMIT</button>
+          <button class="submit-btn menu-btn">SUBMIT</button>
         </div>
       </div>
 

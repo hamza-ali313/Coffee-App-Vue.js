@@ -1,26 +1,27 @@
 <template>
-    <div class="container">
-        <!-- BUTTONS -->
-        <div class="d-flex gap-1 py-5 justify-content-center">
-            <GButton btntxt="upcoming events" icon="bi bi-calendar-event" />
-            <OButton btntxt="calender view" />
-        </div>
-        <div class="calendar-wrapper p-4">
-            <div class="row">
-                <div class="col-md-5">
-                    <CalendarMonth :month="1" :year="2026" />
-                </div>
-                <div class="col-md-2 divider-line">
-                    <img :src="calenbet" />
-                </div>
+    <div class="calen-wrap-sec">
+        <div class="container">
+            <!-- BUTTONS -->
+            <div class="d-flex gap-1 py-5 justify-content-center">
+                <GButton btntxt="upcoming events" icon="bi bi-calendar-event" />
+                <OButton btntxt="calender view" />
+            </div>
+            <div class="calendar-wrapper p-4">
+                <div class="row">
+                    <div class="col-md-5">
+                        <CalendarMonth :month="1" :year="2026" />
+                    </div>
+                    <div class="col-md-2 divider-line">
+                        <img :src="calenbet" />
+                    </div>
 
-                <div class="col-md-5">
-                    <CalendarMonth :month="2" :year="2026" />
+                    <div class="col-md-5">
+                        <CalendarMonth :month="2" :year="2026" />
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-
 </template>
 
 <script setup>
@@ -32,17 +33,17 @@ import calenleaf from "../../assets/images/calenleaf.png";
 </script>
 
 <style lang="scss" scoped>
-.container {
+.calen-wrap-sec {
     position: relative;
 }
 
-.container::before {
+.calen-wrap-sec::before {
     content: "";
     position: absolute;
     background-image: url(/src/assets/images/calenleaf.png);
     background-repeat: no-repeat;
     top: 0;
-    left: -101px;
+    left: 0;
     background-size: contain;
     width: 665px;
     height: 470px;

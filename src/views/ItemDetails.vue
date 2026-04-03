@@ -1,11 +1,15 @@
 <template>
-    <HomeBanner />
-    <DishSection />
-    <Footer :hasBg="false" />
+    <div class="bg_pink">
+        <Header />
+        <DishSection />
+        <PairsWithSlider />
+        <Footer :hasBg="false" />
+    </div>
 </template>
 
 <script setup>
-import HomeBanner from "../components/layouts/HomeBanner.vue";
+import Header from "../components/layouts/Header.vue";
+import PairsWithSlider from "../components/layouts/PairsWithSlider.vue";
 import Footer from "../components/layouts/Footer.vue";
 import DishSection from "../components/layouts/DishSection.vue";
 </script>

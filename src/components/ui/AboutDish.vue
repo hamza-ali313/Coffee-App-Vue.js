@@ -24,10 +24,6 @@ defineProps({
 </script>
 
 <style scoped lang="scss">
-.section-title {
-    font-weight: 600;
-    margin-bottom: 12px;
-}
 
 .about-grid {
     display: flex;

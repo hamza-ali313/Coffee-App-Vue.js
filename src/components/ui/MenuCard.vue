@@ -21,7 +21,14 @@
                     <p>{{ item.desc }}</p>
                 </div>
 
-                <span class="price">£{{ item.price }}</span>
+                <div class="text-center">
+                    <div>
+                        <span class="price">£{{ item.price }}</span>
+                    </div>
+                    <img :src="spice" alt="">
+                    <img :src="seasonal" alt="">
+                    <img :src="vege" alt="">
+                </div>
             </div>
 
         </div>
@@ -30,6 +37,10 @@
 </template>
 
 <script setup>
+import seasonal from '../../assets/images/seasonal.png'
+import spice from '../../assets/images/spice.png'
+import vege from '../../assets/images/vege.png'
+
 defineProps({
     data: Object
 })
@@ -42,7 +53,7 @@ defineProps({
 
 /* IMAGE */
 .img-box {
-    height: 180px;
+    height: 270px;
     // overflow: hidden;
 
     img {
@@ -139,8 +150,16 @@ h5 {
     }
 }
 
+.menu-item img {
+    width: 16px;
+    margin: 0 0 0 2px;
+}
+
+
 .price {
     color: $green-dark;
     font-weight: 700;
+    font-family: $titillium-regular;
+    font-size: 18px;
 }
 </style>

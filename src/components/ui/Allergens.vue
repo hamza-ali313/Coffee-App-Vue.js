@@ -17,11 +17,6 @@ defineProps({
 </script>
 
 <style scoped lang="scss">
-.section-title {
-    font-weight: 600;
-    margin-bottom: 10px;
-}
-
 .tags {
     display: flex;
     gap: 10px;

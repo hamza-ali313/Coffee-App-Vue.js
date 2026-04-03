@@ -1,5 +1,5 @@
 <template>
-    <div class="card p-3 mt-3 addons-card">
+    <div class="card mt-3 addons-card">
         <h6 class="mb-3 card-title">Optional Add-ons</h6>
 
         <div v-for="(item, i) in items" :key="i" class="addon-item" :class="{ active: item.selected }"
@@ -11,7 +11,7 @@
 
             <div class="right">
                 <span class="price">£{{ item.price }}</span>
-                <div class="check" v-if="item.selected">✓</div>
+                <div class="check"><i v-if="item.selected" class="bi bi-check-lg"></i></div>
             </div>
         </div>
     </div>
@@ -43,25 +43,16 @@ function toggleAddon(item) {
 }
 </script>
 
-<style>
+<style lang="scss">
 .addons-card {
     border-radius: 12px;
-
-    .card-title {
-        font-weight: 600;
-        font-size: 17px;
-        letter-spacing: 1px;
-        color: #5c4a3d;
-        padding: 18px;
-        text-transform: uppercase;
-    }
 
     .addon-item {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 10px 14px;
-        margin-bottom: 10px;
+        padding: 9px 14px;
+        margin: 0 25px 10px 25px;
         border-radius: 30px;
         border: 2px solid #eee;
         background: #fff;
@@ -69,11 +60,11 @@ function toggleAddon(item) {
         transition: all 0.25s ease;
 
         &:hover {
-            border-color: #f4a261;
+            border-color: $theme_o;
         }
 
         &.active {
-            border-color: #f4a261;
+            border-color: $theme_o;
             background: #fff7f0;
         }
 
@@ -89,9 +80,11 @@ function toggleAddon(item) {
                 object-fit: cover;
             }
 
-            .name {
+            span {
                 font-weight: 500;
                 color: #333;
+                font-family: 'TitilliumWeb-SemiBold';
+                font-size: 15px;
             }
         }
 
@@ -100,22 +93,25 @@ function toggleAddon(item) {
             align-items: center;
             gap: 10px;
 
-            .price {
-                color: #666;
-                font-weight: 500;
-            }
-
             .check {
                 width: 22px;
                 height: 22px;
                 border-radius: 50%;
-                background: #f4a261;
-                color: #fff;
+                border: 1px solid $theme_o;
+                background: transparent;
+                font-size: 14px;
+                font-weight: bold;
+            }
+
+            i {
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                background-color: $theme_o;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                font-size: 14px;
-                font-weight: bold;
+                color: #fff;
             }
         }
     }

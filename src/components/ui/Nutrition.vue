@@ -1,7 +1,7 @@
 <template>
     <h5 class="section-title">Nutrition Facts</h5>
 
-    <div class="d-flex mt-3  text-center nutri-f">
+    <div class="d-flex text-center nutri-f">
         <div v-for="n in items" :key="n.label" class="nutri">
             <strong>{{ n.value }}</strong>
             <p>{{ n.label }}</p>
@@ -14,15 +14,10 @@ defineProps({ items: Array })
 </script>
 
 <style>
-.section-title {
-    font-weight: 600;
-    margin-bottom: 10px;
-}
-
 .nutri strong {
     font-weight: bolder;
     color: #d08a44;
-    font-size: 19px;
+    font-size: 21px;
     font-family: 'TitilliumWeb-Regular';
 }
 

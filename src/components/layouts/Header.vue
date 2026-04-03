@@ -1,6 +1,6 @@
 <template>
   <div class="container ht">
-    <div class="d-flex justify-content-end align-items-center gap-3 h-icons pe-3 mt-2">
+    <div class="d-flex justify-content-end align-items-center gap-3 h-icons pe-3 p t-2">
       <i class="bi bi-search fs-5"></i>
       <i class="bi bi-cart-fill fs-5"></i>
       <i class="bi bi-person-fill fs-5"></i>
@@ -130,5 +130,6 @@ const foodItems = [
   background-size: contain;
   background-position: center;
   color: #fff;
+  padding: 10px 0;
 }
 </style>

@@ -2,11 +2,11 @@
     <div class="product-header container">
         <div class="row align-items-center">
 
-            <div class="sec_heading col-12 col-lg-5 mb-3 mb-lg-0">
+            <div class="sec_heading col-12 col-lg-6 mb-3 mb-lg-0">
                 <h2>Avocado on Sourdough</h2>
             </div>
 
-            <div class="col-12 col-lg-7">
+            <div class="col-12 col-lg-6">
                 <div class="controls row align-items-center">
 
                     <!-- Quantity -->
@@ -69,13 +69,14 @@ function decrease() {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
 .sec_heading h2 {
     font-size: 102px;
 }
 
 .product-header {
     padding: 20px 10px;
+    margin: 50px 0;
     border-top: 1px solid #e5c7a3;
     border-bottom: 1px solid #e5c7a3;
 
@@ -88,23 +89,28 @@ function decrease() {
 
     .controls {
         .qty-box {
-            border: 2px solid #f4a261;
+            border: 1px solid $theme_o;
             border-radius: 30px;
             padding: 5px 10px;
             gap: 15px;
+            justify-content: space-between;
+            background-color: #f2dcc6;
 
             button {
-                background: transparent;
                 border: none;
                 font-size: 18px;
                 width: 28px;
                 height: 28px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
                 border-radius: 50%;
-                color: #f4a261;
+                color: $theme_o;
+                background: #fff;
                 transition: 0.2s;
 
                 &:hover {
-                    background: #f4a261;
+                    background: $theme_o;
                     color: #fff;
                 }
             }
@@ -113,26 +119,32 @@ function decrease() {
                 font-weight: 600;
                 min-width: 24px;
                 text-align: center;
+                color: $theme_o;
             }
         }
 
         .price-box {
+            text-align: center;
+
             small {
                 display: block;
-                font-size: 12px;
-                color: #666;
+                font-size: 14px;
+                font-family: $titillium-semibold;
+                color: #000;
             }
 
             h2 {
                 margin: 0;
-                font-size: 28px;
-                color: #1b4332;
+                font-size: 38px;
+                line-height: 28px;
+                color: $green-dark;
+                font-family: $titillium-semibold;
                 font-weight: 700;
             }
         }
 
         .add-btn {
-            background: #6b8e23;
+            background: $theme_g;
             color: #fff;
             border: none;
             padding: 12px 20px;
@@ -141,7 +153,7 @@ function decrease() {
             transition: 0.3s;
 
             &:hover {
-                background: #5a7a1d;
+                background: $theme_g;
             }
         }
     }

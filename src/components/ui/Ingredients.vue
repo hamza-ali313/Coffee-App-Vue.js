@@ -20,17 +20,9 @@ defineProps({
 
 <style scoped lang="scss">
 .card-box {
-    background: #f3ebe4; // light beige
-    border-radius: 18px;
-    border: 1px solid #f3ebe4;
-}
-
-.card-title {
-    font-weight: 600;
-    font-size: 17px;
-    letter-spacing: 1px;
-    color: #5c4a3d;
-    padding: 18px;
+    background: #f3ebe4;
+    border: 1px solid #e9d3c4;
+    border-radius: 4px;
 }
 
 .ingredient-list {
@@ -58,16 +50,11 @@ defineProps({
 /* ICON STYLE */
 .icon {
     width: 26px;
+    object-fit: scale-down;
 }
 
 /* TEXT */
 .text {
     white-space: nowrap;
-}
-
-/* HOVER EFFECT (subtle like UI) */
-.ingredient:hover {
-    background: #fff;
-    border-color: #c9a27e;
 }
 </style>

@@ -33,7 +33,6 @@ import "swiper/css/navigation"
 import "swiper/css/pagination"
 
 
-
 import prev from "@/assets/images/prev.png"
 import nxt from "@/assets/images/nxt.png"
 
