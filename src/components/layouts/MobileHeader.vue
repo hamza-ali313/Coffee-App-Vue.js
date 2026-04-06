@@ -84,7 +84,7 @@
             </div>
 
             <!-- 3. MAIN NAVBAR -->
-            <nav class="navbar navbar-expand-lg py-2 d-none rounded-5 px-3 d-bg"
+            <nav class="navbar navbar-expand-lg py-2 d-none d-lg-block rounded-5 px-3 d-bg"
                 :style="{ backgroundImage: `url(${bgImage})` }">
 
                 <!-- NAV LINKS COLLAPSE (Works for both) -->
@@ -231,5 +231,24 @@ const foodItems = [
         font-size: 18px;
         padding: 12px 0;
     }
+}
+
+.nav_order::before {
+    content: "";
+    position: absolute;
+    top: 27%;
+    left: 0px;
+    width: 2px;
+    height: 30px;
+    background: #ccc;
+}
+
+.router-link-active {
+    background-image: url('@/assets/images/gnav.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    color: #fff;
+    padding: 10px 0;
 }
 </style>
