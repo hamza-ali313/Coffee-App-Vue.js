@@ -31,7 +31,7 @@ import olive from '../../../assets/images/olive.png'
 import chilli from '../../../assets/images/chilli.png'
 import dishslide from '../../../assets/images/dishslide1.png'
 import clock from '../../../assets/images/clock.png'
-import check from '../../../assets/images/check.png'
+import check from '../../../assets/images/Check.png'
 import Seasonal from '../../../assets/images/seasonal.png'
 
 const dishes = [
