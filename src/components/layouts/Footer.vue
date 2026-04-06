@@ -21,7 +21,7 @@
       <div class="row mt-5">
         <!-- Left -->
         <div class="col-lg-8 col-md-8  col-sm-12 text-md-start text-center">
-          <img src="@/assets/images/Footlogo.png" class="logo mb-3" />
+          <img src="@/assets/images/footlogo.png" class="logo mb-3" />
 
           <p class="desc">
             A neighbourhood café offering high-quality coffee, fresh and brunch in a calm,

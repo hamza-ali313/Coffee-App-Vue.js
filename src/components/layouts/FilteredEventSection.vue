@@ -122,9 +122,9 @@ const filteredEvents = computed(() => {
     border-radius: 20px;
     transition: all 0.3s ease;
 
-    &.with-bg {
+    /* &.with-bg {
         background: url('@/assets/images/your-bg.png') no-repeat center/cover;
-    }
+    } */
 }
 
 

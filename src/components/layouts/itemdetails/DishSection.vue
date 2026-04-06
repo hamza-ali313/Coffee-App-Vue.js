@@ -32,7 +32,7 @@ import chilli from '../../../assets/images/chilli.png'
 import dishslide from '../../../assets/images/dishslide1.png'
 import clock from '../../../assets/images/clock.png'
 import check from '../../../assets/images/check.png'
-import Seasonal from '../../../assets/images/Seasonal.png'
+import Seasonal from '../../../assets/images/seasonal.png'
 
 const dishes = [
     {

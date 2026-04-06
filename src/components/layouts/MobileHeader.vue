@@ -79,7 +79,7 @@
 
                 <!-- Basket Icon -->
                 <router-link to="/cart" class="mobile-basket">
-                    <img src="@/assets/images/basketwhite.png" alt="Dee Logo" />
+                    <img src="../../assets/images/basketWhite.png" alt="Dee Logo" />
                 </router-link>
             </div>
 
