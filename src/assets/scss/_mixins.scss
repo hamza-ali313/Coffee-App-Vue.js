@@ -43,6 +43,27 @@
 }
 
 // ==========================================
+// BACKGROUND MIXINS
+// ==========================================
+
+@mixin bg_no_repeat_cover_center {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+@mixin bg_no_repeat_contain {
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+@mixin bg_no_repeat_contain_center {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+// ==========================================
 // TYPOGRAPHY MIXINS
 // ==========================================
 
@@ -97,9 +118,7 @@
   color: $white;
   border: none;
   cursor: pointer !important;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
+  @include bg_no_repeat_contain_center;
   background-color: transparent;
   text-transform: uppercase;
   font-size: $font-size-btn;
@@ -119,10 +138,8 @@
   font-weight: 300;
   cursor: pointer;
   background-image: $bg-order-btn;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
   background-color: transparent;
+  @include bg_no_repeat_contain_center
 }
 
 // ==========================================
@@ -147,9 +164,7 @@
 
 @mixin d-bg {
   background-image: $bg-d-nav;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  @include bg_no_repeat_cover_center;
   height: 127px;
 }
 
@@ -162,8 +177,7 @@
     width: 70px;
     height: 60px;
     background-image: $bg-leaf;
-    background-repeat: no-repeat;
-    background-size: contain;
+    @include bg_no_repeat_contain
   }
 }
 

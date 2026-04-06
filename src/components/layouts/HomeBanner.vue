@@ -1,6 +1,6 @@
 <template>
   <section class="hero-section">
-    <MobileHeader iconColor="white" />
+    <Header iconColor="white" />
     <div class="container">
       <div class="row">
         <!-- LEFT CONTENT -->
