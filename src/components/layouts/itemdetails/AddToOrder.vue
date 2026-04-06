@@ -28,7 +28,7 @@
 
                     <!-- Button -->
                     <div class="col-12 col-md-5">
-                        <GButton btntxt="+ add to order" icon="bi bi-cart-check-fill" />
+                        <GButton btntxt="+ add to order" icon="bi bi-cart-check-fill" @click="addItem" />
                     </div>
 
                 </div>
@@ -40,16 +40,18 @@
 
 <script setup>
 import { ref, computed } from "vue"
-import GButton from "./GButton.vue"
+import GButton from "../../ui/GButton.vue"
+import { useCartStore } from "@/store/cart"
+
 
 const props = defineProps({
     basePrice: Number,
     addons: {
         type: Array,
         default: () => []
-    }
+    },
+    dish: Object
 })
-
 const quantity = ref(1)
 
 const addonsTotal = computed(() =>
@@ -62,11 +64,31 @@ const totalPrice = computed(() =>
 
 function increase() {
     quantity.value++
+    console.log(quantity.value)
 }
 
 function decrease() {
     if (quantity.value > 1) quantity.value--
 }
+
+const cart = useCartStore()
+
+function addItem() {
+    console.log('working')
+    cart.addToCart({
+        id: props.dish.id,
+        name: props.dish.name,
+        image: props.dish.sliderImages[0],
+        badges: props.dish.badges.slice(0, 2),
+        basePrice: props.basePrice,
+        addons: props.addons,
+        totalPrice: totalPrice.value,
+        quantity: quantity.value
+    })
+    console.log(cart.items)
+    cart.isCartOpen = true // open cart
+}
+
 </script>
 
 <style lang="scss" scoped>

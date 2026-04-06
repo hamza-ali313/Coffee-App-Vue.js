@@ -1,8 +1,8 @@
 <template>
-    <div class="ingredients card-box">
+    <div class="card-box">
         <h6 class="card-title">INCLUDED INGREDIENTS</h6>
 
-        <div class="ingredient-list">
+        <div class="ingredient-list card-body">
             <div v-for="item in items" :key="item.name" class="ingredient">
                 <img class="icon" :src="item.image">
                 <span class="text">{{ item.name }}</span>
@@ -19,18 +19,12 @@ defineProps({
 </script>
 
 <style scoped lang="scss">
-.card-box {
-    background: #f3ebe4;
-    border: 1px solid #e9d3c4;
-    border-radius: 4px;
-}
+
 
 .ingredient-list {
     display: flex;
     flex-wrap: wrap;
     gap: 12px 14px;
-    background-color: #fff;
-    padding: 18px;
 
 }
 

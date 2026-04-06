@@ -1,6 +1,6 @@
 <template>
   <section class="hero-section">
-    <Header />
+    <MobileHeader iconColor="white" />
     <div class="container">
       <div class="row">
         <!-- LEFT CONTENT -->
@@ -19,8 +19,8 @@
 
           <!-- BUTTONS -->
           <div class="d-flex gap-3 mt-4">
-            <GButton btntxt="See Our Menu" icon="bi bi-list-task" />
-            <OButton btntxt="Vist Us" icon="bi bi-geo-alt-fill"/>
+            <GButton btntxt="See Our Menu" icon="bi bi-list-task" @click="Seemenu" />
+            <OButton btntxt="Vist Us" icon="bi bi-geo-alt-fill" @click="visitus" />
           </div>
         </div>
       </div>
@@ -30,8 +30,20 @@
 
 <script setup>
 import Header from "./Header.vue";
+import MobileHeader from "./MobileHeader.vue";
 import GButton from "../ui/GButton.vue";
 import OButton from "../ui/OButton.vue";
+
+import { useRouter } from "vue-router";
+const router = useRouter();
+
+const Seemenu = () => {
+  router.push('/FoodsDrinks')
+}
+
+const visitus = () => {
+  router.push('/locations')
+}
 </script>
 
 <style scoped lang="scss">

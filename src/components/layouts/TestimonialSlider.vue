@@ -1,21 +1,21 @@
 <template>
-  <SecHeading main_h="Food And Drink"
-    description="Our menu is thoughtfully made, seasonal and always evolving. We care for quality ingredients, local sourcing, and delight in flavour."
-    :leafImage="false" />
-  <div class="testi_slider container position-relative">
-    <!-- Left Arrow -->
-    <div class="nav-btn left" @click="slidePrev"><img :src="prev" /></div>
+  <div class="container">
+    <SecHeading main_h="what they're saying" sub_h="about dee" :showLeaf="true" />
+    <div class="testi_slider position-relative">
+      <!-- Left Arrow -->
+      <div class="nav-btn left" @click="slidePrev"><img :src="prev" /></div>
 
-    <!-- Swiper -->
-    <Swiper :slides-per-view="1" :space-between="20" :loop="true" :breakpoints="breakpoints" @swiper="setSwiper">
-      <SwiperSlide v-for="(item, index) in slides" :key="index">
-        <!-- Render Testimonial Card here -->
-        <TestimonialCard :data="item" />
-      </SwiperSlide>
-    </Swiper>
+      <!-- Swiper -->
+      <Swiper :slides-per-view="1" :space-between="20" :loop="true" :breakpoints="breakpoints" @swiper="setSwiper">
+        <SwiperSlide v-for="(item, index) in slides" :key="index">
+          <!-- Render Testimonial Card here -->
+          <TestimonialCard :data="item" />
+        </SwiperSlide>
+      </Swiper>
 
-    <!-- Right Arrow -->
-    <div class="nav-btn right" @click="slideNext"><img :src="nxt" /></div>
+      <!-- Right Arrow -->
+      <div class="nav-btn right" @click="slideNext"><img :src="nxt" /></div>
+    </div>
   </div>
 </template>
 
@@ -51,16 +51,14 @@ const slides = [
   {
     image: TestiImg,
     rating: "4.8",
-    text:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    text: "LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISICING ELIT, SED DO EIUSMOD TEMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA. UT ENIM AD MINIM VENIAM, QUIS NOSTRUD EXERCITATION... ULLAMCO LABORIS NISI UT ALIQUIP EX EA COMMODO CONSEQUAT. DUIS AUTE IRURE DOLOR IN REPREHENDERIT IN VOLUPTATE VELIT ESSE CILLUM DOLORE.",
     name: "B. Blankenship",
     time: "8 days ago",
   },
   {
     image: TestiImg,
     rating: "2.5",
-    text:
-      "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    text: "LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISICING ELIT, SED DO EIUSMOD TEMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA. UT ENIM AD MINIM VENIAM, QUIS NOSTRUD EXERCITATION... ULLAMCO LABORIS NISI UT ALIQUIP EX EA COMMODO CONSEQUAT. DUIS AUTE IRURE DOLOR IN REPREHENDERIT IN VOLUPTATE VELIT ESSE CILLUM DOLORE.",
     name: "A. Johnson",
     time: "5 days ago",
   },
@@ -69,5 +67,7 @@ const slides = [
 </script>
 
 <style scoped lang="scss">
-// TestimonialSlider specific styles - main styles in global SCSS
-// Only component-specific overrides here</style>
+.container {
+  max-width: 1260px;
+}
+</style>

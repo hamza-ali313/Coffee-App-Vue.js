@@ -25,11 +25,11 @@
 </template>
 
 <script setup>
-import GButton from "../ui/GButton.vue";
-import OButton from "../ui/OButton.vue";
-import CalendarMonth from "../ui/CalendarMonth.vue";
-import calenbet from "../../assets/images/calenbet.png";
-import calenleaf from "../../assets/images/calenleaf.png";
+import GButton from "../../ui/GButton.vue";
+import OButton from "../../ui/OButton.vue";
+import CalendarMonth from "./CalendarMonth.vue";
+import calenbet from "../../../assets/images/calenbet.png";
+import calenleaf from "../../../assets/images/calenleaf.png";
 </script>
 
 <style lang="scss" scoped>

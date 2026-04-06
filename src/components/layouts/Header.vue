@@ -1,12 +1,13 @@
 <template>
   <div class="container ht">
-    <div class="d-flex justify-content-end align-items-center gap-3 h-icons pe-3 p t-2">
+    <div :class="['d-flex justify-content-end align-items-center gap-3 h-icons pe-3 pt-2',
+      props.iconColor === 'white' ? 'text-white' : 'text-dark']">
       <i class="bi bi-search fs-5"></i>
       <i class="bi bi-cart-fill fs-5"></i>
       <i class="bi bi-person-fill fs-5"></i>
       <i class="bi bi-globe fs-5"></i>
     </div>
-    <nav class="navbar navbar-expand-lg py-2 rounded-5 px-3 d-bg">
+    <nav class="navbar navbar-expand-lg py-2 rounded-5 px-3 d-bg " :style="{ backgroundImage: `url(${bgImage})` }">
       <!-- TOGGLE BUTTON for mobile -->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
         aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -62,7 +63,7 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { ref, computed } from "vue";
 import { useRouter } from "vue-router";
 import OButton from "../ui/OButton.vue";
 import MegaDropdown from "@/components/ui/MegaDropdown.vue";
@@ -72,6 +73,12 @@ import dd3 from "../../assets/images/dd3.png";
 import dd4 from "../../assets/images/dd4.png";
 import dd5 from "../../assets/images/dd5.png";
 
+import darkBg from "../../assets/images/nav_bg.png"
+import lightBg from "../../assets/images/nav-white.png"
+
+const bgImage = computed(() => {
+  return props.iconColor === "white" ? darkBg : lightBg
+})
 const router = useRouter();
 
 const activeMenu = ref(null);
@@ -83,6 +90,14 @@ function toggleMenu(menu) {
 function go(path) {
   router.push(path);
 }
+
+const props = defineProps({
+  iconColor: {
+    type: String,
+    default: 'black' // or 'white'
+  },
+  bgImage: String,
+});
 
 const foodItems = [
   {

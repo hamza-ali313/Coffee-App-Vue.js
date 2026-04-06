@@ -28,7 +28,7 @@
 <script setup>
 import { computed } from "vue";
 import CalendarCell from "./CalendarCell.vue";
-import pngwing from "../../assets/images/pngwing.png";
+import pngwing from "../../../assets/images/pngwing.png";
 
 const props = defineProps({
     month: Number,

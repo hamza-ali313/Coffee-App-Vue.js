@@ -1,5 +1,5 @@
 <template>
-  <button class="menu-btn" @click="$emit('click', $event)">
+  <button class="menu-btn" v-bind="$attrs" @click="handleClick">
     <i v-if="icon" :class="icon"></i>
     <span>{{ btntxt }}</span>
   </button>
@@ -17,7 +17,11 @@ defineProps({
   },
 });
 
-defineEmits(["click"]);
+const emit = defineEmits(["click"]);
+
+function handleClick(e) {
+  emit("click", e);
+}
 </script>
 
 <style scoped>

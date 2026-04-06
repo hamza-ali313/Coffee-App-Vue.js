@@ -14,8 +14,8 @@
 </template>
 
 <script setup>
-import AccordianItem from '../ui/AccordianItem.vue'
-import leafImg from '../../assets/images/leaf.png'
+import AccordianItem from './AccordianItem.vue'
+import leafImg from '../../../assets/images/leaf.png'
 const faqs = [
     {
         question: "What happens if I arrive late?",

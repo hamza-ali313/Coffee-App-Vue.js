@@ -4,7 +4,7 @@
         <div class="faq-header d-flex justify-content-between align-items-center rounded-pill px-4 py-3" @click="toggle"
             style="cursor:pointer">
             <h2 class="d-flex align-items-center gap-2 ">
-                <img src="../../assets/images/accleaf.png" class="leaf" />
+                <img src="../../../assets/images/accleaf.png" class="leaf" />
 
                 {{ question }}
             </h2>
@@ -23,9 +23,9 @@
 <script setup>
 import { ref } from "vue"
 
-import plusIcon from "../../assets/images/plusacc.png"
-import minusIcon from "../../assets/images/minusacc.png"
-// import inputbg from "../../assets/images/inputbg.png"
+import plusIcon from "../../../assets/images/plusacc.png"
+import minusIcon from "../../../assets/images/minusacc.png"
+// import inputbg from "../../../assets/images/inputbg.png"
 
 const props = defineProps({
     question: String,
@@ -41,7 +41,7 @@ const toggle = () => {
 
 <style scoped lang="scss">
 .faq-item {
-    background-image: url('../../assets/images/inputbg.png');
+    background-image: url('../../../assets/images/inputbg.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;

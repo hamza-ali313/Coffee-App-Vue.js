@@ -127,21 +127,6 @@ const filteredEvents = computed(() => {
     }
 }
 
-.filtersec.sec_heading p {
-    width: 45%;
-}
-
-.filtersec.sec_heading h2::after {
-    content: "";
-    position: absolute;
-    background-image: url(/src/assets/images/rightleaf.png);
-    background-repeat: no-repeat;
-    top: -27px;
-    right: -63px;
-    background-size: contain;
-    width: 65px;
-    height: 70px;
-}
 
 .filter-bar {
     display: flex;

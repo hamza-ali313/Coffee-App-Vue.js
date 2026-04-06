@@ -20,7 +20,7 @@
       <!-- Main Footer -->
       <div class="row mt-5">
         <!-- Left -->
-        <div class="col-md-8 text-start">
+        <div class="col-lg-8 col-md-8  col-sm-12 text-md-start text-center">
           <img src="@/assets/images/Footlogo.png" class="logo mb-3" />
 
           <p class="desc">
@@ -29,7 +29,7 @@
           </p>
 
           <div class="social mt-3">
-            <ul class="list-unstyled d-flex gap-2">
+            <ul class="list-unstyled d-flex justify-content-md-start justify-content-center gap-2">
               <li>
                 <a href="#" target="_blank">
                   <i class="bi bi-facebook"></i>
@@ -50,7 +50,7 @@
         </div>
 
         <!-- Explore -->
-        <div class="col-md-2 text-start">
+        <div class="col-6 col-lg-2 col-md-2 col-sm-6 text-md-start ">
           <h5>Working</h5>
           <ul class="">
             <li>
@@ -77,7 +77,7 @@
         </div>
 
         <!-- Quick Links -->
-        <div class="col-md-2 text-start">
+        <div class="col-6 col-lg-2 col-md-2 col-sm-6 text-md-start ">
           <h5>QUICK LINKS</h5>
           <ul class="">
             <li>
@@ -115,7 +115,7 @@
       </div>
 
       <!-- Bottom -->
-      <div class="footer-bottom d-flex justify-content-between mt-4 pt-3">
+      <div class="footer-bottom d-lg-flex d-sm-block justify-content-between mt-4 pt-3 text-md-start text-center">
         <p>© 2026 Dee Café. Made with care for our community</p>
         <div>
           <span>Privacy Policy</span>

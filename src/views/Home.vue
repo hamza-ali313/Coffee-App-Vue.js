@@ -1,15 +1,17 @@
 <template>
-  <HomeBanner />
-  <FoodsSlider />
-  <WhatsonSlider />
-  <OurStory />
-  <OurLocal />
-  <Gallery />
-  <TestimonialSlider />
-  <SmallTestimonialSlider />
-  <Visitus />
- 
-  <Footer :hasBg="true" />
+  <div class="bg_pink">
+    <HomeBanner />
+    <FoodsSlider />
+    <WhatsonSlider />
+    <OurStory />
+    <OurLocal />
+    <Gallery />
+    <TestimonialSlider />
+    <SmallTestimonialSlider />
+    <Visitus />
+
+    <Footer :hasBg="true" />
+  </div>
 </template>
 
 <script setup>
@@ -23,6 +25,6 @@ import TestimonialSlider from "../components/layouts/TestimonialSlider.vue";
 import SmallTestimonialSlider from "../components/layouts/SmallTestimonialSlider.vue";
 import Visitus from "../components/layouts/Visitus.vue";
 import Footer from "../components/layouts/Footer.vue";
-import CalenderWrapper from "../components/layouts/CalenderWrapper.vue";
+import CalenderWrapper from "../components/layouts/calender/CalenderWrapper.vue";
 import FilteredEventSection from "../components/layouts/FilteredEventSection.vue";
 </script>

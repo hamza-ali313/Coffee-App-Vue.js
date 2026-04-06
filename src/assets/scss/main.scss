@@ -117,11 +117,6 @@ li {
   list-style-type: none;
 }
 
-.h-icons i {
-  color: $white;
-  font-size: 12px;
-}
-
 .order-btn {
   @include order-btn;
   font-size: 52px;
@@ -204,6 +199,29 @@ li {
   }
 }
 
+.filtersec.sec_heading p {
+  width: 45%;
+}
+
+.filtersec.sec_heading h2::after,
+.lefthl.sec_heading h2::before {
+  content: "";
+  position: absolute;
+  background-image: url(/src/assets/images/rightleaf.png);
+  background-repeat: no-repeat;
+  top: -27px;
+  right: -63px;
+  background-size: contain;
+  width: 65px;
+  height: 70px;
+}
+
+.lefthl.sec_heading h2::before {
+  background-image: url(/src/assets/images/leaf.png);
+  top: -30px;
+  left: -69px;
+}
+
 // ==========================================
 // COMMON PARAGRAPH STYLES
 // ==========================================
@@ -227,6 +245,14 @@ h6 {
 // ==========================================
 // FOOD SLIDER STYLES
 // ==========================================
+
+.foodcard-box {
+  width: 100%;
+
+  img {
+    width: 100%;
+  }
+}
 
 .slider {
   margin-top: 50px;
@@ -523,8 +549,8 @@ h6 {
 // ==========================================
 
 .testimonial-card {
-  background: $white;
-  border-radius: 16px;
+  background: #fff;
+  border-radius: 15px;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 
   img {
@@ -582,11 +608,12 @@ h6 {
     @include font-dramaturg-sc;
     font-size: 52px;
     line-height: 31px;
+    padding: 10px 50px 0 0px;
   }
 }
 
 // Small Testimonial Card
-.testimonial-card {
+.small_testimonial-card {
   background: #ffffff99;
   border-radius: 7px;
   border: 1px solid #00000014;
@@ -907,3 +934,135 @@ input:-webkit-autofill:active {
   /* This changes the text color if the browser tries to make it black */
   -webkit-text-fill-color: #333 !important;
 }
+
+
+// ==========================================
+// CARD BOX
+// ==========================================
+
+.card-box {
+  background: #f3ebe4;
+  border: 1px solid #e9d3c4;
+  border-radius: 4px;
+
+  .card-title {
+    font-weight: 600;
+    font-size: 17px;
+    letter-spacing: 1px;
+    color: #5c4a3d;
+    padding: 18px;
+    text-transform: uppercase;
+    background: #f3ebe4;
+  }
+
+  .card-body {
+    background-color: #fff;
+    padding: 18px;
+  }
+}
+
+
+// Dish Details Page css 
+
+.bg-badge {
+  background: #f3e7dc;
+
+  &:nth-child(odd) {
+    background-color: #f3e7dc;
+    border: 1px solid #e2b689;
+  }
+
+  &:nth-child(even) {
+    background-color: #f3f1e6;
+    border: 1px solid $theme_g;
+  }
+}
+
+span.badge img {
+  width: 15px;
+}
+
+button {
+  border: none;
+}
+
+
+// Form Styles 
+
+label {
+  font-size: 13px;
+  margin-bottom: 6px;
+  display: block;
+}
+
+label {
+  font-family: $titillium-semibold;
+  font-size: 15px;
+}
+
+.input-box {
+  position: relative;
+
+  input,
+  textarea {
+    width: 100%;
+    padding: 12px 40px 12px 12px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    background: #fff;
+    outline: none;
+  }
+
+  textarea {
+    padding: 12px;
+    resize: none;
+  }
+
+  i {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #bbb;
+  }
+}
+
+// $breakpoint-sm: 576px;
+// $breakpoint-md: 768px;  // tablets
+// $breakpoint-lg: 992px;  // small laptops
+// $breakpoint-xl: 1200px;
+// $breakpoint-xxl: 1400px;
+
+// Responsive Styles
+/* Tablet */
+@media (min-width: 768px) and (max-width: 991px) {
+  .hero-section {
+    padding: 60px 20px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 575px) {
+  .ht {
+    width: unset;
+  }
+
+  .footer-section .desc {
+    max-width: unset;
+  }
+
+  .nav-link {
+    width: unset;
+  }
+
+  .offcanvas.offcanvas-start {
+    transform: unset;
+  }
+
+  a.mobile-basket img {
+    width: 68px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 992px) {}

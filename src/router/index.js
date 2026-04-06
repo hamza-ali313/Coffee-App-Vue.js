@@ -4,6 +4,10 @@ import ItemDetails from '@/views/ItemDetails.vue'
 import OrderAheadPage from '@/views/OrderAheadPage.vue'
 import WhatsOnEvent from '@/views/WhatsOnEvent.vue'
 import FoodsDrinks from '@/views/FoodsDrinks.vue'
+import FAQPage from '@/views/FAQPage.vue'
+import VisitusPage from '@/views/VisitusPage.vue'
+import ContactPage from '@/views/ContactPage.vue'
+import CheckoutPage from '@/views/CheckoutPage.vue'
 
 const routes = [
   { path: '/', component: Home },
@@ -11,6 +15,10 @@ const routes = [
   { path: '/orderahead', component: OrderAheadPage },
   { path: '/whatsonevent', component: WhatsOnEvent },
   { path: '/FoodsDrinks', component: FoodsDrinks },
+  { path: '/faqs', component: FAQPage },
+  { path: '/locations', component: VisitusPage },
+  { path: '/contactus', component: ContactPage },
+  { path: '/checkout', component: CheckoutPage },
 ]
 
 const router = createRouter({

@@ -1,5 +1,5 @@
 <template>
-  <div class="card testimonial-card h-100 shadow-sm">
+  <div class="card testimonial-card h-100 shadow-sm position-relative">
     <div class="row g-3 align-items-start text-start p-3">
       <!-- Image -->
       <div class="col-12 col-lg-4 col-md-4">
@@ -32,13 +32,13 @@
                 </div>
               </div>
 
-              <span class="ms-2 text-muted">({{ data.rating }})</span>
+              <span class="ms-2 ">({{ data.rating }})</span>
             </div>
           </span>
         </div>
 
         <!-- Text -->
-        <p class="mb-2 text-muted txt">
+        <p class="mb-2 txt">
           {{ data.text }}
         </p>
 
@@ -62,3 +62,18 @@ defineProps({
   data: Object,
 });
 </script>
+
+<style lang="scss" scoped>
+.testimonial-card::after {
+  content: "";
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url(/src/assets/images/quote.png);
+  top: 0;
+  right: 110px;
+  width: 150px;
+  height: 150px;
+
+}
+</style>

@@ -1,17 +1,19 @@
 <template>
-    <div class="card mt-3 addons-card">
-        <h6 class="mb-3 card-title">Optional Add-ons</h6>
+    <div class="card-box mt-3 addons-card">
+        <h6 class="card-title">Optional Add-ons</h6>
 
-        <div v-for="(item, i) in items" :key="i" class="addon-item" :class="{ active: item.selected }"
-            @click="toggleAddon(item)">
-            <div class="left">
-                <img v-if="item.image" :src="item.image" class="addon-img" />
-                <span class="name">{{ item.name }}</span>
-            </div>
+        <div class="card-body">
+            <div v-for="(item, i) in items" :key="i" class="addon-item" :class="{ active: item.selected }"
+                @click="toggleAddon(item)">
+                <div class="left">
+                    <img v-if="item.image" :src="item.image" class="addon-img" />
+                    <span class="name">{{ item.name }}</span>
+                </div>
 
-            <div class="right">
-                <span class="price">£{{ item.price }}</span>
-                <div class="check"><i v-if="item.selected" class="bi bi-check-lg"></i></div>
+                <div class="right">
+                    <span class="price">£{{ item.price }}</span>
+                    <div class="check"><i v-if="item.selected" class="bi bi-check-lg"></i></div>
+                </div>
             </div>
         </div>
     </div>

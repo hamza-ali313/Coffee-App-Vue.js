@@ -49,7 +49,7 @@
 @mixin hero-title {
   @include font-btn;
   font-size: $font-size-hero-title;
-  line-height: $font-size-hero-title-line-height;
+  line-height: 60px;
 }
 
 @mixin hero-subtitle {

@@ -1,5 +1,5 @@
 <template>
-  <div class="testimonial-card p-4 h-100">
+  <div class="small_testimonial-card testimonial-card p-4 h-100">
     <!-- Top (Image + Name + Rating) -->
     <div class="d-flex align-items-center mb-3">
       <img :src="data.image" class="user-img me-3" />

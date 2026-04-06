@@ -17,7 +17,7 @@
 
         <!-- MENU SECTIONS -->
         <div v-for="section in filteredSections" :key="section.title" class="mb-5">
-            <div v-if="section.filteredCategories.length" class=" sec_heading mb-3 py-4 px-3">
+            <div v-if="section.filteredCategories.length" class="lefthl sec_heading mb-3 py-4 px-3">
                 <h2 class="position-relative d-inline">
                     {{ section.title }}
                 </h2>
@@ -475,17 +475,5 @@ const filteredSections = computed(() => {
 .sec_heading p {
     width: 45%;
     margin: unset;
-}
-
-.sec_heading h2::before {
-    content: "";
-    position: absolute;
-    background-image: url(/src/assets/images/leaf.png);
-    background-repeat: no-repeat;
-    top: -30px;
-    left: -69px;
-    background-size: contain;
-    width: 65px;
-    height: 70px;
 }
 </style>

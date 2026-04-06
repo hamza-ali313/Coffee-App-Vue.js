@@ -1,5 +1,5 @@
 <template>
-    <div class="card-box">
+    <div class="foodcard-box">
         <img :src="image" />
 
         <div class="overlay">

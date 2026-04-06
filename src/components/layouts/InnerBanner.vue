@@ -1,25 +1,25 @@
 <template>
-    <section class="hero-section">
-        <Header />
+    <section class="hero-section" :style="{ backgroundImage: `url(${bgImage})` }">
+        <Header :iconColor="iconColor" />
+
         <div class="container">
             <div class="row">
-                <!-- LEFT CONTENT -->
                 <div class="col-lg-6 text-white hero-content">
-                    <h1 class="hero-title">
-                        What's on at dee cafe!
-                    </h1>
 
-                    <p class="hero-subtitle">thoughtfully happening at dee</p>
+                    <h1 class="hero-title">{{ title }}</h1>
 
-                    <p class="hero-text">
-                        A place for connection,creativity and community
-                    </p>
+                    <p class="hero-subtitle">{{ subtitle }}</p>
 
-                    <!-- BUTTONS -->
+                    <p class="hero-text">{{ description }}</p>
+
                     <div class="d-flex gap-3 mt-4">
-                        <GButton btntxt="Explore What's On" />
-                        <OButton btntxt="Get Tickets" />
+
+                        <GButton v-if="primaryBtn" :btntxt="primaryBtn.text" @click="$emit('primary-click')" />
+
+                        <OButton v-if="secondaryBtn" :btntxt="secondaryBtn.text" @click="$emit('secondary-click')" />
+
                     </div>
+
                 </div>
             </div>
         </div>
@@ -30,12 +30,24 @@
 import Header from "./Header.vue";
 import GButton from "../ui/GButton.vue";
 import OButton from "../ui/OButton.vue";
+
+defineProps({
+    title: String,
+    subtitle: String,
+    description: String,
+    bgImage: String,
+    iconColor: String,
+    primaryBtn: Object,
+    secondaryBtn: Object
+})
+
+defineEmits(["primary-click", "secondary-click"])
 </script>
 
 <style scoped lang="scss">
 // HomeBanner specific styles - main styles in global SCSS
 .hero-section {
-    background-image: url(../../assets//images/inbanevent.png);
+    // background-image: url(../../assets/images/inbanevent.png);
     height: 720px;
 }
 
