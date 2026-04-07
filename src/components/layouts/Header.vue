@@ -141,9 +141,7 @@ const foodItems = [
 
 .router-link-active {
   background-image: url('@/assets/images/gnav.png');
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
+  @include bg_no_repeat_contain_center;
   color: #fff;
   padding: 10px 0;
 }

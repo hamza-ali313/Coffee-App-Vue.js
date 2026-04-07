@@ -10,7 +10,7 @@
 
 // 3. Import mixins
 @import "mixins";
-
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
 // 4. Import Bootstrap
 @import "bootstrap/scss/bootstrap";
 @import "bootstrap-icons/font/bootstrap-icons.css";
@@ -129,9 +129,7 @@ li {
 
 .hero-section {
   background-image: $bg-hero;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  @include bg_no_repeat_cover_center;
   height: 1020px;
 }
 
@@ -153,8 +151,7 @@ li {
     width: 70px;
     height: 60px;
     background-image: $bg-leaf;
-    background-repeat: no-repeat;
-    background-size: contain;
+    @include bg_no_repeat_contain_center;
   }
 }
 
@@ -190,7 +187,7 @@ li {
 
   p {
     font-weight: 400;
-    width: 30%;
+    width: 45%;
     margin: 0 auto;
   }
 
@@ -205,13 +202,10 @@ li {
 
 .filtersec.sec_heading h2::after,
 .lefthl.sec_heading h2::before {
-  content: "";
-  position: absolute;
+  @include content_absolute_no_repeat_contain;
   background-image: url(/src/assets/images/rightleaf.png);
-  background-repeat: no-repeat;
   top: -27px;
   right: -63px;
-  background-size: contain;
   width: 65px;
   height: 70px;
 }
@@ -252,6 +246,24 @@ h6 {
   img {
     width: 100%;
   }
+
+  h5 {
+    font-size: 20px;
+    text-transform: uppercase;
+    font-family: "Cinzel", serif;
+    margin: 0;
+  }
+
+  p {
+    text-transform: uppercase;
+    color: #b8b8b8;
+    font-size: 11px;
+  }
+
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
 }
 
 .slider {
@@ -274,14 +286,10 @@ h6 {
     bottom: 0;
     width: 100%;
     padding: 20px;
-    color: $white;
+    color: #fff;
     text-align: start;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
-
-    h5 {
-      font-weight: bold;
-      text-transform: uppercase;
-    }
+    background: linear-gradient(to top, rgb(0 0 0), #00000091);
+    border-radius: 0 0 12px 12px;
 
     span {
       font-size: 12px;
@@ -316,39 +324,40 @@ h6 {
 // ==========================================
 
 .our_story {
-  &.text-start {
-    background-image: $bg-our-story;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    padding: 340px 20px 340px 200px;
+  background-image: $bg-our-story;
+  @include bg_no_repeat_cover_center;
+  padding: 354px 20px 400px 200px;
+  position: relative;
+  z-index: 3;
 
-    h2,
-    p {
-      color: $white;
-    }
 
-    p {
-      margin: 0 0 20px 0;
-    }
+  h2,
+  p {
+    color: $white;
   }
 
-  &.text-center {
-    background-image: $bg-local-community;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 620px;
-    padding: 50px 0 0 0;
-
-    p {
-      width: 40%;
-    }
+  p {
+    margin: 0 0 20px 0;
+    width: 40%;
   }
 
   .menu-btn {
-    padding: 21px 15px;
+    padding: 28px 21px !important;
   }
+}
+
+
+// ==========================================
+// GALLERY STYLES
+// ==========================================
+.our_local_comunity {
+  background-image: $bg-local-community;
+  @include bg_no_repeat_cover_center;
+  height: 1170px;
+  padding: 220px 0 0 0;
+  position: relative;
+  z-index: 2;
+  margin: -100px 0 0 0;
 }
 
 // ==========================================
@@ -387,14 +396,16 @@ h6 {
   padding: 169px 20px 230px 100px;
   z-index: 1;
 
+  h6 {
+    font-size: 18px;
+  }
+
   &::before {
     content: "";
     position: absolute;
     inset: 0;
     background-image: $bg-visitus;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    @include bg_no_repeat_cover_center;
     z-index: 1;
   }
 
@@ -463,6 +474,7 @@ h6 {
 // EVENT CARD STYLES
 // ==========================================
 
+
 .event-card {
   background: $white;
   border-radius: 10px 10px 2px 2px;
@@ -473,7 +485,7 @@ h6 {
 
     img {
       width: 100%;
-      height: 220px;
+      height: 270px;
       object-fit: cover;
     }
 
@@ -483,9 +495,9 @@ h6 {
       left: 10px;
       background: $white;
       padding: 6px 10px;
-      border-radius: 6px;
+      border-radius: 4px;
       text-align: center;
-      font-weight: bold;
+      font-weight: 500;
       @include font-dramaturg-sc;
       color: $theme_o;
       font-size: 39px;
@@ -494,7 +506,16 @@ h6 {
       span {
         color: $theme_g;
         font-size: 49px;
+        font-weight: 700;
       }
+
+
+    }
+
+    h5 {
+      font-family: 'TitilliumWeb-Regular';
+      margin: 0 0 20px 0;
+      font-size: 19px;
     }
 
     .tag {
@@ -520,11 +541,15 @@ h6 {
   .content {
     padding: 45px 10px;
     background-image: $bg-wavy;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    @include bg_no_repeat_cover_center;
     margin: -20px 0 0 0;
     position: relative;
+
+    p.desc {
+      background: #faf3ec;
+      padding: 10px 10px;
+      font-size: 12px;
+    }
 
   }
 
@@ -533,7 +558,7 @@ h6 {
     text-align: justify;
 
     p {
-      margin: 0;
+      margin: 6px 0 5px 0;
       line-height: 17px;
     }
   }
@@ -542,6 +567,14 @@ h6 {
     padding: 11px 39px;
     font-size: 38px;
   }
+}
+
+// ==========================================
+// EVENT GRID STYLES
+// ==========================================
+.event_grid {
+  width: 90%;
+  margin: 0 auto;
 }
 
 // ==========================================
@@ -648,9 +681,7 @@ h6 {
 .footer-section {
   @include section-padding;
   background-image: $bg-footer;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  @include bg_no_repeat_cover_center;
   font-family: sans-serif;
 
   &.bg_green {
@@ -665,9 +696,7 @@ h6 {
     .input-wrapper {
       border: none;
       background: $bg-input;
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: contain;
+      @include bg_no_repeat_contain_center;
       outline: none;
       width: 100%;
       color: #333;
@@ -709,9 +738,7 @@ h6 {
 
     .submit-btn {
       background-image: $bg-obtnbg !important;
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: cover;
+      @include bg_no_repeat_cover_center;
       padding: 17px 51px;
       color: $white;
       position: absolute;
@@ -755,9 +782,7 @@ h6 {
     border: 1px solid $white;
     height: 30px;
     width: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flex_center_center;
     border-radius: 30px;
     background: $white;
     color: $theme_o;
@@ -883,9 +908,7 @@ h6 {
 
 .bg_pink {
   background-image: url('../images/Orderahead_bg.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  @include bg_no_repeat_cover_center
 }
 
 
@@ -898,9 +921,7 @@ h6 {
   cursor: pointer;
   padding: 6px 14px;
   transition: all 0.25s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flex_center_center;
   width: 143px;
   height: 42px;
 
@@ -915,9 +936,7 @@ h6 {
 
   &.active {
     background-image: url('@/assets/images/onav.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    @include bg_no_repeat_cover_center;
     color: #fff;
     font-weight: 500;
   }
@@ -1062,6 +1081,131 @@ label {
   a.mobile-basket img {
     width: 68px;
   }
+
+  // Home Page Banner 
+  .hero-section {
+    background-image: url(/src/assets/images//mobilehomebanner-bg.png) !important;
+    height: 1020px;
+  }
+
+  .hero-content {
+    height: 843px;
+    display: block;
+  }
+
+  .mobile-logo img {
+    width: 140px;
+  }
+
+  .hero-title {
+    font-size: 80px;
+    text-align: center !important;
+    line-height: 39px;
+  }
+
+  .hero-subtitle {
+    font-size: 25px;
+    line-height: 25px;
+    text-align: center !important;
+  }
+
+  .hero-text {
+    width: 100%;
+    text-align: center !important;
+  }
+
+  .o_btn.menu-btn {
+    padding: 10px 29px !important;
+  }
+
+  .g_btn.menu-btn {
+    padding: 14px 22px !important;
+  }
+
+  .menu-btn {
+    font-size: 46px;
+  }
+
+  .menu-btn i {
+    font-size: 18px;
+  }
+
+  .slider.foodcard-slider {
+    margin: 0 auto;
+    width: 380px;
+
+    .nav-btn.left {
+      left: -10px;
+    }
+
+    .nav-btn.right {
+      right: 0px;
+    }
+
+  }
+
+  .sec_heading p {
+    width: 100% !important;
+  }
+
+  .our_local_comunity {
+    padding: 110px 0 0 0;
+    height: 750px;
+
+  }
+
+  .our_story {
+    background-image: url(/src/assets/images/mobilestorybg.png);
+    padding: 164px 20px 430px 40px;
+  }
+
+  .footer-section .larg_f {
+    font-size: 42px;
+  }
+
+  .sec_heading h2 {
+    font-size: 118px;
+  }
+
+  .gallery-item {
+
+    &.short {
+      height: 200px !important;
+    }
+
+    &.tall {
+      height: 270px !important;
+    }
+  }
+
+  .sec_heading h3 {
+    width: 100% !important;
+  }
+
+  .move-up {
+    margin: -70px 0 0 0 !important;
+  }
+
+  .visitus-sec::before {
+    background-image: url(/src/assets/images/mobilevisitusbg.png) !important;
+  }
+
+  .visitus-sec {
+    padding: 49px 20px 560px 10px;
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+
 }
 
 /* Desktop */

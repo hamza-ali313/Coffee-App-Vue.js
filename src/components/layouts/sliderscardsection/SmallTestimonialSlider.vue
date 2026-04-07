@@ -31,8 +31,8 @@
 import { Swiper, SwiperSlide } from "swiper/vue";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
-import SmallTestimonial from "../ui/SmallTestimonial.vue";
-import user from "../../assets/images/user.png";
+import SmallTestimonial from "./SmallTestimonial.vue";
+import user from "../../../assets/images/user.png";
 // DATA
 const testimonials = [
   {

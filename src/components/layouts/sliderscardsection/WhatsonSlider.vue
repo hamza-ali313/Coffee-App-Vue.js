@@ -19,17 +19,21 @@
     <!-- Right Arrow -->
     <div class="nav-btn right" @click="slideNext"><img :src="nxt" /></div>
   </div>
+  <div class="text-center my-5">
+    <GButton btntxt="explore what's on" />
+  </div>
 </template>
 <script setup>
 import { ref } from "vue";
 import { Swiper, SwiperSlide } from "swiper/vue";
-import SecHeading from "../ui/SecHeading.vue";
+import SecHeading from "../../ui/SecHeading.vue";
+import GButton from "../../ui/GButton.vue";
 import "swiper/css";
-import EventCard from "../ui/EventCard.vue";
-import img1 from "@/assets/images/Fslid1.png";
-import img2 from "@/assets/images/Fslid2.png";
-import img3 from "@/assets/images/Fslid3.png";
-import img4 from "@/assets/images/Fslid4.png";
+import EventCard from "./EventCard.vue";
+import img1 from "@/assets/images/eve1.png";
+import img2 from "@/assets/images/eve2.png";
+import img3 from "@/assets/images/eve3.png";
+import img4 from "@/assets/images/eve4.png";
 import prev from "@/assets/images/prev.png";
 import nxt from "@/assets/images/nxt.png";
 import wavy from "@/assets/images/wavy.png";
@@ -52,7 +56,7 @@ function slidePrev() {
 const events = [
   {
     title: "Saturday Brunch Club",
-    desc: "Lorem ipsum dolor sit amet.",
+    desc: "Lorem ipsum dolor sit amet, consectetur adip-isicing elit, sed do eiusmod.",
     day: "24",
     month: "AUG",
     tag: "Social Nights",
@@ -62,7 +66,7 @@ const events = [
   },
   {
     title: "Coffee Tasting Evening",
-    desc: "Lorem ipsum dolor sit amet.",
+    desc: "Lorem ipsum dolor sit amet, consectetur adip-isicing elit, sed do eiusmod.",
     day: "08",
     month: "APR",
     tag: "Coffee Experiences",
@@ -72,7 +76,7 @@ const events = [
   },
   {
     title: "Local Art Showcase",
-    desc: "Lorem ipsum dolor sit amet.",
+    desc: "Lorem ipsum dolor sit amet, consectetur adip-isicing elit, sed do eiusmod.",
     day: "15",
     month: "JUL",
     tag: "Art",
@@ -82,7 +86,7 @@ const events = [
   },
   {
     title: "Morning Coffee & Calm",
-    desc: "Lorem ipsum dolor sit amet.",
+    desc: "Lorem ipsum dolor sit amet, consectetur adip-isicing elit, sed do eiusmod.",
     day: "23",
     month: "MAR",
     tag: "Family",

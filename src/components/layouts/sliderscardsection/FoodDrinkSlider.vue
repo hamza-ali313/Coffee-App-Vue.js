@@ -30,7 +30,7 @@ import { ref } from "vue"
 import { Swiper, SwiperSlide } from "swiper/vue"
 import "swiper/css"
 
-import FoodDrinkCard from "../ui/FoodDrinkCard.vue"
+import FoodDrinkCard from "./FoodDrinkCard.vue"
 
 import prev from "@/assets/images/prev.png"
 import nxt from "@/assets/images/nxt.png"

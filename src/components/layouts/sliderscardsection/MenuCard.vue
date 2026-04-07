@@ -37,9 +37,9 @@
 </template>
 
 <script setup>
-import seasonal from '../../assets/images/seasonal.png'
-import spice from '../../assets/images/spice.png'
-import vege from '../../assets/images/vege.png'
+import seasonal from '../../../assets/images/seasonal.png'
+import spice from '../../../assets/images/spice.png'
+import vege from '../../../assets/images/vege.png'
 
 defineProps({
     data: Object

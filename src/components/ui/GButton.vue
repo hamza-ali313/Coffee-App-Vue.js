@@ -1,5 +1,5 @@
 <template>
-  <button class="menu-btn" v-bind="$attrs" @click="handleClick">
+  <button class="g_btn menu-btn" v-bind="$attrs" @click="handleClick">
     <i v-if="icon" :class="icon"></i>
     <span>{{ btntxt }}</span>
   </button>
@@ -25,7 +25,7 @@ function handleClick(e) {
 </script>
 
 <style scoped>
-.menu-btn {
+.g_btn.menu-btn {
   background-image: url("@/assets/images/greenGbtn.png");
   padding: 18px 30px;
 }

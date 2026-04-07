@@ -42,7 +42,7 @@ import pair4 from "@/assets/images/pair4.png"
 
 import { Navigation, Pagination } from "swiper/modules"
 const modules = [Navigation, Pagination]
-import PairsWithCard from "../ui/PairsWithCard.vue"
+import PairsWithCard from "./PairsWithCard.vue"
 
 const visibleSlides = ref(null)
 const swiperInstance = ref(null)

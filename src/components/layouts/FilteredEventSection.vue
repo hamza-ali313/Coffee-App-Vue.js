@@ -33,7 +33,7 @@
 
 <script setup>
 import { ref, computed } from "vue";
-import EventCard from "../ui/EventCard.vue";
+import EventCard from "../layouts/sliderscardsection/EventCard.vue";
 import img1 from "@/assets/images/Fslid1.png";
 import img2 from "@/assets/images/Fslid2.png";
 import img3 from "@/assets/images/Fslid3.png";

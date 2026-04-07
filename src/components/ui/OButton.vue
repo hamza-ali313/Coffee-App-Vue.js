@@ -1,5 +1,5 @@
 <template>
-  <button class="menu-btn" @click="$emit('click', $event)">
+  <button class="o_btn menu-btn" @click="$emit('click', $event)">
     <i v-if="icon" :class="icon"></i>
     <span>{{ btntxt }}</span>
   </button>
@@ -21,7 +21,7 @@ defineEmits(["click"]);
 </script>
 
 <style scoped>
-.menu-btn {
+.o_btn.menu-btn {
   background-image: url("@/assets/images/Obtnbg.png");
   padding: 21px 52px;
 }

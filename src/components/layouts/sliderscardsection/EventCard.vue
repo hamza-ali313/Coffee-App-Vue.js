@@ -21,7 +21,7 @@
 
     <!-- Content -->
     <div class="content">
-      <p>{{ desc }}</p>
+      <p class="desc">{{ desc }}</p>
 
       <div class="info">
         <p>
@@ -29,10 +29,7 @@
           <strong>{{ time }}</strong>
         </p>
         <p>
-          <i
-            class="bi bi-person-fill fs-5"
-            style="color: #919b4c; padding: 0 10px 0 0"
-          ></i>
+          <i class="bi bi-person-fill fs-5" style="color: #919b4c; padding: 0 10px 0 0"></i>
           <strong>{{ spots }}</strong> Spot Left
         </p>
       </div>
@@ -46,8 +43,8 @@
 </template>
 
 <script setup>
-import OButton from "../ui/OButton.vue";
-import GButton from "../ui/GButton.vue";
+import OButton from "../../ui/OButton.vue";
+import GButton from "../../ui/GButton.vue";
 
 defineProps({
   title: {

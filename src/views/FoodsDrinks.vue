@@ -12,7 +12,7 @@
 
 <script setup>
 import Footer from "../components/layouts/Footer.vue";
-import MenuSection from "../components/layouts/MenuSection.vue";
+import MenuSection from "../components/layouts/sliderscardsection/MenuSection.vue";
 import InnerBanner from "../components/layouts/InnerBanner.vue";
 
 import eventBanner from "@/assets/images/inbanevent.png"

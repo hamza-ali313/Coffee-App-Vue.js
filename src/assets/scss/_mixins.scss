@@ -63,6 +63,19 @@
   background-position: center;
 }
 
+@mixin content_absolute_no_repeat_contain {
+  content: "";
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+@mixin flex_center_center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 // ==========================================
 // TYPOGRAPHY MIXINS
 // ==========================================

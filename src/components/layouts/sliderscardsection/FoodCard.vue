@@ -5,7 +5,9 @@
         <div class="overlay">
             <h5>{{ title }}</h5>
             <p>{{ desc }}</p>
-            <span>{{ cta }}</span>
+            <router-link to="/orderahead">
+                {{ cta }}
+            </router-link>
         </div>
     </div>
 </template>

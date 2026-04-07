@@ -57,7 +57,7 @@
 </template>
 
 <script setup>
-import google from "../../assets/images/google.png";
+import google from "../../../assets/images/google.png";
 defineProps({
   data: Object,
 });

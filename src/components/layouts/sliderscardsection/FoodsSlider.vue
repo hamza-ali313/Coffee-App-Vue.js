@@ -2,7 +2,7 @@
   <SecHeading main_h="Food And Drink"
     description="Our menu is thoughtfully made, seasonal and always evolving. We care for quality ingredients, local sourcing, and delight in flavour."
     :showLeaf="false" />
-  <div class="slider container position-relative">
+  <div class="slider foodcard-slider container position-relative">
     <!-- Left Arrow -->
     <div class="nav-btn left" @click="slidePrev"><img :src="prev" /></div>
 
@@ -31,15 +31,15 @@ import { ref } from "vue";
 // Swiper
 import { Swiper, SwiperSlide } from "swiper/vue";
 import "swiper/css";
-import SecHeading from "../ui/SecHeading.vue";
+import SecHeading from "../../ui/SecHeading.vue";
 import Fslid1 from "@/assets/images/Fslid1.png";
 import Fslid2 from "@/assets/images/Fslid2.png";
 import Fslid3 from "@/assets/images/Fslid3.png";
 import Fslid4 from "@/assets/images/Fslid4.png";
 import nxt from "@/assets/images/nxt.png";
 import prev from "@/assets/images/prev.png";
-import GButton from "../ui/GButton.vue";
-import FoodCard from "../ui/FoodCard.vue";
+import GButton from "../../ui/GButton.vue";
+import FoodCard from "./FoodCard.vue";
 
 const swiperInstance = ref(null);
 
@@ -58,41 +58,41 @@ function slidePrev() {
 const items = [
   {
     title: "Coffee & Breakfast",
-    desc: "Specialty coffee brewed fresh.",
+    desc: "Specialty coffee, carefully sourced brewed for balance, clarity...",
     cta: "VIEW COFFEE",
     image: Fslid1,
   },
   {
     title: "Lunch & Brunch",
-    desc: "Fresh seasonal meals.",
+    desc: "Fresh, seasonal brunch dishes made to be enjoyed Taking a quiet moment.",
     cta: "VIEW BRUNCH",
     image: Fslid2,
   },
   {
     title: "Bakery & Sweets",
-    desc: "Delicious baked items.",
+    desc: "Simple, nourishing lunch plates that work just as well for a long catch-up as a quick.",
     cta: "VIEW LUNCH",
     image: Fslid3,
   },
   {
     title: "Seasonal Specials",
-    desc: "Fresh pastries & treats.",
+    desc: "Freshly baked pastries and small treats, made in-house or sourced.",
     cta: "VIEW BAKERY",
     image: Fslid4,
   },
   {
-    title: "Drinks",
-    desc: "Refreshing beverages.",
-    cta: "VIEW DRINKS",
-    image: Fslid3,
+    title: "Coffee & Breakfast",
+    desc: "Specialty coffee, carefully sourced brewed for balance, clarity...",
+    cta: "VIEW COFFEE",
+    image: Fslid1,
   },
 ];
 
 // Responsive
 const breakpoints = {
-  320: { slidesPerView: 1 },
-  768: { slidesPerView: 2 },
-  1024: { slidesPerView: 4 },
+  320: { slidesPerView: 1, loop: "true" },
+  768: { slidesPerView: 2, loop: "true" },
+  1024: { slidesPerView: 4, loop: "true" },
 };
 </script>
 

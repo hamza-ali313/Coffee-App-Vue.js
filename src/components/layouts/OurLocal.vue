@@ -1,5 +1,5 @@
 <template>
-  <div class="our_story">
+  <div class="our_local_comunity">
     <div class="container">
       <div class="sec_heading text-center">
         <h2>Our Local community</h2>
@@ -14,8 +14,9 @@
           Dee is a space to share, connect and get involved, whether you’re a regular, a
           neighbour, or just passing through.
         </p>
-
-        <OButton btntxt="learn more" />
+        <div class="mt-3">
+          <OButton btntxt="learn more" />
+        </div>
       </div>
     </div>
   </div>

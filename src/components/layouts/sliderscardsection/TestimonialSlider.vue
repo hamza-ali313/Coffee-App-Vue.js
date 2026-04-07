@@ -27,8 +27,8 @@ import { Swiper, SwiperSlide } from "swiper/vue";
 import "swiper/css";
 
 // Components
-import SecHeading from "../ui/SecHeading.vue";
-import TestimonialCard from "../ui/TestimonialCard.vue";
+import SecHeading from "../../ui/SecHeading.vue";
+import TestimonialCard from "./TestimonialCard.vue";
 // Images
 import TestiImg from "@/assets/images/TestiImg.png";
 import nxt from "@/assets/images/nxt.png";

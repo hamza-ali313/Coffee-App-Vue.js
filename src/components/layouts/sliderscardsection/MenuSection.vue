@@ -34,7 +34,7 @@
 
 <script setup>
 import { ref, computed } from "vue"
-import MenuSlider from "../layouts/MenuSlider.vue"
+import MenuSlider from "./MenuSlider.vue"
 
 const filters = ["All", "Vegan", "Vegetarian", "Gluten Free", "Kids"]
 

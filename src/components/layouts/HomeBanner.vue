@@ -1,6 +1,6 @@
 <template>
   <section class="hero-section">
-    <Header iconColor="white" />
+    <MobileHeader iconColor="white" />
     <div class="container">
       <div class="row">
         <!-- LEFT CONTENT -->
@@ -18,7 +18,7 @@
           </p>
 
           <!-- BUTTONS -->
-          <div class="d-flex gap-3 mt-4">
+          <div class="d-flex justify-content-lg-start justify-content-center gap-3 mt-4">
             <GButton btntxt="See Our Menu" icon="bi bi-list-task" @click="Seemenu" />
             <OButton btntxt="Vist Us" icon="bi bi-geo-alt-fill" @click="visitus" />
           </div>

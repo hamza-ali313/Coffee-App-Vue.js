@@ -38,7 +38,7 @@ import nxt from "@/assets/images/nxt.png"
 
 import { Navigation, Pagination } from "swiper/modules"
 const modules = [Navigation, Pagination]
-import MenuCard from "../ui/MenuCard.vue"
+import MenuCard from "./MenuCard.vue"
 
 const visibleSlides = ref(null)
 const swiperInstance = ref(null)
