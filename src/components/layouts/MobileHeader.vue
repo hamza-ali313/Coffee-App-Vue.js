@@ -94,9 +94,12 @@
                         <li class="nav-item">
                             <router-link to="/" class="nav-link">Home</router-link>
                         </li>
-                        <li class="nav-item dropdown" @click="toggleMenu('food')">
-                            <router-link to="/FoodsDrinks" class="nav-link">Food & Drinks</router-link>
-                            <div v-if="activeMenu === 'food'">
+                        <li class="nav-item dropdown position-relative" @mouseenter="openMenu('food')">
+                            <router-link to="/FoodsDrinks" class="nav-link">
+                                Food & Drinks
+                            </router-link>
+
+                            <div v-if="activeMenu === 'food'" class="mega-wrapper">
                                 <MegaDropdown :items="foodItems" @navigate="go" />
                             </div>
                         </li>
@@ -134,7 +137,7 @@
 
 <script setup>
 
-import { ref, computed } from "vue";
+import { ref, computed, onMounted, onUnmounted } from "vue";
 import { useRouter } from "vue-router";
 import OButton from "../ui/OButton.vue";
 import MegaDropdown from "@/components/ui/MegaDropdown.vue";
@@ -166,12 +169,27 @@ const bgImage = computed(() => {
     return props.iconColor === "white" ? darkBg : lightBg
 })
 const router = useRouter();
+const activeMenu = ref(null)
 
-const activeMenu = ref(null);
-
-function toggleMenu(menu) {
-    activeMenu.value = activeMenu.value === menu ? null : menu;
+function openMenu(menu) {
+    activeMenu.value = menu
 }
+
+function handleClickOutside(e) {
+    const menu = document.querySelector(".dropdown")
+
+    if (menu && !menu.contains(e.target)) {
+        activeMenu.value = null
+    }
+}
+
+onMounted(() => {
+    document.addEventListener("click", handleClickOutside)
+})
+
+onUnmounted(() => {
+    document.removeEventListener("click", handleClickOutside)
+})
 
 function go(path) {
     router.push(path);
@@ -210,6 +228,10 @@ const foodItems = [
 
 <style lang="scss">
 /* Mobile Specific Styles */
+ul {
+    margin-top: revert;
+}
+
 .mobile-nav {
     .orange-blob {
 

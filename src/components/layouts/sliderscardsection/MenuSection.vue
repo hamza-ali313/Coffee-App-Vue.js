@@ -2,16 +2,16 @@
     <div class="menu-page container py-5">
 
         <!-- FILTERS -->
-        <div class="filters d-flex justify-content-center gap-3 mb-4">
+        <div class="filters d-flex justify-content-center gap-1 mb-4">
             <p v-for="f in filters" :key="f" class="filter-item" :class="{ active: activeFilter === f }"
                 @click="activeFilter = f">
                 {{ f }}
             </p>
 
             <!-- toggle -->
-            <p class="form-check form-switch ms-3">
+            <p class="form-check form-switch d-flex justify-content-center align-items-center gap-5">
+                <label class="form-check-label">Order Ahead :</label>
                 <input class="form-check-input" type="checkbox" v-model="orderAhead">
-                <label class="form-check-label">Order Ahead</label>
             </p>
         </div>
 
@@ -475,5 +475,34 @@ const filteredSections = computed(() => {
 .sec_heading p {
     width: 45%;
     margin: unset;
+}
+
+.form-check {
+    margin-bottom: none !important;
+    padding: none !important;
+}
+
+.form-check-input {
+    width: 67px !important;
+    height: 24px;
+    box-shadow: unset;
+    border-color: #e4632c;
+    background-color: #e4632c;
+
+    /* Orange ball (default) */
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='%23ffffff' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='8' cy='8' r='6'/%3e%3c/svg%3e");
+
+    background-position: right center;
+    transition: background-position .25s ease-in-out;
+}
+
+.form-check-input:checked {
+    background-color: #fff;
+
+    /* White ball after toggle */
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='%23e4632c' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='8' cy='8' r='6'/%3e%3c/svg%3e");
+
+
+    background-position: left center;
 }
 </style>
