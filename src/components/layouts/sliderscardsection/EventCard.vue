@@ -1,5 +1,5 @@
 <template>
-  <div class="event-card">
+  <div class="event-card" @click="goToDetails" style="cursor: pointer">
     <!-- Image -->
     <div class="img-box">
       <img :src="image" />
@@ -43,8 +43,15 @@
 </template>
 
 <script setup>
+import { useRouter } from "vue-router";
 import OButton from "../../ui/OButton.vue";
 import GButton from "../../ui/GButton.vue";
+
+const router = useRouter();
+
+const goToDetails = () => {
+  router.push("/event-details");
+};
 
 defineProps({
   title: {

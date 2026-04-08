@@ -5,10 +5,10 @@
             <!-- 1. DESKTOP ONLY TOP ICONS (Hidden on mobile) -->
             <div :class="['d-none d-lg-flex justify-content-end align-items-center gap-3 h-icons pe-3 pt-2',
                 props.iconColor === 'white' ? 'text-white' : 'text-dark']">
-                <i class="bi bi-search fs-5"></i>
-                <i class="bi bi-cart-fill fs-5"></i>
-                <i class="bi bi-person-fill fs-5"></i>
-                <i class="bi bi-globe fs-5"></i>
+                <i class="bi bi-search fs-5" style="cursor: pointer"></i>
+                <i class="bi bi-cart-fill fs-5" style="cursor: pointer" @click="cart.toggleCart"></i>
+                <i class="bi bi-person-fill fs-5" style="cursor: pointer"></i>
+                <i class="bi bi-globe fs-5" style="cursor: pointer"></i>
             </div>
 
             <!-- 2. MOBILE HEADER (Shown only on mobile/tablet) -->
@@ -78,9 +78,9 @@
                 </div>
 
                 <!-- Basket Icon -->
-                <router-link to="/cart" class="mobile-basket">
-                    <img src="../../assets/images/basketWhite.png" alt="Dee Logo" />
-                </router-link>
+                <div class="mobile-basket" style="cursor: pointer" @click="cart.toggleCart">
+                    <img src="../../assets/images/basketWhite.png" alt="Basket" />
+                </div>
             </div>
 
             <!-- 3. MAIN NAVBAR -->
@@ -136,6 +136,7 @@
 
 import { ref, computed } from "vue";
 import { useRouter } from "vue-router";
+import { useCartStore } from "@/store/cart";
 import OButton from "../ui/OButton.vue";
 import MegaDropdown from "@/components/ui/MegaDropdown.vue";
 import dd1 from "../../assets/images/dd1.png";
@@ -165,6 +166,7 @@ function toggleMobileMenu() {
 const bgImage = computed(() => {
     return props.iconColor === "white" ? darkBg : lightBg
 })
+const cart = useCartStore();
 const router = useRouter();
 
 const activeMenu = ref(null);

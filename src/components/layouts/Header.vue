@@ -2,10 +2,10 @@
   <div class="container ht">
     <div :class="['d-flex justify-content-end align-items-center gap-3 h-icons pe-3 pt-2',
       props.iconColor === 'white' ? 'text-white' : 'text-dark']">
-      <i class="bi bi-search fs-5"></i>
-      <i class="bi bi-cart-fill fs-5"></i>
-      <i class="bi bi-person-fill fs-5"></i>
-      <i class="bi bi-globe fs-5"></i>
+      <i class="bi bi-search fs-5" style="cursor: pointer"></i>
+      <i class="bi bi-cart-fill fs-5" style="cursor: pointer" @click="cart.toggleCart"></i>
+      <i class="bi bi-person-fill fs-5" style="cursor: pointer"></i>
+      <i class="bi bi-globe fs-5" style="cursor: pointer"></i>
     </div>
     <nav class="navbar navbar-expand-lg py-2 rounded-5 px-3 d-bg " :style="{ backgroundImage: `url(${bgImage})` }">
       <!-- TOGGLE BUTTON for mobile -->
@@ -65,6 +65,7 @@
 <script setup>
 import { ref, computed } from "vue";
 import { useRouter } from "vue-router";
+import { useCartStore } from "@/store/cart";
 import OButton from "../ui/OButton.vue";
 import MegaDropdown from "@/components/ui/MegaDropdown.vue";
 import dd1 from "../../assets/images/dd1.png";
@@ -79,6 +80,7 @@ import lightBg from "../../assets/images/nav-white.png"
 const bgImage = computed(() => {
   return props.iconColor === "white" ? darkBg : lightBg
 })
+const cart = useCartStore();
 const router = useRouter();
 
 const activeMenu = ref(null);
