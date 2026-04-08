@@ -10,7 +10,7 @@
                 <p style="width:unset; margin: unset;">{{ cart.items.length }} Items in your bag</p>
             </div>
             <CartItem v-for="(item, i) in cart.items" :key="item.key" :item="item" :index="i" />
-            <CartSummary :subtotal="cart.subtotal" />
+            <CartSummary :subtotal="cart.subtotal" :isCartDrawer="true" />
 
             <!-- // import { useCheckoutStore } from '@/stores/checkoutStore'
 // const store = useCheckoutStore()

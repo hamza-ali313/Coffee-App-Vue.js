@@ -43,13 +43,17 @@ export const useCartStore = defineStore('cart', {
         },
 
         increaseQty(index) {
-            this.items[index].quantity++;
-            this.items[index].totalPrice = this.items[index].quantity * this.items[index].basePrice;
+            const item = this.items[index];
+            item.quantity++;
+            const addonPrice = item.addons?.reduce((sum, a) => sum + (a.price || 0), 0) || 0;
+            item.totalPrice = item.quantity * (item.basePrice + addonPrice);
         },
         decreaseQty(index) {
-            if (this.items[index].quantity > 1) {
-                this.items[index].quantity--;
-                this.items[index].totalPrice = this.items[index].quantity * this.items[index].basePrice;
+            const item = this.items[index];
+            if (item.quantity > 1) {
+                item.quantity--;
+                const addonPrice = item.addons?.reduce((sum, a) => sum + (a.price || 0), 0) || 0;
+                item.totalPrice = item.quantity * (item.basePrice + addonPrice);
             }
         }
     }

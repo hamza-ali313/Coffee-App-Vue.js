@@ -4,11 +4,12 @@
             <h2>Collection Details</h2>
         </div>
         <p>Your Permanent address details</p>
-
-        <label>Select Dee Location</label>
-        <select v-model="collection.location" class="form-control mb-3">
-            <option value="Dee Barnes">Dee Barnes - 153 Church Road</option>
-        </select>
+        <div class="input-box">
+            <label>Select Dee Location</label>
+            <select v-model="collection.location" class="form-control mb-3">
+                <option value="Dee Barnes">Dee Barnes - 153 Church Road</option>
+            </select>
+        </div>
 
         <div class="time-date-field">
 
