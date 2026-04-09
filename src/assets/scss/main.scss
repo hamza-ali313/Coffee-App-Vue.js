@@ -18,6 +18,12 @@
 // ==========================================
 // GLOBAL SHARED STYLES
 // ==========================================
+html {
+  overflow-x:hidden; 
+} 
+// body {
+//   overflow-x:hidden!important; 
+// } 
 a {
   text-decoration: none !important;
 }
@@ -126,6 +132,7 @@ li {
 .hero-section {
   background-image: $bg-hero;
   @include bg_no_repeat_cover_center;
+  background-position: top;
   height: 1020px;
 }
 
@@ -346,6 +353,9 @@ h6 {
   z-index: 3;
 
 
+  h2 { 
+    font-size: 170px;
+  }
   h2,
   p {
     color: $white;
@@ -354,6 +364,8 @@ h6 {
   p {
     margin: 0 0 20px 0;
     width: 40%;
+    font-size: 16px;
+    line-height: 22px;
   }
 
   .menu-btn {
@@ -554,12 +566,12 @@ h6 {
   }
 
   .content {
-    padding: 45px 10px;
+    padding: 45px 10px 20px;
     background-image: $bg-wavy;
     @include bg_no_repeat_cover_center;
     margin: -20px 0 0 0;
     position: relative;
-
+    
     p.desc {
       background: #faf3ec;
       padding: 10px 10px;
@@ -582,6 +594,7 @@ h6 {
     padding: 11px 39px;
     font-size: 38px;
   }
+  
 }
 
 // ==========================================
@@ -698,6 +711,7 @@ h6 {
   background-image: $bg-footer;
   @include bg_no_repeat_cover_center;
   font-family: sans-serif;
+  background-position: top;
 
   &.bg_green {
     background-color: $green-dark;
@@ -1083,6 +1097,55 @@ label {
 
 // Responsive Styles
 /* Tablet */
+
+@media (min-width: 1751px) and (max-width: 1950px) {
+  .hero-section {
+    height: 1250px!important;
+  }
+}
+@media (min-width: 1600px) and (max-width: 1950px) {
+  .hero-section {
+    height: 1150px!important;
+  }
+.hero-section.inner_banner {
+    height: 900px !important;
+}
+  .hero-title, .sec_heading h2 {
+    font-size: 195px;
+    line-height: 100px;
+  }
+  .our_story p,.sec_heading p {
+    width: 60%;
+    font-size: 20px;
+    line-height: 30px;
+  }
+  // .visitus-sec {
+  //       padding: 269px 20px 230px 100px!important;
+  // }
+}
+@media (min-width: 992px) and (max-width: 1399px) {
+  .event-card {
+  background: $white;
+  border-radius: 10px 10px 2px 2px;
+  overflow: hidden;
+
+  .content {
+    padding: 45px 10px 20px;
+  }
+
+  .menu-btn {
+    font-size: 24px!important;
+  }
+  .g_btn.menu-btn {
+    padding: 10px 20px!important;
+  }
+}
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .hours-card p {
+    font-size: 11px!important;
+  }
+}
 @media (min-width: 768px) and (max-width: 991px) {
   .hero-section {
     padding: 60px 20px;

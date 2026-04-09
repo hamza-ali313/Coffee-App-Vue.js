@@ -60,7 +60,7 @@ import leafImg from "../../assets/images/leaf.png";
   background-image: url("@/assets/images/visitus.png");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: top;
   z-index: 1;
 }
 
