@@ -10,9 +10,9 @@
         <h3>step inside<span>,</span> grab a coffee<span>,</span> take a breath</h3>
         <!-- Description -->
         <p class="description">
-          You’ll find us on 153 Church Road in Barnes, close to local green spaces and riverside walks. We’re
-          easy to reach on foot or by bike, and well placed for a relaxed stop before or after exploring the
-          area.
+          You’ll find us on 153 Church Road in Barnes, close to local green spaces and
+          riverside walks. We’re easy to reach on foot or by bike, and well placed for a
+          relaxed stop before or after exploring the area.
         </p>
       </div>
       <div class="text-start">
@@ -40,7 +40,6 @@
 import GButton from "../ui/GButton.vue";
 import OButton from "../ui/OButton.vue";
 import leafImg from "../../assets/images/leaf.png";
-
 </script>
 
 <style scoped lang="scss">
@@ -80,11 +79,6 @@ import leafImg from "../../assets/images/leaf.png";
 .sec_heading .description {
   width: 40%;
   margin: unset !important;
-}
-
-.sec_heading h3 {
-  width: 45% !important;
-  line-height: 40px !important;
 }
 
 .sec_heading {

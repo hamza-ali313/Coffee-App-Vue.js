@@ -5,7 +5,7 @@
                 description="A space for connection, creativity and conversation. From small community gatherings and workshops to rotating art exhibitions and new dishes, there's always something unfolding. Take a look at what's new or coming up."
                 :showLeaf="true" />
         </div>
-        <div class='container'>
+        <div class="container">
             <div class="row g-4">
                 <div v-for="(item, i) in events" :key="i" class="col-md-4 col-lg-3">
                     <EventCard :title="item.title" :desc="item.desc" :day="item.day" :month="item.month" :tag="item.tag"
@@ -13,11 +13,15 @@
                 </div>
             </div>
         </div>
+        <div class="text-center mt-3">
+            <GButton btntxt="explore the menu" icon="bi bi-list-task" />
+        </div>
     </div>
 </template>
 <script setup>
-import EventCard from './EventCard.vue';
-import SecHeading from '../../ui/SecHeading.vue';
+import EventCard from "./EventCard.vue";
+import SecHeading from "../../ui/SecHeading.vue";
+import GButton from "../../ui/GButton.vue";
 import img1 from "@/assets/images/eve1.png";
 import img2 from "@/assets/images/eve2.png";
 import img3 from "@/assets/images/eve3.png";

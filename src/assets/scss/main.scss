@@ -18,21 +18,24 @@
 // ==========================================
 // GLOBAL SHARED STYLES
 // ==========================================
+a {
+  text-decoration: none !important;
+}
 
 // Dropdown Card Styles (used in MegaDropdown)
 .dropdown-card {
   text-align: center;
   cursor: pointer;
   transition: all 0.3s ease;
-  height: 170px;
+  height: 203px;
   width: 186px;
   padding: 10px 0 0 0;
   position: relative;
   @include font-titillium-semibold;
 
   img {
-    width: 130px;
-    height: 90px;
+    width: 140px;
+    height: 120px;
     object-fit: contain;
   }
 
@@ -40,6 +43,7 @@
     margin-top: 10px;
     font-size: 14px;
     font-weight: bold;
+    color: #000;
   }
 
   &:hover {
@@ -47,6 +51,8 @@
     border-radius: 12px;
     background-color: #fff !important;
   }
+
+
 
   &::before {
     content: "";
@@ -69,31 +75,19 @@
 // Mega Dropdown Styles
 .mega-dropdown {
   position: absolute;
-  top: 70px;
+  top: 20px;
   left: -60px;
+  background-image: url(../images/megadropbg.png);
+  @include bg_no_repeat_cover_center;
   width: 1000px;
-  align-items: center;
-  background: rgba(255, 255, 255, 0.9);
+  height: 230px;
+  align-items: flex-end;
   border-radius: 9px;
   display: inline-flex;
   gap: 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
   z-index: 50;
   margin: 40px 0 0 0;
   padding: 0;
-
-  // Triangle indicator
-  &::before {
-    content: "";
-    position: absolute;
-    top: -10px;
-    left: 50px;
-    width: 0;
-    height: 0;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-bottom: 10px solid #eaeaea;
-  }
 }
 
 // ==========================================
@@ -126,6 +120,8 @@ li {
 // ==========================================
 // HERO SECTION STYLES
 // ==========================================
+
+
 
 .hero-section {
   background-image: $bg-hero;
@@ -166,6 +162,18 @@ li {
   align-items: start;
   flex-direction: column;
   justify-content: center;
+}
+
+.hero-section.inner_banner {
+  height: 760px !important;
+
+}
+
+.inner_banner {
+  .hero-content {
+    padding: 140px 0 0px 70px !important;
+    height: 0 !important;
+  }
 }
 
 // ==========================================
@@ -298,12 +306,14 @@ h6 {
     }
   }
 
+
   .nav-btn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     cursor: pointer;
     z-index: 10;
+    display: inline-table;
 
     img {
       width: 60px;
@@ -317,6 +327,11 @@ h6 {
       right: -80px;
     }
   }
+}
+
+.nav-btn.left,
+.nav-btn.right {
+  display: inline-block;
 }
 
 // ==========================================
@@ -1097,6 +1112,9 @@ label {
   }
 
   // Home Page Banner 
+
+
+
   .hero-section {
     background-image: url(/src/assets/images//mobilehomebanner-bg.png) !important;
     height: 1020px;
@@ -1146,7 +1164,7 @@ label {
 
   .slider.foodcard-slider {
     margin: 0 auto;
-    width: 380px;
+    width: 330px;
 
     .nav-btn.left {
       left: -10px;
@@ -1178,7 +1196,7 @@ label {
   }
 
   .sec_heading h2 {
-    font-size: 118px;
+    font-size: 100px;
   }
 
   .gallery-item {
@@ -1205,22 +1223,213 @@ label {
   }
 
   .visitus-sec {
-    padding: 49px 20px 560px 10px;
+    padding: 49px 20px 560px 10px !important;
+  }
 
+  .visitus-sec .sec_heading h3 {
+    width: 100% !important;
+  }
+
+  .visitus-sec .sec_heading h2 {
+    font-size: 170px !important;
+  }
+
+  .nav-btn.left img,
+  .nav-btn.right img {
+    width: 55px;
+  }
+
+  .testimonial-wrapper {
+    width: 80%;
+    margin: 0 auto;
+    padding: 0 !important;
+  }
+
+  footer .sec_heading h2,
+  .sec_heading .h2 {
+    font-size: 70px;
+    line-height: 60px;
+  }
+
+  .footer-section .newsletter .input-wrapper {
+    background-image: url(/src/assets/images/mob-foot-input-bg.png);
+
+    i {
+      top: 27%;
+    }
+
+    input {
+      left: 11%;
+    }
+  }
+
+  .footer-section .newsletter .submit-btn {
+    padding: 12px 40px;
+    top: 20%;
+    right: -10px;
   }
 
 
 
+  .slider {
+    .nav-btn {
+      top: unset;
+      bottom: -69px;
 
+      &.left {
+        left: 130px;
+      }
 
+      &.right {
+        right: 130px;
+      }
+    }
+  }
 
+  .slider.foodcard-slider .nav-btn {
+    top: 50% !important;
+    bottom: unset !important;
+  }
 
+  .menu-page .sec_heading {
+    text-align: center;
+    padding: 0 0 !important;
+  }
 
+  .menu-page .filters {
+    flex-wrap: wrap;
+  }
 
+  // Inner Banner css Mobile
+  .inner_banner .hero-content {
+    padding: unset !important;
+  }
 
+  section.hero-section.inner_banner.FooddrinkMobilebanner {
+    background-image: url(../images/FooddrinkMobilebanner.png) !important;
+  }
 
+  .nutri-f {
+    gap: 32px !important;
+    flex-wrap: wrap;
 
+    .nutri {
+      position: unset;
+    }
+  }
+
+  .product-header .controls .qty-box {
+    gap: 9px;
+  }
+
+  .pairs_with_sec[data-v-c4eec845] {
+    width: 92%;
+    margin: 0 auto;
+  }
+
+  .pairs_with_sec[data-v-c4eec845]::before {
+    content: "";
+    top: 110px !important;
+    left: -30px !important;
+    width: 190px !important;
+    height: 90px !important;
+  }
+
+  .about-grid {
+    gap: 20px !important;
+    margin: 0 0 39px 0;
+  }
+
+  .pairs_with_sec::after {
+    right: -17px !important;
+    width: 170px !important;
+    height: 110px !important;
+  }
+
+  .sec_heading {
+    text-align: center;
+  }
+
+  body {
+    overflow: unset !important;
+    padding-right: unset !important;
+  }
+
+  .events-section .sec_heading {
+    text-align: justify;
+  }
+
+  .main-card .sec_heading h2 {
+    font-size: 115px;
+    display: inline !important;
+    line-height: 62px !important;
+  }
+
+  .calen-wrap-sec[data-v-badff4d2]::before {
+    top: 100px;
+    left: 0;
+    background-size: contain;
+    width: 175px;
+    height: 105px;
+  }
+
+  .divider-line img {
+    display: none;
+  }
+
+  .week-days {
+    font-size: 8px;
+  }
+
+  .faq-section .sec_heading h2[data-v-7a06f214] {
+    font-size: 92px !important;
+    line-height: 60px !important;
+  }
+
+  .faq-item h2 {
+    font-size: 17px !important;
+  }
+
+  .orderahead_pg .sec_heading {
+    padding: 30px 0 0px 0 !important;
+  }
+
+  .orderahead_pg .sec_heading h3 {
+    font-size: 33px !important;
+  }
+
+  .orderahead_pg .sec_heading h2 {
+    font-size: 140px !important;
+    line-height: 70px !important;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .orderahead_pg .sec_heading {
+    padding: 30px 0 0px 0 !important;
+  }
+
+  .orderahead_pg .sec_heading::before {
+    top: 0 !important;
+  }
+
+  .steps-process .step-item .icon-wrapper .step-icon {
+    height: 130px !important;
+  }
+
+  .orderahead_pg .sec_heading h2::after {
+    right: -17px !important;
+  }
+
+  .steps-process .step-item .icon-wrapper::after {
+    display: none !important;
+  }
+
+  .calen-wrap-sec::before {
+    width: 0 !important;
+  }
 }
+
 
 /* Desktop */
 @media (min-width: 992px) {}

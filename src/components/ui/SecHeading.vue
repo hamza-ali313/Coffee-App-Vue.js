@@ -1,5 +1,5 @@
 <template>
-  <div class="sec_heading text-center py-4 px-3">
+  <div class="sec_heading text-center py-4 px-lg-3">
     <!-- Leaf + Heading -->
     <span v-if="showLeaf" class="leaf">
       <img :src="leafImg" alt="leaf" />

@@ -1,14 +1,14 @@
 <template>
-    <div class='bg_pink'>
-        <Header />
-        <CheckoutLayout />
-        <Footer :hasBg="false" />
-    </div>
+  <div class="bg_pink">
+    <MobileHeader />
+    <CheckoutLayout />
+    <Footer :hasBg="false" />
+  </div>
 </template>
 
 <script setup>
 import Footer from "../components/layouts/Footer.vue";
-import Header from "../components/layouts/Header.vue";
+import MobileHeader from "../components/layouts/MobileHeader.vue";
 import CheckoutLayout from "../components/layouts/checkout/CheckoutLayout.vue";
 </script>
 
