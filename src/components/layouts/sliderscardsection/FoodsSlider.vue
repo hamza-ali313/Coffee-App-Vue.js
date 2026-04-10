@@ -90,9 +90,9 @@ const items = [
 
 // Responsive
 const breakpoints = {
-  320: { slidesPerView: 1, loop: "true" },
-  768: { slidesPerView: 2, loop: "true" },
-  1024: { slidesPerView: 4, loop: "true" },
+  320: { slidesPerView: 1, loop: true },
+  768: { slidesPerView: 2, loop: true },
+  1024: { slidesPerView: 4, loop: true },
 };
 </script>
 
