@@ -94,6 +94,16 @@ const events = [
     spots: 8,
     image: img4,
   },
+  {
+    title: "Saturday Brunch Club",
+    desc: "Lorem ipsum dolor sit amet, consectetur adip-isicing elit, sed do eiusmod.",
+    day: "24",
+    month: "AUG",
+    tag: "Social Nights",
+    time: "10:00 AM – 01:00 PM",
+    spots: 4,
+    image: img1,
+  },
 ];
 
 const breakpoints = {
