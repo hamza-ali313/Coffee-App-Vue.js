@@ -19,8 +19,14 @@
 // GLOBAL SHARED STYLES
 // ==========================================
 html {
-  overflow-x:hidden; 
-} 
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+
+}
+
 // body {
 //   overflow-x:hidden!important; 
 // } 
@@ -37,6 +43,10 @@ a {
   width: 186px;
   padding: 10px 0 0 0;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   @include font-titillium-semibold;
 
   img {
@@ -54,7 +64,7 @@ a {
 
   &:hover {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    border-radius: 12px;
+    border-radius: 7px;
     background-color: #fff !important;
   }
 
@@ -353,9 +363,10 @@ h6 {
   z-index: 3;
 
 
-  h2 { 
+  h2 {
     font-size: 170px;
   }
+
   h2,
   p {
     color: $white;
@@ -494,6 +505,7 @@ h6 {
 .testimonial-wrapper {
   .swiper-wrapper {
     transition-timing-function: linear !important;
+    padding: 10px 0;
   }
 }
 
@@ -571,7 +583,7 @@ h6 {
     @include bg_no_repeat_cover_center;
     margin: -20px 0 0 0;
     position: relative;
-    
+
     p.desc {
       background: #faf3ec;
       padding: 10px 10px;
@@ -582,6 +594,7 @@ h6 {
 
   .info {
     margin: 10px 0;
+    padding: 0 10px;
     text-align: justify;
 
     p {
@@ -594,7 +607,7 @@ h6 {
     padding: 11px 39px;
     font-size: 38px;
   }
-  
+
 }
 
 // ==========================================
@@ -612,6 +625,7 @@ h6 {
 .testimonial-card {
   background: #fff;
   border-radius: 15px;
+  border: none;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 
   img {
@@ -677,10 +691,11 @@ h6 {
 .small_testimonial-card {
   background: #ffffff99;
   border-radius: 7px;
-  border: 1px solid #00000014;
+  border: 1px solid transparent;
   min-height: 220px;
   transition: 0.3s;
-  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  // box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  box-shadow: rgb(193 193 193 / 24%) 0px 3px 8px;
 
   &:hover {
     transform: translateY(-5px);
@@ -937,7 +952,8 @@ h6 {
 
 .bg_pink {
   background-image: url('../images/Orderahead_bg.png');
-  @include bg_no_repeat_cover_center
+  @include bg_no_repeat_cover_center;
+  overflow-x: "hidden"
 }
 
 
@@ -1100,60 +1116,122 @@ label {
 
 @media (min-width: 1751px) and (max-width: 1950px) {
   .hero-section {
-    height: 1250px!important;
+    height: 1250px !important;
   }
 }
+
 @media (min-width: 1600px) and (max-width: 1950px) {
   .hero-section {
-    height: 1150px!important;
+    height: 1150px !important;
   }
-.hero-section.inner_banner {
+
+  .hero-section.inner_banner {
     height: 900px !important;
-}
-  .hero-title, .sec_heading h2 {
+  }
+
+  .hero-title,
+  .sec_heading h2 {
     font-size: 195px;
     line-height: 100px;
   }
-  .our_story p,.sec_heading p {
+
+  .our_story p,
+  .sec_heading p {
     width: 60%;
     font-size: 20px;
     line-height: 30px;
   }
+
   // .visitus-sec {
   //       padding: 269px 20px 230px 100px!important;
   // }
 }
+
 @media (min-width: 992px) and (max-width: 1399px) {
+  .testi_slider {
+    .nav-btn.left {
+      left: -30px;
+    }
+
+    .nav-btn.right {
+      right: -30px;
+    }
+  }
+
   .event-card {
-  background: $white;
-  border-radius: 10px 10px 2px 2px;
-  overflow: hidden;
+    background: $white;
+    border-radius: 10px 10px 2px 2px;
+    overflow: hidden;
 
-  .content {
-    padding: 45px 10px 20px;
-  }
+    .content {
+      padding: 45px 10px 20px;
+    }
 
-  .menu-btn {
-    font-size: 24px!important;
-  }
-  .g_btn.menu-btn {
-    padding: 10px 20px!important;
+    .menu-btn {
+      font-size: 24px !important;
+    }
+
+    .g_btn.menu-btn {
+      padding: 10px 20px !important;
+    }
   }
 }
-}
+
 @media (min-width: 992px) and (max-width: 1199px) {
   .hours-card p {
-    font-size: 11px!important;
+    font-size: 11px !important;
+  }
+
+  .testi_slider {
+    .nav-btn.left {
+      left: 60px;
+      opacity: .6;
+    }
+
+    .nav-btn.right {
+      right: 60px;
+      opacity: .6;
+    }
+  }
+
+  .testimonial-card {
+    img {
+      width: 100%;
+    }
   }
 }
+
 @media (min-width: 768px) and (max-width: 991px) {
   .hero-section {
     padding: 60px 20px;
   }
 }
 
+.testimonial-card {
+  img {
+    width: 100%;
+  }
+
+
+}
+
+@media (max-width: 991px) {
+  .our_story {
+    padding-left: 50px;
+
+    p {
+      width: 100% !important;
+    }
+  }
+}
+
 /* Mobile */
 @media (max-width: 575px) {
+  .calendar-wrapper {
+    border-radius: 20px;
+    box-shadow: none;
+  }
+
   .ht {
     width: unset;
   }
@@ -1230,11 +1308,11 @@ label {
     width: 330px;
 
     .nav-btn.left {
-      left: -10px;
+      left: -15px;
     }
 
     .nav-btn.right {
-      right: 0px;
+      right: -15px;
     }
 
   }
@@ -1281,12 +1359,21 @@ label {
     margin: -70px 0 0 0 !important;
   }
 
-  .visitus-sec::before {
-    background-image: url(/src/assets/images/mobilevisitusbg.png) !important;
+  .visitus-sec {
+
+    &::before {
+      background-image: url(/src/assets/images/mobilevisitusbg.png) !important;
+      background-position: top !important;
+    }
   }
 
   .visitus-sec {
-    padding: 49px 20px 560px 10px !important;
+    padding: 49px 20px 160px 10px !important;
+  }
+
+
+  .footer-section.bg_green {
+    padding: 100px 0 0 !important;
   }
 
   .visitus-sec .sec_heading h3 {
@@ -1337,7 +1424,7 @@ label {
   .slider {
     .nav-btn {
       top: unset;
-      bottom: -69px;
+      bottom: -100px;
 
       &.left {
         left: 130px;
@@ -1422,10 +1509,18 @@ label {
     text-align: justify;
   }
 
+  .events-section {
+    margin-bottom: 0 !important;
+  }
+
   .main-card .sec_heading h2 {
     font-size: 115px;
     display: inline !important;
     line-height: 62px !important;
+  }
+
+  .main-card .sec_heading p {
+    width: 100% !important;
   }
 
   .calen-wrap-sec[data-v-badff4d2]::before {
@@ -1490,6 +1585,63 @@ label {
 
   .calen-wrap-sec::before {
     width: 0 !important;
+  }
+
+  .menu-card {
+    .content {
+      h5 {
+        font-size: 26px !important;
+      }
+    }
+  }
+
+  .menu-card {
+    .content {
+      .menu-item {
+        strong {
+          font-size: 17px !important;
+        }
+      }
+    }
+  }
+
+  .footer-section {
+    padding: 150px 0 0 0;
+  }
+
+  .dish-showcase {
+    .bottom-images {
+      img {
+        height: 200px !important;
+      }
+    }
+  }
+
+  .tag {
+    padding: 7px 0;
+    width: 100px;
+    text-align: center;
+    border-radius: 30px;
+    background: #f2dcc6;
+    color: #d08a44;
+    font-size: 16px;
+    border: 1px solid #d08a44;
+    font-family: "TitilliumWeb-Regular";
+  }
+
+  .food-image {
+    img {
+      padding: 10px;
+      border-radius: 15px;
+    }
+  }
+
+  .food-image {
+    .tags {
+      top: 20px;
+      left: 20px;
+
+    }
   }
 }
 

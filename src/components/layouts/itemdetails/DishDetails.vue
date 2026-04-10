@@ -16,11 +16,11 @@
           <p class="m-0">{{ b.label }}</p>
         </span>
       </div>
-      <p class="mt-3">{{ dish.description }}</p>
+      <p class="mt-3 text-center text-sm-start">{{ dish.description }}</p>
 
-      <h6 class="mt-3">{{ dish.tagline }}</h6>
+      <h6 class="mt-3 text-center text-sm-start">{{ dish.tagline }}</h6>
 
-      <h3>£{{ dish.price }} <sub>Per Serving</sub></h3>
+      <h3 class="text-center text-sm-start">£{{ dish.price }} <sub>Per Serving</sub></h3>
 
       <Nutrition :items="dish.nutritions" />
       <Allergens :items="dish.allergens" />
