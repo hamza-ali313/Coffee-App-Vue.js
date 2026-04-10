@@ -6,7 +6,7 @@
   </div>
   <div class="slider event-slider container position-relative">
     <!-- Left Arrow -->
-    <div class="nav-btn left" @click="slidePrev"><img :src="prev" /></div>
+    <div class="nav-btn left d-md-none" @click="slidePrev"><img :src="prev" /></div>
 
     <!-- Swiper -->
     <Swiper :slides-per-view="4" :space-between="20" :loop="true" :breakpoints="breakpoints" @swiper="setSwiper">
@@ -17,8 +17,14 @@
     </Swiper>
 
     <!-- Right Arrow -->
-    <div class="nav-btn right" @click="slideNext"><img :src="nxt" /></div>
+    <div class="nav-btn right d-md-none" @click="slideNext"><img :src="nxt" /></div>
   </div>
+  
+    <!-- Tabs arrows -->
+    <div class="d-none d-md-flex mt-3 justify-content-center gap-3">
+      <div class="nav-btn left" @click="slidePrev"><img :src="prev" /></div>
+      <div class="nav-btn right" @click="slideNext"><img :src="nxt" /></div>
+    </div>
   <div class="text-center my-5">
     <GButton btntxt="explore what's on" />
   </div>
@@ -93,6 +99,16 @@ const events = [
     time: "05:00 AM – 08:00 PM",
     spots: 8,
     image: img4,
+  },
+  {
+    title: "Saturday Brunch Club",
+    desc: "Lorem ipsum dolor sit amet, consectetur adip-isicing elit, sed do eiusmod.",
+    day: "24",
+    month: "AUG",
+    tag: "Social Nights",
+    time: "10:00 AM – 01:00 PM",
+    spots: 4,
+    image: img1,
   },
 ];
 

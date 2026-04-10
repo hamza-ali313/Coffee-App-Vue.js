@@ -7,7 +7,7 @@
                 <OButton btntxt="calender view" />
             </div> -->
             <div class="calendar-wrapper p-4">
-                <div class="row">
+                <div class="row gy-5">
                     <div class="col-md-5">
                         <CalendarMonth :month="1" :year="2026" />
                     </div>

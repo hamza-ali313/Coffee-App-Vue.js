@@ -3,7 +3,7 @@
     <!-- Left Arrow -->
     <div
       v-if="showNavigation"
-      class="nav-btn d-lg-block d-md-block d-none left"
+      class="nav-btn d-lg-block d-md-none d-none left"
       @click="slidePrev"
     >
       <img :src="prev" />
@@ -30,14 +30,14 @@
     <!-- {{ showNavigation }} -->
     <div
       v-if="showNavigation"
-      class="nav-btn d-lg-block d-md-block d-none right"
+      class="nav-btn d-lg-block d-md-none d-none right"
       @click="slideNext"
     >
       <img :src="nxt" />
     </div>
 
     <!-- mobile arrows -->
-    <div class="d-lg-none d-md-none d-flex justify-content-center gap-3">
+    <div class="d-lg-none d-md-block d-flex justify-content-center gap-3">
       <div class="nav-btn left" @click="slidePrev"><img :src="prev" /></div>
       <div class="nav-btn right" @click="slideNext"><img :src="nxt" /></div>
     </div>

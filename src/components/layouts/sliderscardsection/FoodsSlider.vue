@@ -4,7 +4,7 @@
     :showLeaf="false" />
   <div class="slider foodcard-slider container position-relative">
     <!-- Left Arrow -->
-    <div class="nav-btn left" @click="slidePrev"><img :src="prev" /></div>
+    <div class="nav-btn left d-md-none" @click="slidePrev"><img :src="prev" /></div>
 
     <!-- Swiper -->
     <Swiper :slides-per-view="4" :space-between="20" :loop="true" :breakpoints="breakpoints" @swiper="setSwiper">
@@ -14,8 +14,13 @@
     </Swiper>
 
     <!-- Right Arrow -->
-    <div class="nav-btn right" @click="slideNext"><img :src="nxt" /></div>
+    <div class="nav-btn right d-md-none" @click="slideNext"><img :src="nxt" /></div>
   </div>
+      <!-- Tabs arrows -->
+    <div class="d-none d-md-flex mt-3 justify-content-center gap-3">
+      <div class="nav-btn left" @click="slidePrev"><img :src="prev" /></div>
+      <div class="nav-btn right" @click="slideNext"><img :src="nxt" /></div>
+    </div>
   <p class="text-center pt-4">
     Whether you’re stopping in for a quick coffee or settling in for a longer meal,
     there’s something here to come back to.
@@ -90,9 +95,9 @@ const items = [
 
 // Responsive
 const breakpoints = {
-  320: { slidesPerView: 1, loop: "true" },
-  768: { slidesPerView: 2, loop: "true" },
-  1024: { slidesPerView: 4, loop: "true" },
+  320: { slidesPerView: 1, loop: true },
+  768: { slidesPerView: 2, loop: true },
+  1024: { slidesPerView: 4, loop: true },
 };
 </script>
 

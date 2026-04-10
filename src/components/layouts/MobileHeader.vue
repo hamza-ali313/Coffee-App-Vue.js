@@ -25,7 +25,7 @@
       >
         <!-- Custom Toggle Button -->
         <button
-          class="mobile-toggle-btn"
+          class="mobile-toggle-btn bg-transparent"
           type="button"
           data-bs-toggle="offcanvas"
           data-bs-target="#mobileMenu"
@@ -40,38 +40,38 @@
         >
           <div class="offcanvas-header">
             <h5 class="offcanvas-title">Menu</h5>
-            <button type="button" class="btn-close fs-4" data-bs-dismiss="offcanvas">
+            <button type="button" class="btn-close fs-4 d-flex align-items-center justify-content-center" data-bs-dismiss="offcanvas">
               <img src="../../assets/images/navtoggle.png" />
             </button>
           </div>
 
           <div class="offcanvas-body">
             <ul class="navbar-nav">
-              <li class="nav-item">
-                <router-link class="nav-link" to="/">Home</router-link>
+              <li class="nav-item text-nowrap w-100 text-center">
+                <router-link class="nav-link mx-auto" to="/">Home</router-link>
               </li>
-              <li class="nav-item">
-                <router-link class="nav-link" to="/FoodsDrinks">
+              <li class="nav-item text-nowrap w-100 text-center">
+                <router-link class="nav-link mx-auto" to="/FoodsDrinks">
                   Food & Drinks
                 </router-link>
               </li>
-              <li class="nav-item">
-                <router-link class="nav-link" to="/whatsonevent"> What's On </router-link>
+              <li class="nav-item text-nowrap w-100 text-center">
+                <router-link class="nav-link mx-auto" to="/whatsonevent"> What's On </router-link>
               </li>
 
-              <li class="nav-item">
-                <router-link class="nav-link" to="/item-details"> Community </router-link>
+              <li class="nav-item text-nowrap w-100 text-center">
+                <router-link class="nav-link mx-auto" to="/item-details"> Community </router-link>
               </li>
 
-              <li class="nav-item">
-                <router-link class="nav-link" to="/faqs"> About Us </router-link>
+              <li class="nav-item text-nowrap w-100 text-center">
+                <router-link class="nav-link mx-auto" to="/faqs"> About Us </router-link>
               </li>
 
-              <li class="nav-item">
-                <router-link class="nav-link" to="/locations"> Visit Dee </router-link>
+              <li class="nav-item text-nowrap w-100 text-center">
+                <router-link class="nav-link mx-auto" to="/locations"> Visit Dee </router-link>
               </li>
 
-              <li class="nav-item mt-3 text-center">
+              <li class="nav-item text-nowrap w-100 text-center mt-3 text-center">
                 <router-link to="/orderahead">
                   <button class="btn order-btn">ORDER AHEAD</button>
                 </router-link>
@@ -296,5 +296,8 @@ ul {
   background-position: center;
   color: #fff;
   padding: 10px 0;
+}
+.mobile-logo .router-link-active {
+    background-image: unset;
 }
 </style>
