@@ -40,10 +40,10 @@ import calenleaf from "../../../assets/images/calenleaf.png";
     position: absolute;
     background-image: url(/src/assets/images/calenleaf.png);
     background-repeat: no-repeat;
-    top: 0;
+    top: -90px;
     left: 0;
     background-size: contain;
-    width: 665px;
+    width: 235px;
     height: 470px;
 }
 </style>

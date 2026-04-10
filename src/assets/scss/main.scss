@@ -19,8 +19,9 @@
 // GLOBAL SHARED STYLES
 // ==========================================
 html {
-  overflow-x:hidden; 
-} 
+  overflow-x: hidden;
+}
+
 // body {
 //   overflow-x:hidden!important; 
 // } 
@@ -353,9 +354,10 @@ h6 {
   z-index: 3;
 
 
-  h2 { 
+  h2 {
     font-size: 170px;
   }
+
   h2,
   p {
     color: $white;
@@ -571,7 +573,7 @@ h6 {
     @include bg_no_repeat_cover_center;
     margin: -20px 0 0 0;
     position: relative;
-    
+
     p.desc {
       background: #faf3ec;
       padding: 10px 10px;
@@ -594,7 +596,7 @@ h6 {
     padding: 11px 39px;
     font-size: 38px;
   }
-  
+
 }
 
 // ==========================================
@@ -766,7 +768,7 @@ h6 {
     }
 
     .submit-btn {
-      background-image: $bg-obtnbg !important;
+      background-image: $bg-o-btn !important;
       @include bg_no_repeat_cover_center;
       padding: 17px 51px;
       color: $white;
@@ -1100,52 +1102,63 @@ label {
 
 @media (min-width: 1751px) and (max-width: 1950px) {
   .hero-section {
-    height: 1250px!important;
+    height: 1250px !important;
   }
 }
+
 @media (min-width: 1600px) and (max-width: 1950px) {
   .hero-section {
-    height: 1150px!important;
+    height: 1150px !important;
   }
-.hero-section.inner_banner {
+
+  .hero-section.inner_banner {
     height: 900px !important;
-}
-  .hero-title, .sec_heading h2 {
+  }
+
+  .hero-title,
+  .sec_heading h2 {
     font-size: 195px;
     line-height: 100px;
   }
-  .our_story p,.sec_heading p {
+
+  .our_story p,
+  .sec_heading p {
     width: 60%;
     font-size: 20px;
     line-height: 30px;
   }
+
   // .visitus-sec {
   //       padding: 269px 20px 230px 100px!important;
   // }
 }
+
 @media (min-width: 992px) and (max-width: 1399px) {
   .event-card {
-  background: $white;
-  border-radius: 10px 10px 2px 2px;
-  overflow: hidden;
+    background: $white;
+    border-radius: 10px 10px 2px 2px;
+    overflow: hidden;
 
-  .content {
-    padding: 45px 10px 20px;
-  }
+    .content {
+      padding: 45px 10px 20px;
+    }
 
-  .menu-btn {
-    font-size: 24px!important;
-  }
-  .g_btn.menu-btn {
-    padding: 10px 20px!important;
+    .menu-btn {
+      font-size: 24px !important;
+    }
+
+    .g_btn.menu-btn {
+      padding: 10px 20px !important;
+    }
   }
 }
-}
+
 @media (min-width: 992px) and (max-width: 1199px) {
   .hours-card p {
-    font-size: 11px!important;
+    font-size: 11px !important;
   }
 }
+
 @media (min-width: 768px) and (max-width: 991px) {
   .hero-section {
     padding: 60px 20px;
