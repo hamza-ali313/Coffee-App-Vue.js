@@ -297,4 +297,7 @@ ul {
   color: #fff;
   padding: 10px 0;
 }
+.mobile-logo .router-link-active {
+    background-image: unset;
+}
 </style>
