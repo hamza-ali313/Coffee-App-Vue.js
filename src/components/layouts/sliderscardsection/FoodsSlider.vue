@@ -1,26 +1,43 @@
 <template>
-  <SecHeading main_h="Food And Drink"
+  <SecHeading
+    main_h="Food And Drink"
     description="Our menu is thoughtfully made, seasonal and always evolving. We care for quality ingredients, local sourcing, and delight in flavour."
-    :showLeaf="false" />
+    :showLeaf="false"
+  />
   <div class="slider foodcard-slider container position-relative">
     <!-- Left Arrow -->
-    <div class="nav-btn left d-md-none" @click="slidePrev"><img :src="prev" /></div>
+    <div class="nav-btn left d-md-none d-lg-block" @click="slidePrev">
+      <img :src="prev" />
+    </div>
 
     <!-- Swiper -->
-    <Swiper :slides-per-view="4" :space-between="20" :loop="true" :breakpoints="breakpoints" @swiper="setSwiper">
+    <Swiper
+      :slides-per-view="4"
+      :space-between="20"
+      :loop="true"
+      :breakpoints="breakpoints"
+      @swiper="setSwiper"
+    >
       <SwiperSlide v-for="item in items" :key="item.title">
-        <FoodCard :title="item.title" :desc="item.desc" :cta="item.cta" :image="item.image" />
+        <FoodCard
+          :title="item.title"
+          :desc="item.desc"
+          :cta="item.cta"
+          :image="item.image"
+        />
       </SwiperSlide>
     </Swiper>
 
     <!-- Right Arrow -->
-    <div class="nav-btn right d-md-none" @click="slideNext"><img :src="nxt" /></div>
-  </div>
-      <!-- Tabs arrows -->
-    <div class="d-none d-md-flex mt-3 justify-content-center gap-3">
-      <div class="nav-btn left" @click="slidePrev"><img :src="prev" /></div>
-      <div class="nav-btn right" @click="slideNext"><img :src="nxt" /></div>
+    <div class="nav-btn right d-md-none d-lg-block" @click="slideNext">
+      <img :src="nxt" />
     </div>
+  </div>
+  <!-- Tabs arrows -->
+  <div class="d-none d-lg-none d-md-flex mt-3 justify-content-center gap-3">
+    <div class="nav-btn left" @click="slidePrev"><img :src="prev" /></div>
+    <div class="nav-btn right" @click="slideNext"><img :src="nxt" /></div>
+  </div>
   <p class="text-center pt-4">
     Whether you’re stopping in for a quick coffee or settling in for a longer meal,
     there’s something here to come back to.
@@ -75,7 +92,8 @@ const items = [
   },
   {
     title: "Bakery & Sweets",
-    desc: "Simple, nourishing lunch plates that work just as well for a long catch-up as a quick.",
+    desc:
+      "Simple, nourishing lunch plates that work just as well for a long catch-up as a quick.",
     cta: "VIEW LUNCH",
     image: Fslid3,
   },

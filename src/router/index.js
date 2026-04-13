@@ -9,6 +9,7 @@ import VisitusPage from '@/views/VisitusPage.vue'
 import ContactPage from '@/views/ContactPage.vue'
 import CheckoutPage from '@/views/CheckoutPage.vue'
 import EventDetails from '@/views/EventDetails.vue'
+import OurChoices from '@/views/OurChoices.vue'
 
 const routes = [
   { path: '/', component: Home },
@@ -21,6 +22,7 @@ const routes = [
   { path: '/contactus', component: ContactPage },
   { path: '/checkout', component: CheckoutPage },
   { path: '/event-details', component: EventDetails },
+  { path: '/our-choices', component: OurChoices },
 ]
 
 const router = createRouter({

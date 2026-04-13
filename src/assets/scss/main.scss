@@ -177,10 +177,13 @@ li {
 }
 
 .hero-section.inner_banner {
-  height: 760px !important;
+  height: 910px !important;
 
 }
-
+.choicesban {
+  position: relative;
+  z-index: 3;
+}
 .inner_banner {
   .hero-content {
     padding: 140px 0 0px 70px !important;
@@ -356,7 +359,16 @@ h6 {
   padding: 354px 20px 400px 200px;
   position: relative;
   z-index: 3;
+  width: 100%;
 
+  &.coffee-philo {
+    background-image: url(/src/assets/images/coffeephilosofy.png);
+    height: 1140px;
+    margin: 0 0 -490px 0;
+    position: relative;
+    z-index: 2;
+    padding: 154px 0px 0 0px;
+  }
 
   h2 {
     font-size: 170px;
@@ -383,7 +395,7 @@ h6 {
 // ==========================================
 // GALLERY STYLES
 // ==========================================
-.our_local_comunity {
+.our_local_comunity,.ingrediantsource {
   background-image: $bg-local-community;
   @include bg_no_repeat_cover_center;
   height: 1170px;
@@ -391,6 +403,11 @@ h6 {
   position: relative;
   z-index: 2;
   margin: -100px 0 0 0;
+}
+.ingrediantsource {
+  background-image: url(../images/ingrediantbg.png);
+  margin: -100px 0 -150px 0;
+  height: 1050px;
 }
 
 // ==========================================
@@ -725,9 +742,12 @@ h6 {
 
   &.bg_green {
     background-color: $green-dark;
-    padding: 0 0 0 0 !important;
+    padding: 0 0 0 0;
   }
 
+  &.negm {
+    padding: 300px 0 0 0;
+  }
   .newsletter {
     background: transparent;
     margin-bottom: 40px;
@@ -1008,7 +1028,7 @@ input:-webkit-autofill:active {
     font-weight: 600;
     font-size: 17px;
     letter-spacing: 1px;
-    color: #5c4a3d;
+    color: #000;
     padding: 18px;
     text-transform: uppercase;
     // background: #f3ebe4;
@@ -1256,6 +1276,10 @@ label {
     height: 1020px;
   }
 
+  .hero-section.eventBanner {
+    background-image: url(/src/assets/images//mobInbanevent.png) !important;
+  }
+
   .hero-content {
     height: 843px;
     display: block;
@@ -1272,9 +1296,25 @@ label {
   }
 
   .hero-subtitle {
-    font-size: 25px;
+    font-size: 21px;
     line-height: 25px;
     text-align: center !important;
+  }
+
+  .hero-subtitle::before {
+    top: -30px;
+    left: -40px;
+    width: 46px;
+  }
+
+  .divider-line {
+    width: unset;
+    margin: unset;
+
+    img {
+      width: 100%;
+      margin: 50px 0 0 0;
+    }
   }
 
   .hero-text {
@@ -1432,8 +1472,8 @@ label {
   }
 
   .menu-page .slider .nav-btn {
-     position: unset;
-     margin: 30px 0 0 0; 
+    position: unset;
+    margin: 30px 0 0 0;
   }
 
   .slider.foodcard-slider .nav-btn {
@@ -1452,7 +1492,7 @@ label {
 
   // Inner Banner css Mobile
   .inner_banner .hero-content {
-    padding: unset !important;
+    padding: 0 60px !important;
   }
 
   section.hero-section.inner_banner.FooddrinkMobilebanner {
@@ -1643,6 +1683,10 @@ label {
 
     }
   }
+
+  .events-wrapper {
+    padding-top: 0 !important;
+}
 }
 
 

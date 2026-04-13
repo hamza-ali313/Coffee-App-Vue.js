@@ -1,3 +1,10 @@
+import amn1 from '../assets/images/amn1.png'
+import amn2 from '../assets/images/amn2.png'
+import amn3 from '../assets/images/amn3.png'
+import amn4 from '../assets/images/amn4.png'
+import amn5 from '../assets/images/amn5.png'
+
+
 export const locations = [
     {
         key: "barnes",
@@ -21,12 +28,27 @@ export const locations = [
         ],
 
         amenities: [
-            "Free WiFi",
-            "Indoor & outdoor seating",
-            "Dog-friendly environment",
-            "Accessible entry",
-            "Comfortable workspace area",
-        ],
+            {
+              text: "Free WiFi",
+              img: amn1,
+            },
+            {
+              text: "Indoor & outdoor seating",
+              img: amn2,
+            },
+            {
+              text: "Dog-friendly environment",
+              img: amn3,
+            },
+            {
+              text: "Accessible entry",
+              img: amn4,
+            },
+            {
+              text: "Comfortable workspace area",
+              img: amn5,
+            },
+          ],
     },
 
     {
@@ -50,7 +72,28 @@ export const locations = [
             { day: "Sat - Sun", time: "Closed" },
         ],
 
-        amenities: ["Free WiFi", "Outdoor seating", "Pet friendly"],
+        amenities: [
+            {
+              text: "Free WiFi",
+              img: amn1,
+            },
+            {
+              text: "Indoor & outdoor seating",
+              img: amn2,
+            },
+            {
+              text: "Dog-friendly environment",
+              img: amn3,
+            },
+            {
+              text: "Accessible entry",
+              img: amn4,
+            },
+            {
+              text: "Comfortable workspace area",
+              img: amn5,
+            },
+          ],
     },
 
     {
@@ -62,7 +105,28 @@ export const locations = [
         email: "parsons@deecafe.com",
         mapQuery: "Parsons Green London",
         openingHours: [],
-        amenities: ["Free WiFi", "Outdoor seating"],
+        amenities: [
+            {
+              text: "Free WiFi",
+              img: amn1,
+            },
+            {
+              text: "Indoor & outdoor seating",
+              img: amn2,
+            },
+            {
+              text: "Dog-friendly environment",
+              img: amn3,
+            },
+            {
+              text: "Accessible entry",
+              img: amn4,
+            },
+            {
+              text: "Comfortable workspace area",
+              img: amn5,
+            },
+          ],
     },
 
     {
@@ -74,6 +138,29 @@ export const locations = [
         email: "victoria@deecafe.com",
         mapQuery: "Victoria Station London",
         openingHours: [],
-        amenities: ["Free WiFi", "Dog Friendly"],
+        amenities: [
+            {
+              text: "Free WiFi",
+              img: amn1,
+            },
+            {
+              text: "Indoor & outdoor seating",
+              img: amn2,
+            },
+            {
+              text: "Dog-friendly environment",
+              img: amn3,
+            },
+            {
+              text: "Accessible entry",
+              img: amn4,
+            },
+            {
+              text: "Comfortable workspace area",
+              img: amn5,
+            },
+          ],
     },
 ];
+
+

@@ -1,11 +1,8 @@
 <template>
   <div class="sec_heading text-center px-3">
-    <h2>Order Ahead a pick at dee</h2>
+    <h2>{{ title }}</h2>
     <h3>here is how it works</h3>
-    <p class="description">
-      Alongside good food and coffee, we host a rotating programme of community events in
-      Barnes, gatherings and exhibitions that reflect the people and ideas around us.
-    </p>
+    <p class="description"></p>
   </div>
   <div class="steps-process container py-5">
     <div class="row justify-content-center">
@@ -25,35 +22,12 @@
 </template>
 
 <script setup>
-import ord1 from "../../assets/images/ord1.png";
-import ord2 from "../../assets/images/ord2.png";
-import ord3 from "../../assets/images/ord3.png";
-import ord4 from "../../assets/images/ord4.png";
-
-const steps = [
-  {
-    icon: ord1,
-    title: "Browse and choose",
-    desc: "Explore the menu, select your items, and customise if you wish.",
-  },
-  {
-    icon: ord2,
-    title: "Pick a pickup time",
-    desc: "Choose a 10-minute pickup window at checkout.",
-  },
-  {
-    icon: ord3,
-    title: "We prepare it fresh",
-    desc:
-      "Our baristas and chefs start preparing your order so it is ready at the start of your chosen window.",
-  },
-  {
-    icon: ord4,
-    title: "Skip the line and collect",
-    desc:
-      "Walk in, head to the pickup counter, show your order confirmation, and take your order.",
-  },
-];
+defineProps({
+  steps: Array,
+  title: String,
+  sub_title: String,
+  desc: String,
+});
 </script>
 
 <style lang="scss" scoped>

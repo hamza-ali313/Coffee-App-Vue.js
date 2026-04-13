@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer-section text-white" :class="{ bg_green: hasBg }">
+  <footer class="footer-section text-white" :class="{ bg_green: hasBg, negm: negm }">
     <div class="container">
       <h1 class="larg_f">come in<span>,</span> stay a while</h1>
       <div class="sec_heading text-center py-lg-4 py-md-4">
@@ -136,6 +136,10 @@ const props = defineProps({
   hasBg: {
     type: Boolean,
     default: true,
+  },
+  negm: {
+    type: Boolean,
+    default: false,
   },
 });
 </script>

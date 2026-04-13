@@ -101,11 +101,12 @@
 }
 
 @mixin sec-subheading {
-  font-size: $font-size-sec-subheading;
-  line-height: $font-size-sec-subheading-line-height;
+  font-size: 36px;
+  line-height: 30px;
   font-family: $daughter-demo;
   color: $theme_o;
   text-transform: capitalize;
+  letter-spacing: -2px;
 }
 
 @mixin body-text {

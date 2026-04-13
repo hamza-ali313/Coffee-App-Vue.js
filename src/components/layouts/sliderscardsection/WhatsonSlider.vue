@@ -1,30 +1,51 @@
 <template>
   <div class="container">
-    <SecHeading main_h="WHAT'S ON" sub_h="At Dee"
+    <SecHeading
+      main_h="WHAT'S ON"
+      sub_h="At Dee"
       description="A space for connection, creativity and conversation. From small community gatherings and workshops to rotating art exhibitions and new dishes, there's always something unfolding. Take a look at what's new or coming up."
-      :showLeaf="true" />
+      :showLeaf="true"
+    />
   </div>
   <div class="slider event-slider container position-relative">
     <!-- Left Arrow -->
-    <div class="nav-btn left d-md-none" @click="slidePrev"><img :src="prev" /></div>
+    <div class="nav-btn left d-md-none d-lg-block" @click="slidePrev">
+      <img :src="prev" />
+    </div>
 
     <!-- Swiper -->
-    <Swiper :slides-per-view="4" :space-between="20" :loop="true" :breakpoints="breakpoints" @swiper="setSwiper">
+    <Swiper
+      :slides-per-view="4"
+      :space-between="20"
+      :loop="true"
+      :breakpoints="breakpoints"
+      @swiper="setSwiper"
+    >
       <SwiperSlide v-for="item in events" :key="item.title">
-        <EventCard :title="item.title" :desc="item.desc" :day="item.day" :month="item.month" :tag="item.tag"
-          :time="item.time" :spots="item.spots" :image="item.image" />
+        <EventCard
+          :title="item.title"
+          :desc="item.desc"
+          :day="item.day"
+          :month="item.month"
+          :tag="item.tag"
+          :time="item.time"
+          :spots="item.spots"
+          :image="item.image"
+        />
       </SwiperSlide>
     </Swiper>
 
     <!-- Right Arrow -->
-    <div class="nav-btn right d-md-none" @click="slideNext"><img :src="nxt" /></div>
-  </div>
-  
-    <!-- Tabs arrows -->
-    <div class="d-none d-md-flex mt-3 justify-content-center gap-3">
-      <div class="nav-btn left" @click="slidePrev"><img :src="prev" /></div>
-      <div class="nav-btn right" @click="slideNext"><img :src="nxt" /></div>
+    <div class="nav-btn right d-md-none d-lg-block" @click="slideNext">
+      <img :src="nxt" />
     </div>
+  </div>
+
+  <!-- Tabs arrows -->
+  <div class="d-none d-lg-none d-md-flex mt-3 justify-content-center gap-3">
+    <div class="nav-btn left" @click="slidePrev"><img :src="prev" /></div>
+    <div class="nav-btn right" @click="slideNext"><img :src="nxt" /></div>
+  </div>
   <div class="text-center my-5">
     <GButton btntxt="explore what's on" />
   </div>
@@ -120,4 +141,5 @@ const breakpoints = {
 </script>
 <style scoped lang="scss">
 // WhatsonSlider specific styles - main styles in global SCSS
-// Only component-specific overrides here</style>
+// Only component-specific overrides here
+</style>
