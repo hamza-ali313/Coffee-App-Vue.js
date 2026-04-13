@@ -17,9 +17,13 @@ import { ref, onMounted } from "vue";
 const isLoading = ref(true);
 
 onMounted(() => {
-  window.addEventListener("load", () => {
+  if (document.readyState === "complete") {
     isLoading.value = false;
-  });
+  } else {
+    window.addEventListener("load", () => {
+      isLoading.value = false;
+    });
+  }
 });
 </script>
 
