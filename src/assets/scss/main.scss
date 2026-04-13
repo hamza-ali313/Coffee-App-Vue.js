@@ -170,10 +170,7 @@ li {
 
 .hero-content {
   height: 843px;
-  display: flex;
-  align-items: start;
-  flex-direction: column;
-  justify-content: center;
+  padding: 190px 0 0 30px;
 }
 
 .hero-section.inner_banner {
@@ -268,6 +265,9 @@ h6 {
 
   img {
     width: 100%;
+    border-radius: 10px;
+    height: 410px;
+    object-fit: cover;
   }
 
   h5 {
@@ -402,7 +402,7 @@ h6 {
   padding: 220px 0 0 0;
   position: relative;
   z-index: 2;
-  margin: -100px 0 0 0;
+  margin: -230px 0 0 0;
 }
 .ingrediantsource {
   background-image: url(../images/ingrediantbg.png);
@@ -490,7 +490,6 @@ h6 {
 // ==========================================
 
 .testi_slider {
-  margin-top: 50px;
   position: relative;
 
   .nav-btn {
@@ -538,6 +537,7 @@ h6 {
       width: 100%;
       height: 270px;
       object-fit: cover;
+      border-radius: 12px;
     }
 
     .date-badge {
@@ -590,7 +590,7 @@ h6 {
   }
 
   .content {
-    padding: 45px 10px 20px;
+    padding: 5px 10px 20px;
     background-image: $bg-wavy;
     @include bg_no_repeat_cover_center;
     margin: -20px 0 0 0;
@@ -702,7 +702,7 @@ h6 {
 // Small Testimonial Card
 .small_testimonial-card {
   background: #ffffff99;
-  border-radius: 7px;
+  border-radius: 15px;
   border: 1px solid transparent;
   min-height: 220px;
   transition: 0.3s;
@@ -1179,7 +1179,7 @@ label {
     overflow: hidden;
 
     .content {
-      padding: 45px 10px 20px;
+      padding: 5px 10px 20px;
     }
 
     .menu-btn {
@@ -1238,6 +1238,28 @@ label {
       width: 100% !important;
     }
   }
+  .footer-section.bg_green
+ {
+    margin: -120px 0 0 0;
+    position: relative;
+    z-index: 1;
+
+  }
+  .testi_slider {
+      width: 80% !important;
+      margin: 0 auto;
+      .nav-btn.left{
+        left: -20px;
+      }
+      .nav-btn.right {
+        right: -20px;
+      }
+}
+
+.hero-content {
+  padding: 70px 0 0 20px;
+}
+
 }
 
 /* Mobile */

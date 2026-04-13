@@ -18,9 +18,11 @@
           </p>
 
           <!-- BUTTONS -->
-          <div class="d-flex justify-content-lg-start justify-content-center gap-3 mt-4">
+          <div
+            class="d-flex justify-content-lg-start justify-content-md-start justify-content-center gap-3 mt-4"
+          >
             <GButton btntxt="See Our Menu" icon="bi bi-list-task" @click="Seemenu" />
-            <OButton btntxt="Vist Us" icon="bi bi-geo-alt-fill" @click="visitus" />
+            <OButton btntxt="Visit Us" icon="bi bi-geo-alt-fill" @click="visitus" />
           </div>
         </div>
       </div>
@@ -38,12 +40,12 @@ import { useRouter } from "vue-router";
 const router = useRouter();
 
 const Seemenu = () => {
-  router.push('/FoodsDrinks')
-}
+  router.push("/FoodsDrinks");
+};
 
 const visitus = () => {
-  router.push('/locations')
-}
+  router.push("/locations");
+};
 </script>
 
 <style scoped lang="scss">

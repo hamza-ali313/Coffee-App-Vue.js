@@ -6,7 +6,7 @@
       description="Seasonal food, specialty coffee, and baked treats made with care for slow
     mornings, relaxed brunches, and easy lunches."
       :bgImage="fooddrinksbanner"
-      :primaryBtn="{ text: 'View Details' }"
+      :primaryBtn="{ text: 'View Menu' }"
       :secondaryBtn="{ text: 'Order Ahead' }"
       @primary-click="exploreEvents"
       @secondary-click="buyTickets"

@@ -97,8 +97,8 @@ const breakpoints = {
 3
 <style scoped lang="scss">
 .slider {
-  /* Remove fixed padding-bottom if you want it to be dynamic */
   padding-bottom: 20px;
+  margin-top: unset;
 }
 
 /* 1. Make the swiper a flex container so pagination sits below the slides */

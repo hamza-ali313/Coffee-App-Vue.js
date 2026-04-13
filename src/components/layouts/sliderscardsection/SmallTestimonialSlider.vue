@@ -1,12 +1,17 @@
 <template>
   <div class="testimonial-wrapper py-5">
     <!-- 🔼 TOP SLIDER (LEFT DIRECTION) -->
-    <Swiper :slides-per-view="4" :modules="[Autoplay]" :space-between="20" :loop="true" :speed="5000"
-      :allow-touch-move="false" :autoplay="{
-        delay: 0,
-        disableOnInteraction: false,
-        reverseDirection: false,
-      }" class="mb-4">
+    <!-- :autoplay="{ delay: 0, disableOnInteraction: false, reverseDirection: false, }" -->
+    <Swiper
+      :slides-per-view="4"
+      :modules="[Autoplay]"
+      :space-between="20"
+      :loop="true"
+      :speed="5000"
+      :breakpoints="breakpoints"
+      :allow-touch-move="true"
+      class="mb-4"
+    >
       <SwiperSlide v-for="(item, index) in testimonials" :key="'top' + index">
         <SmallTestimonial :data="item" />
       </SwiperSlide>
@@ -14,13 +19,15 @@
 
     <!-- 🔽 BOTTOM SLIDER (RIGHT DIRECTION) -->
 
-
-    <Swiper :slides-per-view="4" :modules="[Autoplay]" :space-between="20" :loop="true" :speed="5000"
-      :allow-touch-move="false" :autoplay="{
-        delay: 0,
-        disableOnInteraction: false,
-        reverseDirection: true,
-      }">
+    <Swiper
+      :slides-per-view="4"
+      :modules="[Autoplay]"
+      :space-between="20"
+      :loop="true"
+      :speed="5000"
+      :breakpoints="breakpoints"
+      :allow-touch-move="true"
+    >
       <SwiperSlide v-for="(item, index) in testimonials" :key="'bottom' + index">
         <SmallTestimonial :data="item" />
       </SwiperSlide>
@@ -33,6 +40,10 @@ import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import SmallTestimonial from "./SmallTestimonial.vue";
 import user from "../../../assets/images/user.png";
+const breakpoints = {
+  768: { slidesPerView: 3 },
+  1024: { slidesPerView: 4 },
+};
 // DATA
 const testimonials = [
   {
@@ -86,5 +97,7 @@ const testimonials = [
 
 .swiper-wrapper {
   transition-timing-function: linear !important;
+  cursor: grab;
+  cursor: -webkit-grab; /* for Safari */
 }
 </style>

@@ -15,6 +15,7 @@
       :slides-per-view="4"
       :space-between="20"
       :loop="true"
+      :loopedSlides="items.length"
       :breakpoints="breakpoints"
       @swiper="setSwiper"
     >
@@ -58,6 +59,7 @@ import Fslid1 from "@/assets/images/Fslid1.png";
 import Fslid2 from "@/assets/images/Fslid2.png";
 import Fslid3 from "@/assets/images/Fslid3.png";
 import Fslid4 from "@/assets/images/Fslid4.png";
+import Fslid5 from "@/assets/images/Gal2.png";
 import nxt from "@/assets/images/nxt.png";
 import prev from "@/assets/images/prev.png";
 import GButton from "../../ui/GButton.vue";
@@ -91,6 +93,12 @@ const items = [
     image: Fslid2,
   },
   {
+    title: "Coffee & Breakfast",
+    desc: "Specialty coffee, carefully sourced brewed for balance, clarity...",
+    cta: "VIEW COFFEE",
+    image: Fslid5,
+  },
+  {
     title: "Bakery & Sweets",
     desc:
       "Simple, nourishing lunch plates that work just as well for a long catch-up as a quick.",
@@ -102,12 +110,6 @@ const items = [
     desc: "Freshly baked pastries and small treats, made in-house or sourced.",
     cta: "VIEW BAKERY",
     image: Fslid4,
-  },
-  {
-    title: "Coffee & Breakfast",
-    desc: "Specialty coffee, carefully sourced brewed for balance, clarity...",
-    cta: "VIEW COFFEE",
-    image: Fslid1,
   },
 ];
 

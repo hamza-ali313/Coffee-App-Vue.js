@@ -14,12 +14,14 @@
 
           <p class="hero-text">{{ description }}</p>
 
-          <div class="d-flex justify-content-lg-start justify-content-center gap-3 mt-4">
+          <div
+            class="d-block d-lg-flex d-md-flex justify-content-lg-start justify-content-md-start justify-content-center gap-3 mt-4"
+          >
             <GButton
               v-if="primaryBtn"
               :btntxt="primaryBtn.text"
               @click="$emit('primary-click')"
-              class="d-none d-lg-block d-md-block"
+              class=""
             />
 
             <OButton

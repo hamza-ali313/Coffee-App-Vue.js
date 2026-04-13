@@ -32,7 +32,7 @@
                 </div>
               </div>
 
-              <span class="ms-2 ">({{ data.rating }})</span>
+              <span class="ms-2">({{ data.rating }})</span>
             </div>
           </span>
         </div>
@@ -45,10 +45,11 @@
         <!-- Name & Time -->
         <div class="d-flex justify-content-between">
           <div>
-            <strong>{{ data.name }}</strong><br />
+            <strong>{{ data.name }}</strong
+            ><br />
             <small class="text-muted">{{ data.time }}</small>
           </div>
-          <img :src="google" alt="logo" class="img-fluid" style="width: 40px; height: 40px; object-fit: contain" />
+          <!-- <img :src="google" alt="logo" class="img-fluid" style="width: 40px; height: 40px; object-fit: contain" /> -->
           <!-- <i class="bi bi-google"></i> -->
         </div>
       </div>
@@ -74,6 +75,5 @@ defineProps({
   right: 110px;
   width: 150px;
   height: 150px;
-
 }
 </style>

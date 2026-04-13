@@ -27,7 +27,7 @@ function handleClick(e) {
 <style scoped>
 .g_btn.menu-btn {
   background-image: url("@/assets/images/greenGbtn.png");
-  padding: 18px 30px;
+  padding: 18px 45px;
 }
 .g_btn.menu-btn:focus {
   outline: none;

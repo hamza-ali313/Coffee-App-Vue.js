@@ -5,10 +5,10 @@
       <img :src="image" />
 
       <!-- Date Badge -->
-      <div class="date-badge">
+      <!-- <div class="date-badge">
         <span>{{ day }}</span> <br />
         {{ month }}
-      </div>
+      </div> -->
 
       <!-- Tag -->
       <p class="tag">{{ tag }}</p>
@@ -21,22 +21,32 @@
 
     <!-- Content -->
     <div class="content">
-      <p class="desc">{{ desc }}</p>
+      <!-- <p class="desc"></p> -->
 
-      <div class="info">
-        <p>
-          <i class="bi bi-clock-fill" style="color: #d08a44; padding: 0 10px 0 0"></i>
-          <strong>{{ time }}</strong>
-        </p>
-        <p>
-          <i class="bi bi-person-fill fs-5" style="color: #919b4c; padding: 0 10px 0 0"></i>
-          <strong>{{ spots }}</strong> Spot Left
-        </p>
-      </div>
-
-      <div class="d-flex gap-3 mt-4">
-        <GButton btntxt="Add to Calender" />
-        <OButton btntxt="RSVP" />
+      <div class="info d-flex align-items-baseline">
+        <div>
+          <p>
+            <i
+              class="bi bi-calendar-fill"
+              style="color: #d08a44; padding: 0 10px 0 0"
+            ></i>
+            <strong>{{ day }} {{ month }}. {{ year }}</strong>
+          </p>
+          <p>
+            <i
+              class="bi bi-person-fill fs-5"
+              style="color: #919b4c; padding: 0 10px 0 0"
+            ></i>
+            <strong>{{ spots }}</strong> Spot Left
+          </p>
+          <p>
+            <i class="bi bi-clock-fill" style="color: #d08a44; padding: 0 10px 0 0"></i>
+            <strong>{{ time }}</strong>
+          </p>
+        </div>
+        <div class="d-flex gap-3 mt-4">
+          <OButton btntxt="RSVP" />
+        </div>
       </div>
     </div>
   </div>
@@ -70,6 +80,10 @@ defineProps({
     type: String,
     required: true,
   },
+  year: {
+    type: String,
+    required: true,
+  },
   tag: {
     type: String,
     required: true,
@@ -94,7 +108,7 @@ defineProps({
 // Only component-specific overrides here
 
 .menu-btn {
-  padding: 11px 39px;
+  padding: 21px 42px !important;
   font-size: 38px;
 }
 </style>
