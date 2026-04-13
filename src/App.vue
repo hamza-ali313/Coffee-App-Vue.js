@@ -19,7 +19,7 @@ const isLoading = ref(true);
 onMounted(() => {
   setTimeout(() => {
     isLoading.value = false;
-  }, 500); // smooth UX
+  }, 1500); // smooth UX
 });
 </script>
 
