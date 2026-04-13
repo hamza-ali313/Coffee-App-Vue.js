@@ -72,7 +72,6 @@ const router = useRouter();
 
 const exploreEvents = () => {
   router.push("/faqs");
-  console.log("working");
 };
 
 const buyTickets = () => {

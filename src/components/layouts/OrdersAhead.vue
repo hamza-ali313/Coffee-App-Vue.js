@@ -1,10 +1,10 @@
 <template>
   <div class="sec_heading text-center px-3">
-    <h2>{{ title }}</h2>
+    <h2>Getting here</h2>
     <h3>here is how it works</h3>
     <p class="description"></p>
   </div>
-  <div class="steps-process container py-5">
+  <div class="steps-process container pb-5">
     <div class="row justify-content-center">
       <div
         v-for="(step, index) in steps"
@@ -113,13 +113,4 @@ defineProps({
     display: none;
   }
 }
-
-// /* Responsive spacing */
-// @media (max-width: 767px) {
-//     .steps-process .step-item .icon-wrapper::after {
-//         width: 25px;
-//         height: 12px;
-//         right: -30%;
-//     }
-// }
 </style>

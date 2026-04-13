@@ -102,7 +102,7 @@ defineProps({
 }
 
 .map-caption {
-  background: #f3f3f3;
+  background: #fff;
   padding: 15px;
   font-size: 13px;
 }
