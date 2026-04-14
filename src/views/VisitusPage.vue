@@ -1,10 +1,9 @@
 <template>
   <div class="bg_pink">
     <InnerBanner
-      title="OUR CHOICES SHAPE"
-      subtitle="Everything We Serve"
-      description="We believe that every choice matters. From the ingredients we source to the way we serve. 
-      Our approach is rooted in transparency, responsibility, and long-term thinking."
+      title="FIND YOUR WAY TO DEE!"
+      subtitle="Your neighbourhood cafe awaits"
+      description="A calm neighbourhood café, open daily for coffee, food, and time well spent."
       :bgImage="locationban"
       innerbanclass="locationban"
       :secondaryBtn="{ text: 'Visit us' }"
