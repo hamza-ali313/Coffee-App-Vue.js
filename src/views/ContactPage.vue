@@ -16,7 +16,6 @@ import ContactHead from "../components/layouts/contactpage/ContactHead.vue";
 import Footer from "../components/layouts/Footer.vue";
 import { locations } from "../data/locations.js";
 import LocationDetails from "../components/layouts/Locations/LocationDetails.vue";
-import ContactLocation from "../components/layouts/contactpage/ContactLocation.vue";
 </script>
 
 <style lang="scss" scoped>
