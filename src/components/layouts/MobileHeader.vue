@@ -40,7 +40,11 @@
         >
           <div class="offcanvas-header">
             <h5 class="offcanvas-title">Menu</h5>
-            <button type="button" class="btn-close fs-4 d-flex align-items-center justify-content-center" data-bs-dismiss="offcanvas">
+            <button
+              type="button"
+              class="btn-close fs-4 d-flex align-items-center justify-content-center"
+              data-bs-dismiss="offcanvas"
+            >
               <img src="../../assets/images/navtoggle.png" />
             </button>
           </div>
@@ -56,19 +60,27 @@
                 </router-link>
               </li>
               <li class="nav-item text-nowrap w-100 text-center">
-                <router-link class="nav-link mx-auto" to="/whatsonevent"> What's On </router-link>
+                <router-link class="nav-link mx-auto" to="/whatsonevent">
+                  What's On
+                </router-link>
               </li>
 
               <li class="nav-item text-nowrap w-100 text-center">
-                <router-link class="nav-link mx-auto" to="/item-details"> Community </router-link>
+                <router-link class="nav-link mx-auto" to="/our-choices">
+                  Community
+                </router-link>
               </li>
 
               <li class="nav-item text-nowrap w-100 text-center">
-                <router-link class="nav-link mx-auto" to="/faqs"> About Us </router-link>
+                <router-link class="nav-link mx-auto" to="/our-story">
+                  About Us
+                </router-link>
               </li>
 
               <li class="nav-item text-nowrap w-100 text-center">
-                <router-link class="nav-link mx-auto" to="/locations"> Visit Dee </router-link>
+                <router-link class="nav-link mx-auto" to="/locations">
+                  Visit Dee
+                </router-link>
               </li>
 
               <li class="nav-item text-nowrap w-100 text-center mt-3 text-center">
@@ -99,7 +111,7 @@
         </div>
       </div>
 
-      <!-- 3. MAIN NAVBAR -->
+      <!-- 3. Desktop NAVBAR -->
       <nav
         class="navbar navbar-expand-lg py-2 d-none d-lg-block rounded-5 px-3 d-bg"
         :style="{ backgroundImage: `url(${bgImage})` }"
@@ -129,7 +141,7 @@
               <router-link to="/whatsonevent" class="nav-link">What’s On</router-link>
             </li>
             <li class="nav-item">
-              <router-link to="/item-details" class="nav-link">Community</router-link>
+              <router-link to="/our-choices" class="nav-link">Community</router-link>
             </li>
           </ul>
 
@@ -139,7 +151,7 @@
           >
             <ul class="d-flex align-items-center gap-1">
               <li class="nav-item">
-                <router-link to="/faqs" class="nav-link">About Us</router-link>
+                <router-link to="/our-story" class="nav-link">About Us</router-link>
               </li>
               <li class="nav-item">
                 <router-link to="/locations" class="nav-link">Visit Dee</router-link>
@@ -298,6 +310,6 @@ ul {
   padding: 10px 0;
 }
 .mobile-logo .router-link-active {
-    background-image: unset;
+  background-image: unset;
 }
 </style>

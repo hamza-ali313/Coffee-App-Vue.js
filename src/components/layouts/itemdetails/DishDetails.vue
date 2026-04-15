@@ -5,7 +5,7 @@
         <h2>{{ dish.name }}</h2>
       </div>
       <div
-        class="d-flex gap-2 flex-wrap justify-content-center justify-content-lg-center justify-content-md-center align-items-center mb-2"
+        class="d-flex gap-2 flex-wrap justify-content-center justify-content-lg-start justify-content-md-start align-items-center mb-2"
       >
         <span
           v-for="(b, index) in dish.badges"

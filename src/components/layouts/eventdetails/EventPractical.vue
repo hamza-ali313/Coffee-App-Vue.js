@@ -6,7 +6,7 @@
         <div class="icon-box">
           <i :class="item.icon"></i>
         </div>
-        <div class="text-box text-start">
+        <div class="text-box d-flex align-items-center gap-3">
           <span class="label">{{ item.label }}:</span>
           <p class="value">{{ item.value }}</p>
         </div>
@@ -17,16 +17,11 @@
 
 <script setup>
 defineProps({
-  practical: Array
-})
+  practical: Array,
+});
 </script>
 
 <style scoped lang="scss">
-.practical-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
-}
 .section-title {
   font-family: $titillium-bold;
   font-size: 24px;
@@ -49,14 +44,12 @@ defineProps({
   .text-box {
     .label {
       font-size: 14px;
-      color: #999;
       font-family: $titillium-semibold;
     }
     .value {
       margin: 0;
       font-size: 16px;
-      color: #333;
-      font-family: $titillium-bold;
+      font-family: $titillium-regular;
     }
   }
 }

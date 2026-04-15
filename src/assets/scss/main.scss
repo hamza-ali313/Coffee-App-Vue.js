@@ -143,6 +143,19 @@ li {
   @include bg_no_repeat_cover_center;
   background-position: top;
   height: 1020px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url("@/assets/images/bannerleaf.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: 130px;
+    left: 0;
+    width: 300px;
+    height: 300px;
+} 
 }
 
 .hero-title {
@@ -174,7 +187,7 @@ li {
 
 .hero-content {
   height: 843px;
-  padding: 190px 0 0 30px;
+  padding: 190px 0 0 30px; 
 }
 
 .hero-section.inner_banner {
@@ -1030,6 +1043,83 @@ input:-webkit-autofill:active {
 }
 
 
+
+// ==========================================
+// Book Now & Add to Order Seciton Css
+// ==========================================
+
+.product-header {
+  padding: 20px 10px;
+  margin: 50px 0;
+  border-top: 1px solid #e5c7a3;
+  border-bottom: 1px solid #e5c7a3;
+
+  .title {
+    font-size: 42px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  .controls {
+    .qty-box {
+      border: 1px solid $theme_o;
+      border-radius: 30px;
+      padding: 5px 10px;
+      gap: 15px;
+      justify-content: space-between;
+      background-color: #f2dcc6;
+
+      button {
+        border: none;
+        font-size: 18px;
+        width: 28px;
+        height: 28px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        color: $theme_o;
+        background: #fff;
+        transition: 0.2s;
+
+        &:hover {
+          background: $theme_o;
+          color: #fff;
+        }
+      }
+
+      span {
+        font-weight: 600;
+        min-width: 24px;
+        text-align: center;
+        color: $theme_o;
+      }
+    }
+
+    .price-box {
+      text-align: center;
+
+      small {
+        display: block;
+        font-size: 14px;
+        font-family: $titillium-semibold;
+        color: #000;
+      }
+
+      h2 {
+        margin: 0;
+        font-size: 38px;
+        line-height: 28px;
+        color: $green-dark;
+        font-family: $titillium-semibold;
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+
 // ==========================================
 // CARD BOX
 // ==========================================
@@ -1061,22 +1151,22 @@ input:-webkit-autofill:active {
 // Dish Details Page css 
 
 .bg-badge {
-  background: #f3e7dc;
 
   &:nth-child(odd) {
     background-color: #f3e7dc;
-    border: 1px solid #e2b689;
+    border: 1px solid $theme_g !important;
   }
 
   &:nth-child(even) {
-    background-color: #f3f1e6;
-    border: 1px solid $theme_g;
+    background-color: #f7e7da;
+    border: 1px solid $theme_o !important;
+  }
+
+  img {
+    width: 18px;
   }
 }
 
-span.badge img {
-  width: 15px;
-}
 
 button {
   border: none;
@@ -1146,6 +1236,36 @@ label {
 }
 
 
+// Section 
+
+.pairs_with_sec {
+  position: relative;
+  padding: 0 0 150px 0;
+
+  &::before {
+      content: "";
+      position: absolute;
+      background-image: url("@/assets/images/pairbef.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      top: 0;
+      left: 0;
+      width: 300px;
+      height: 300px;
+  }
+
+  &::after {
+      content: "";
+      position: absolute;
+      background-image: url("@/assets/images/pairafter.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      bottom: 0;
+      right: 0;
+      width: 230px;
+      height: 160px;
+  }
+}
 
 
 
@@ -1587,12 +1707,12 @@ label {
     gap: 9px;
   }
 
-  .pairs_with_sec[data-v-c4eec845] {
+  .pairs_with_sec {
     width: 92%;
     margin: 0 auto;
   }
 
-  .pairs_with_sec[data-v-c4eec845]::before {
+  .pairs_with_sec::before {
     content: "";
     top: 110px !important;
     left: -30px !important;

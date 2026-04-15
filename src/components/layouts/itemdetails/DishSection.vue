@@ -37,6 +37,9 @@ import dishslide3 from "../../../assets/images/dishslide3.png";
 import clock from "../../../assets/images/clock.png";
 import check from "../../../assets/images/Check.png";
 import Seasonal from "../../../assets/images/seasonal.png";
+import avacado from "../../../assets/images/avacado.png";
+import friedfish from "../../../assets/images/friedfish.png";
+import poachedegg from "../../../assets/images/poachedegg.png";
 
 const dishes = [
   {
@@ -84,7 +87,7 @@ const dishes = [
       {
         name: "Fried Eggs",
         price: 1.0,
-        image: "https://images.unsplash.com/photo-1506086679525-9c3c3e1c6b6c",
+        image: friedfish,
         selected: false,
       },
       {
@@ -96,7 +99,7 @@ const dishes = [
       {
         name: "Avocado",
         price: 0.5,
-        image: "https://images.unsplash.com/photo-1582515073490-dc2c7a8c6b63",
+        image: avacado,
         selected: true,
       },
       {
@@ -108,7 +111,7 @@ const dishes = [
       {
         name: "Feta cheese crumbles",
         price: 0.5,
-        image: "https://images.unsplash.com/photo-1604908811817-0a7b9d8f2b44",
+        image: poachedegg,
         selected: false,
       },
     ],

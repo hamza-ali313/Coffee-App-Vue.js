@@ -29,7 +29,11 @@
 
     <!-- GETTING HERE -->
   </div>
-  <OrdersAhead :steps="steps" title="Getting here" sub_title="here is how it works" />
+  <OrdersAhead
+    :steps="steps"
+    title="Getting here"
+    sub_title="At Dee our values shape everything we do"
+  />
 </template>
 
 <script setup>

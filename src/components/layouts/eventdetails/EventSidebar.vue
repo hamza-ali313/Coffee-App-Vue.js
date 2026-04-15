@@ -1,5 +1,5 @@
 <template>
-  <div class="event-details-card">
+  <div class="event-details-card card-box">
     <div class="card-header">
       <h4>EVENT DETAILS</h4>
     </div>
@@ -8,7 +8,7 @@
         <div class="icon-box">
           <i :class="item.icon"></i>
         </div>
-        <div class="text-box text-start">
+        <div class="text-box d-flex align-items-center gap-3">
           <span class="label">{{ item.label }}:</span>
           <p class="value">{{ item.value }}</p>
         </div>
@@ -19,8 +19,8 @@
 
 <script setup>
 defineProps({
-  details: Array
-})
+  details: Array,
+});
 </script>
 
 <style scoped lang="scss">
@@ -31,7 +31,7 @@ defineProps({
   overflow: hidden;
 
   .card-header {
-    background: #f2e1d1;
+    background: #f4e7de;
     padding: 15px 20px;
     h4 {
       margin: 0;
@@ -45,19 +45,18 @@ defineProps({
     padding: 20px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 3px;
   }
 
   .detail-row {
     display: flex;
-    align-items: flex-start;
-    gap: 15px;
+    align-items: start;
+    gap: 5px;
 
     .icon-box {
       width: 40px;
       height: 40px;
       display: flex;
-      align-items: center;
       justify-content: center;
       font-size: 18px;
       color: #d08a44;
@@ -66,14 +65,13 @@ defineProps({
     .text-box {
       .label {
         font-size: 14px;
-        color: #777;
         font-family: $titillium-semibold;
+        width: 69px;
       }
       .value {
         margin: 0;
         font-size: 15px;
-        color: #333;
-        font-family: $titillium-bold;
+        font-family: $titillium-regular;
       }
     }
   }

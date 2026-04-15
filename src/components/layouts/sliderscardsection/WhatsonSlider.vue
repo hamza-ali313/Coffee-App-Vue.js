@@ -1,12 +1,4 @@
 <template>
-  <div class="container">
-    <SecHeading
-      main_h="WHAT'S ON"
-      sub_h="At Dee"
-      description="A space for connection, creativity and conversation. From small community gatherings and workshops to rotating art exhibitions and new dishes, there's always something unfolding. Take a look at what's new or coming up."
-      :showLeaf="true"
-    />
-  </div>
   <div class="slider event-slider container position-relative">
     <!-- Left Arrow -->
     <div class="nav-btn left d-md-none d-lg-block" @click="slidePrev">
@@ -46,9 +38,6 @@
   <div class="d-none d-lg-none d-md-flex mt-3 justify-content-center gap-3">
     <div class="nav-btn left" @click="slidePrev"><img :src="prev" /></div>
     <div class="nav-btn right" @click="slideNext"><img :src="nxt" /></div>
-  </div>
-  <div class="text-center my-5">
-    <GButton btntxt="explore what's on" />
   </div>
 </template>
 <script setup>
@@ -146,7 +135,4 @@ const breakpoints = {
   1024: { slidesPerView: 4 },
 };
 </script>
-<style scoped lang="scss">
-// WhatsonSlider specific styles - main styles in global SCSS
-// Only component-specific overrides here
-</style>
+<style scoped lang="scss"></style>

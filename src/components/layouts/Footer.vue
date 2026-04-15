@@ -56,24 +56,24 @@
           <h5>Working</h5>
           <ul class="">
             <li>
-              <a href="#">
+              <router-link to="/item-details">
                 <p>Menu</p>
-              </a>
+              </router-link>
             </li>
             <li>
-              <a href="#">
+              <router-link to="/whatsonevent">
                 <p>Whats On</p>
-              </a>
+              </router-link>
             </li>
             <li>
-              <a href="#">
+              <router-link to="/our-story">
                 <p>Our Story</p>
-              </a>
+              </router-link>
             </li>
             <li>
-              <a href="#">
+              <router-link to="/whatsonevent">
                 <p>Our Local Community</p>
-              </a>
+              </router-link>
             </li>
           </ul>
         </div>
@@ -83,34 +83,34 @@
           <h5>QUICK LINKS</h5>
           <ul class="">
             <li>
-              <a href="#">
+              <router-link to="/contactus">
                 <p>Contact us</p>
-              </a>
+              </router-link>
             </li>
             <li>
-              <a href="#">
+              <router-link to="/whatsonevent">
                 <p>Art at Dee</p>
-              </a>
+              </router-link>
             </li>
             <li>
-              <a href="#">
+              <router-link to="/whatsonevent">
                 <p>Blog & Shop</p>
-              </a>
+              </router-link>
             </li>
             <li>
-              <a href="#">
+              <router-link to="/locations">
                 <p>Locations</p>
-              </a>
+              </router-link>
             </li>
             <li>
-              <a href="#">
+              <router-link to="/faqs">
                 <p>FAQ’s</p>
-              </a>
+              </router-link>
             </li>
             <li>
-              <a href="#">
+              <router-link to="">
                 <p>Careers</p>
-              </a>
+              </router-link>
             </li>
           </ul>
         </div>
