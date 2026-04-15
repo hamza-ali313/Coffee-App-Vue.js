@@ -1,8 +1,8 @@
 <template>
   <div class="sec_heading text-center px-3">
-    <h2>Getting here</h2>
-    <h3>here is how it works</h3>
-    <p class="description"></p>
+    <h2>{{ title }}</h2>
+    <h3>{{ sub_title }}</h3>
+    <p class="description" :v-if="desc">{{ desc }}</p>
   </div>
   <div class="steps-process container pb-5">
     <div class="row justify-content-center">

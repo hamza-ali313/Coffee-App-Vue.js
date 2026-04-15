@@ -10,6 +10,7 @@ import ContactPage from '@/views/ContactPage.vue'
 import CheckoutPage from '@/views/CheckoutPage.vue'
 import EventDetails from '@/views/EventDetails.vue'
 import OurChoices from '@/views/OurChoices.vue'
+import OurStory from '@/views/OurStory.vue'
 
 const routes = [
   { path: '/', component: Home },
@@ -23,6 +24,7 @@ const routes = [
   { path: '/checkout', component: CheckoutPage },
   { path: '/event-details', component: EventDetails },
   { path: '/our-choices', component: OurChoices },
+  { path: '/our-story', component: OurStory },
 ]
 
 const router = createRouter({

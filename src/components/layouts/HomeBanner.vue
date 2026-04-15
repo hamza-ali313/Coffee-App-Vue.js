@@ -31,7 +31,6 @@
 </template>
 
 <script setup>
-import Header from "./Header.vue";
 import MobileHeader from "./MobileHeader.vue";
 import GButton from "../ui/GButton.vue";
 import OButton from "../ui/OButton.vue";

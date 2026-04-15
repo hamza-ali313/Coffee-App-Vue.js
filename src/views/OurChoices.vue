@@ -34,7 +34,7 @@
       :card2Image="img2"
     />
 
-    <Footer :negm="true" :hasBg="true" />
+    <Footer :negm="true" />
   </div>
 </template>
 

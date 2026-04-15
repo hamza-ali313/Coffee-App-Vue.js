@@ -1,6 +1,6 @@
 <template>
   <div class="events-section">
-    <div class="container py-5">
+    <div class="container pt-3 pb-5">
       <div class="main-card mb-4">
         <img :src="bannerImage" class="bg-img" />
 
@@ -105,6 +105,7 @@ const props = defineProps({
   bottom: 40px;
   z-index: 5;
   left: 20px;
+  width: 100%;
 }
 
 .events-section {
@@ -129,9 +130,9 @@ const props = defineProps({
   position: absolute;
   background-image: url(/src/assets/images/rightleaf.png);
   background-repeat: no-repeat;
+  background-size: contain;
   top: -27px;
   right: -63px;
-  background-size: contain;
   width: 65px;
   height: 70px;
 }
