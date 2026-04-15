@@ -177,10 +177,12 @@ li {
   height: 910px !important;
 
 }
+
 .choicesban {
   position: relative;
   z-index: 3;
 }
+
 .inner_banner {
   .hero-content {
     padding: 170px 0 0px 70px !important;
@@ -395,15 +397,18 @@ h6 {
 // ==========================================
 // GALLERY STYLES
 // ==========================================
-.our_local_comunity,.ingrediantsource {
+.our_local_comunity,
+.ingrediantsource {
   background-image: $bg-local-community;
   @include bg_no_repeat_cover_center;
+  background-position: bottom;
   height: 1170px;
   padding: 220px 0 0 0;
   position: relative;
   z-index: 2;
   margin: -230px 0 0 0;
 }
+
 .ingrediantsource {
   background-image: url(../images/ingrediantbg.png);
   margin: -100px 0 -150px 0;
@@ -443,7 +448,7 @@ h6 {
 
 .visitus-sec {
   position: relative;
-  padding: 169px 20px 230px 100px;
+  padding: 169px 20px 330px 100px;
   z-index: 1;
 
   h6 {
@@ -748,6 +753,7 @@ h6 {
   &.negm {
     padding: 300px 0 0 0;
   }
+
   .newsletter {
     background: transparent;
     margin-bottom: 40px;
@@ -1133,9 +1139,13 @@ label {
   .hero-section {
     height: 1250px !important;
   }
+
+  .our_story {
+    padding: 354px 20px 600px 200px;
+  }
 }
 
-@media (min-width: 1600px) and (max-width: 1950px) {
+@media (min-width: 1600px) and (max-width: 1750px) {
   .hero-section {
     height: 1150px !important;
   }
@@ -1238,27 +1248,34 @@ label {
       width: 100% !important;
     }
   }
-  .footer-section.bg_green
- {
+
+  .hero-section {
+    background-position: bottom;
+  }
+
+  .footer-section.bg_green {
     margin: -120px 0 0 0;
     position: relative;
     z-index: 1;
 
   }
-  .testi_slider {
-      width: 80% !important;
-      margin: 0 auto;
-      .nav-btn.left{
-        left: -20px;
-      }
-      .nav-btn.right {
-        right: -20px;
-      }
-}
 
-.hero-content {
-  padding: 70px 0 0 20px;
-}
+  .testi_slider {
+    width: 80% !important;
+    margin: 0 auto;
+
+    .nav-btn.left {
+      left: -20px;
+    }
+
+    .nav-btn.right {
+      right: -20px;
+    }
+  }
+
+  .hero-content {
+    padding: 70px 0 0 20px;
+  }
 
 }
 
@@ -1708,7 +1725,7 @@ label {
 
   .events-wrapper {
     padding-top: 0 !important;
-}
+  }
 }
 
 

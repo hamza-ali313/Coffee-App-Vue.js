@@ -188,7 +188,9 @@ const faqTabs = [
     background: #c88947;
     color: white;
 }
-
+.faq-tab.active .count{
+    color: white;
+}
 .faq-search {
     position: relative;
     max-width: 900px;
