@@ -128,6 +128,10 @@ li {
   padding: 0px 33px;
 }
 
+.navbar-nav .order-btn {
+  white-space: nowrap;
+}
+
 // ==========================================
 // HERO SECTION STYLES
 // ==========================================
@@ -1143,6 +1147,11 @@ label {
   .our_story {
     padding: 354px 20px 600px 200px;
   }
+
+  .hero-section.locationban {
+    height: 1250px !important;
+  }
+
 }
 
 @media (min-width: 1600px) and (max-width: 1750px) {
@@ -1152,6 +1161,10 @@ label {
 
   .hero-section.inner_banner {
     height: 900px !important;
+  }
+
+  .hero-section.locationban {
+    height: 1050px !important;
   }
 
   .hero-title,

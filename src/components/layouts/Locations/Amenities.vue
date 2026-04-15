@@ -10,7 +10,7 @@
       <div class="card-box amenities-box">
         <h6 class="card-title">amenities</h6>
         <div class="card-body">
-          <ul class="d-flex justify-content-center align-items-center gap-3">
+          <ul class="d-flex flex-wrap p-0 justify-content-center align-items-center gap-3">
             <li
               v-for="(item, i) in items"
               :key="i"
