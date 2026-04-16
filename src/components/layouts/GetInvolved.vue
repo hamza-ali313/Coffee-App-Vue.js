@@ -13,10 +13,12 @@
             </p>
             <OButton btntxt="Contact Us" class='btn'/>
        </div>
+       <img :src="getinvolvedbg" alt="getinvolvedbg" class="img-fluid getinvolvedbg" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;object-fit: cover;" />
     </div>
 </template>
 <script setup>
 import leafImg from "../../assets/images/leaf.png";
+import getinvolvedbg from "../../assets/images/getinvolvedbg.png";
 import OButton from "../ui/OButton.vue";
 
 </script>
@@ -31,20 +33,7 @@ import OButton from "../ui/OButton.vue";
     padding: 140px 0;
 }
 
-.get_involved_bg::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-image: url(../../assets/images/getinvolvedbg.png);
-    background-repeat: no-repeat;
-    top: 0;
-    left: 0;
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: 570px;
-    z-index: 1;
-}
+
 
 /* green block */
 .get_involved_bg::after {
