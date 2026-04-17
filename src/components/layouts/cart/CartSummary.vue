@@ -52,7 +52,7 @@
     <!-- Checkout Button (Only in Drawer) -->
     <div v-if="isCartDrawer" class="mt-4">
       <button class="o_btn menu-btn w-100" @click="proceedToCheckout">
-        <span style="font-size: 2.5rem">CHECKOUT</span>
+        <span style="font-size: 46px">Proceed to Checkout</span>
       </button>
     </div>
   </div>
@@ -103,11 +103,11 @@ const proceedToCheckout = () => {
     margin: 0 10px 0 0px;
   }
   .text-theme-orange {
-    color: #d17842;
+    color: $theme_o;
   }
 
   .bg-orange-light {
-    border: 1px solid #d08a44;
+    border: 1px solid $theme_o;
   }
 
   .bg-orange-lighter {
@@ -131,13 +131,14 @@ const proceedToCheckout = () => {
 
   h5 {
     font-family: $titillium-semibold;
-    margin: 5px 0;
+    margin: 10px 0;
+    color: #000;
   }
 
   .o_btn.menu-btn {
     background-image: url("@/assets/images/greenGbtn.png");
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: 70% 90%;
     padding: 21px 52px;
     border: none;
     background-color: transparent;

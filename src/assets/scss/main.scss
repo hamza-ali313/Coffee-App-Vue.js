@@ -1210,7 +1210,10 @@ label {
     box-shadow: rgb(213 213 213 / 4%) 0px 3px 5px;
     outline: none;
   }
-
+  input:focus,
+  select:focus {
+    box-shadow:none !important;
+  }
   textarea {
     padding: 12px;
     resize: none;
@@ -1798,9 +1801,6 @@ label {
     margin: 0 auto;
   }
 
-  .orderahead_pg .sec_heading {
-    padding: 30px 0 0px 0 !important;
-  }
 
   .orderahead_pg .sec_heading::before {
     top: 0 !important;
