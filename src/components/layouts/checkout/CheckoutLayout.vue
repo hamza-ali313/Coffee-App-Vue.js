@@ -7,9 +7,9 @@
           <UserDetails class="mb-4" />
           <CollectionDetails class="mb-4" />
           <PaymentDetails />
-          <div class="mt-4">
+          <div class="mt-4 text-start">
             <button class="o_btn menu-btn w-100" @click="placeOrder">
-              <span style="font-size: 2.5rem">PLACE ORDER</span>
+              <span style="font-size: 2.5rem">Proceed to checkout</span>
             </button>
           </div>
         </div>
@@ -99,12 +99,11 @@ const placeOrder = () => {
   .o_btn.menu-btn {
     background-image: url("@/assets/images/greenGbtn.png");
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: 60% 100%;
     padding: 21px 52px;
     border: none;
     background-color: transparent;
     color: white;
-    font-weight: bold;
     transition: transform 0.2s;
 
     &:hover {
@@ -112,7 +111,7 @@ const placeOrder = () => {
     }
 
     span {
-      font-size: 1.2rem;
+      font-size: 4.2rem !important;
       letter-spacing: 1px;
     }
   }

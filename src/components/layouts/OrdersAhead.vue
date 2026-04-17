@@ -1,9 +1,4 @@
 <template>
-  <div class="sec_heading text-center px-3">
-    <h2>{{ title }}</h2>
-    <h3>{{ sub_title }}</h3>
-    <p class="description" :v-if="desc">{{ desc }}</p>
-  </div>
   <div class="steps-process container pb-5">
     <div class="row justify-content-center">
       <div
@@ -24,9 +19,6 @@
 <script setup>
 defineProps({
   steps: Array,
-  title: String,
-  sub_title: String,
-  desc: String,
 });
 </script>
 

@@ -1,18 +1,18 @@
 <template>
   <div class="cart-summary p-3">
     <!-- Discount / Gift Code -->
-    <div class="mb-3">
+    <div class="mb-3" v-if="isCartDrawer">
       <label class="form-label fw-semibold">
         <h6>Discount Code or Gift Card</h6>
       </label>
-      <div class="d-flex">
+      <div class="input-box input_bg">
         <input
           type="text"
           class="form-control me-2"
           placeholder="ENTER CODE"
           v-model="discountCode"
         />
-        <button class="btn btn-warning text-white">Apply</button>
+        <OButton btntxt="Apply" />
       </div>
     </div>
 
@@ -24,6 +24,7 @@
 
     <!-- Delivery Options -->
     <div
+      v-if="isCartDrawer"
       v-for="option in deliveryOptions"
       :key="option.name"
       class="d-flex justify-content-between p-2 my-4"
@@ -31,6 +32,22 @@
     >
       <h6>{{ option.name }}</h6>
       <h6>£{{ (option.price || 0).toFixed(2) }}</h6>
+    </div>
+
+    <div
+      v-if="
+        !isCartDrawer && checkoutStore.collection.time && checkoutStore.collection.date
+      "
+      class="p-2 my-4 bg-orange-light d-flex justify-content-between p-2"
+    >
+      <h6>{{ formattedTime }}</h6>
+      <h6>{{ formattedDate }}</h6>
+    </div>
+    <div
+      v-if="!isCartDrawer && checkoutStore.collection.location"
+      class="p-2 my-4 bg-orange-lighter"
+    >
+      <h6>{{ checkoutStore.collection.location }}</h6>
     </div>
 
     <!-- Total & Saved -->
@@ -61,9 +78,23 @@
 <script setup>
 import { ref, computed } from "vue";
 import { useCartStore } from "@/store/cart";
+import { useCheckoutStore } from "@/store/checkout";
 import { useRouter } from "vue-router";
+import OButton from "../../ui/OButton.vue";
+import { formatTime12h, formatDateReadable } from "../../../utils/formatters.js";
 
 const cart = useCartStore();
+const checkoutStore = useCheckoutStore();
+
+// format time
+const formattedTime = computed(() => {
+  return formatTime12h(checkoutStore.collection.time);
+});
+
+// format date
+const formattedDate = computed(() => {
+  return formatDateReadable(checkoutStore.collection.date);
+});
 const router = useRouter();
 
 const props = defineProps({
@@ -105,23 +136,42 @@ const proceedToCheckout = () => {
   .text-theme-orange {
     color: $theme_o;
   }
+  .input_bg {
+    background-image: url("../../../assets//images/cartinputbg.png");
+    @include bg_no_repeat_contain_center;
+    height: 65px;
+    width: 100%;
 
+    .o_btn.menu-btn {
+      padding: 17px 63px;
+    }
+    input.form-control {
+      height: 33px;
+      border: none;
+      width: 80%;
+      position: absolute;
+      top: 16px;
+      left: 14px;
+
+      &::placeholder {
+        @include font-titillium-regular;
+      }
+    }
+    input:focus {
+      box-shadow: none;
+    }
+    button {
+      position: absolute;
+      top: 8%;
+      right: -30px;
+    }
+  }
   .bg-orange-light {
     border: 1px solid $theme_o;
   }
 
   .bg-orange-lighter {
     background-color: #f5a6231a;
-  }
-
-  input.form-control {
-    border-radius: 50px;
-    padding: 12px 20px;
-  }
-
-  button.btn-warning {
-    border-radius: 50px;
-    padding: 12px 25px;
   }
 
   h6 {
@@ -135,7 +185,7 @@ const proceedToCheckout = () => {
     color: #000;
   }
 
-  .o_btn.menu-btn {
+  .menu-btn {
     background-image: url("@/assets/images/greenGbtn.png");
     background-repeat: no-repeat;
     background-size: 70% 90%;
@@ -143,7 +193,6 @@ const proceedToCheckout = () => {
     border: none;
     background-color: transparent;
     color: white;
-    font-weight: bold;
     transition: transform 0.2s;
 
     &:hover {

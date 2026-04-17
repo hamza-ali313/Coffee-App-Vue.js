@@ -1176,6 +1176,12 @@ button {
 
 // Form Styles 
 
+.checkout {
+  label {
+    margin-top: 6px;
+  }
+}
+
 label {
   font-size: 13px;
   margin-bottom: 6px;
@@ -1210,6 +1216,7 @@ label {
     background: #fff;
     box-shadow: rgb(213 213 213 / 4%) 0px 3px 5px;
     outline: none;
+    font-family: $titillium-regular;
   }
   input:focus,
   select:focus {
@@ -1490,8 +1497,9 @@ label {
 
   // Home Page Banner 
 
-
-
+  .hero-section::before {
+    width: 90px;
+  }
   .hero-section {
     background-image: url(/src/assets/images//mobilehomebanner-bg.png) !important;
     height: 1020px;
@@ -1578,8 +1586,8 @@ label {
   }
 
   .our_local_comunity {
-    padding: 110px 0 0 0;
-    height: 750px;
+    padding: 220px 0 0 0;
+    height: 1030px;
 
   }
 
@@ -1768,8 +1776,23 @@ label {
 
   .events-section .sec_heading {
     text-align: justify;
+
+    p {
+      padding: 0 10px 0 0 !important;
+
+    }
   }
 
+  .food_for_every .img_box img {
+    width: 100%;
+  }
+  .sec_heading h3{
+    font-size: 27px;
+  }
+
+  .sec_heading::before {
+    width: 150px !important;
+  }
   .events-section {
     margin-bottom: 0 !important;
   }
@@ -1800,7 +1823,7 @@ label {
     font-size: 8px;
   }
 
-  .faq-section .sec_heading h2[data-v-7a06f214] {
+.sec_heading h2[data-v-7a06f214] {
     font-size: 92px !important;
     line-height: 60px !important;
   }
@@ -1808,22 +1831,6 @@ label {
   .faq-item h2 {
     font-size: 17px !important;
   }
-
-  .orderahead_pg .sec_heading {
-    padding: 30px 0 0px 0 !important;
-  }
-
-  .orderahead_pg .sec_heading h3 {
-    font-size: 33px !important;
-  }
-
-  .orderahead_pg .sec_heading h2 {
-    font-size: 140px !important;
-    line-height: 70px !important;
-    width: 80%;
-    margin: 0 auto;
-  }
-
 
   .orderahead_pg .sec_heading::before {
     top: 0 !important;
@@ -1877,7 +1884,7 @@ label {
 
   .tag {
     padding: 7px 0;
-    width: 100px;
+    width: 120px;
     text-align: center;
     border-radius: 30px;
     background: #f2dcc6;

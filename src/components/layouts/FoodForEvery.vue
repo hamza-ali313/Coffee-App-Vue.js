@@ -8,7 +8,9 @@
           </div>
         </div>
         <div class="col-12 col-lg-6 col-md-6">
-          <div class="txt-sec w-75 ps-5">
+          <div
+            class="txt-sec w-100 w-lg-75 w-md-75 ps-lg-5 ps-md-5 text-center text-lg-start"
+          >
             <div class="sec_heading py-4">
               <span class="leaf">
                 <img :src="leafImg" alt="leaf" />

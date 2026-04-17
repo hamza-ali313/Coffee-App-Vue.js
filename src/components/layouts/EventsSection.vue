@@ -104,7 +104,7 @@ const props = defineProps({
   position: absolute;
   bottom: 40px;
   z-index: 5;
-  left: 20px;
+  left: 0px;
   width: 100%;
 }
 
