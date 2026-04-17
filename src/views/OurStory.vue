@@ -14,6 +14,13 @@
     />
     <FoodForEvery />
     <OurStoryPgSec />
+    <div class="pb-3">
+      <SecHeading
+        main_h="Our Values"
+        sub_h="At Dee our values shape everything we do"
+        :showLeaf="true"
+      />
+    </div>
     <OrdersAhead
       :steps="steps"
       title="OUR VALUES"
