@@ -155,7 +155,7 @@ li {
     left: 0;
     width: 300px;
     height: 300px;
-} 
+  }
 }
 
 .hero-title {
@@ -187,7 +187,7 @@ li {
 
 .hero-content {
   height: 843px;
-  padding: 190px 0 0 30px; 
+  padding: 190px 0 0 30px;
 }
 
 .hero-section.inner_banner {
@@ -384,6 +384,7 @@ h6 {
     background-image: url(/src/assets/images/ourstory2.png);
     padding: 204px 20px 400px 200px;
   }
+
   &.coffee-philo {
     background-image: url(/src/assets/images/coffeephilosofy.png);
     height: 1140px;
@@ -1228,16 +1229,16 @@ label {
   }
 }
 
-.food_for_every  {
+.food_for_every {
   padding: 100px 0;
-    .img_box { 
-        img {
-          width: 580px;
-          object-fit: contain;
+
+  .img_box {
+    img {
+      width: 580px;
+      object-fit: contain;
     }
   }
 }
-
 
 // Section 
 
@@ -1246,27 +1247,27 @@ label {
   padding: 0 0 150px 0;
 
   &::before {
-      content: "";
-      position: absolute;
-      background-image: url("@/assets/images/pairbef.png");
-      background-repeat: no-repeat;
-      background-size: contain;
-      top: 0;
-      left: 0;
-      width: 300px;
-      height: 300px;
+    content: "";
+    position: absolute;
+    background-image: url("@/assets/images/pairbef.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 300px;
   }
 
   &::after {
-      content: "";
-      position: absolute;
-      background-image: url("@/assets/images/pairafter.png");
-      background-repeat: no-repeat;
-      background-size: contain;
-      bottom: 0;
-      right: 0;
-      width: 230px;
-      height: 160px;
+    content: "";
+    position: absolute;
+    background-image: url("@/assets/images/pairafter.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    bottom: 0;
+    right: 0;
+    width: 230px;
+    height: 160px;
   }
 }
 
@@ -1285,6 +1286,12 @@ label {
 // Responsive Styles
 /* Tablet */
 
+@media (min-width: 1951px) and (max-width: 2500px) {
+  .visitus-sec {
+    padding: 169px 20px 530px 100px !important;
+  }
+}
+
 @media (min-width: 1751px) and (max-width: 1950px) {
   .hero-section {
     height: 1250px !important;
@@ -1296,6 +1303,10 @@ label {
 
   .hero-section.locationban {
     height: 1250px !important;
+  }
+
+  .visitus-sec {
+    padding: 169px 20px 430px 100px !important;
   }
 
 }
@@ -1329,6 +1340,12 @@ label {
   // .visitus-sec {
   //       padding: 269px 20px 230px 100px!important;
   // }
+}
+
+@media (min-width: 1450px) and (max-width: 2100px) {
+  .getinvolvedbg {
+    object-fit: fill !important;
+  }
 }
 
 @media (min-width: 992px) and (max-width: 1399px) {
@@ -1382,6 +1399,12 @@ label {
     img {
       width: 100%;
     }
+  }
+}
+
+@media (max-width: 991px) {
+  .get_involved_bg {
+    margin: 0 0 100px 0 !important;
   }
 }
 
