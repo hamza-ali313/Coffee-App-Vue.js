@@ -1,5 +1,5 @@
 <template>
-  <router-link to="/FoodsDrinks">
+  <router-link to="/foods-drinks">
     <div class="dropdown-card" @click="$emit('click')">
       <img :src="item.image" />
       <p>{{ item.title }}</p>

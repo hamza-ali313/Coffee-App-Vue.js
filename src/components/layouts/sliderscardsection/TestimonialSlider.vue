@@ -6,9 +6,14 @@
       <div class="nav-btn left" @click="slidePrev"><img :src="prev" /></div>
 
       <!-- Swiper -->
-      <Swiper :slides-per-view="1" :space-between="20" :loop="true" :breakpoints="breakpoints" @swiper="setSwiper">
+      <Swiper
+        :slides-per-view="1"
+        :space-between="20"
+        :loop="true"
+        :breakpoints="breakpoints"
+        @swiper="setSwiper"
+      >
         <SwiperSlide v-for="(item, index) in slides" :key="index">
-          <!-- Render Testimonial Card here -->
           <TestimonialCard :data="item" />
         </SwiperSlide>
       </Swiper>
@@ -34,6 +39,10 @@ import TestiImg from "@/assets/images/TestiImg.png";
 import nxt from "@/assets/images/nxt.png";
 import prev from "@/assets/images/prev.png";
 
+const breakpoints = {
+  768: { slidesPerView: 1 },
+  1024: { slidesPerView: 1 },
+};
 // Swiper instance
 const swiperInstance = ref(null);
 function setSwiper(swiper) {
@@ -51,14 +60,16 @@ const slides = [
   {
     image: TestiImg,
     rating: "4.8",
-    text: "LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISICING ELIT, SED DO EIUSMOD TEMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA. UT ENIM AD MINIM VENIAM, QUIS NOSTRUD EXERCITATION... ULLAMCO LABORIS NISI UT ALIQUIP EX EA COMMODO CONSEQUAT. DUIS AUTE IRURE DOLOR IN REPREHENDERIT IN VOLUPTATE VELIT ESSE CILLUM DOLORE.",
+    text:
+      "LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISICING ELIT, SED DO EIUSMOD TEMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA. UT ENIM AD MINIM VENIAM, QUIS NOSTRUD EXERCITATION... ULLAMCO LABORIS NISI UT ALIQUIP EX EA COMMODO CONSEQUAT. DUIS AUTE IRURE DOLOR IN REPREHENDERIT IN VOLUPTATE VELIT ESSE CILLUM DOLORE.",
     name: "B. Blankenship",
     time: "8 days ago",
   },
   {
     image: TestiImg,
     rating: "2.5",
-    text: "LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISICING ELIT, SED DO EIUSMOD TEMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA. UT ENIM AD MINIM VENIAM, QUIS NOSTRUD EXERCITATION... ULLAMCO LABORIS NISI UT ALIQUIP EX EA COMMODO CONSEQUAT. DUIS AUTE IRURE DOLOR IN REPREHENDERIT IN VOLUPTATE VELIT ESSE CILLUM DOLORE.",
+    text:
+      "LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISICING ELIT, SED DO EIUSMOD TEMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA. UT ENIM AD MINIM VENIAM, QUIS NOSTRUD EXERCITATION... ULLAMCO LABORIS NISI UT ALIQUIP EX EA COMMODO CONSEQUAT. DUIS AUTE IRURE DOLOR IN REPREHENDERIT IN VOLUPTATE VELIT ESSE CILLUM DOLORE.",
     name: "A. Johnson",
     time: "5 days ago",
   },

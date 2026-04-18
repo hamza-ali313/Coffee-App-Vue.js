@@ -1,16 +1,16 @@
 <template>
   <div class="container">
-    <div class="amenities text-center mb-5">
-      <div class="filtersec sec_heading text-center py-4 px-3">
+    <div class="amenities mb-5">
+      <div class="filtersec sec_heading text-start text-lg-center py-4 px-3">
         <h2 class="position-relative d-inline">AMENITIES</h2>
-        <h3 style="padding: unset" class="text-center">
-          At Dee our values shape everything we do
-        </h3>
+        <h3 style="padding: unset">At Dee our values shape everything we do</h3>
       </div>
       <div class="card-box amenities-box">
         <h6 class="card-title">amenities</h6>
         <div class="card-body">
-          <ul class="d-flex flex-wrap p-0 justify-content-center align-items-center gap-3">
+          <ul
+            class="d-flex flex-wrap p-0 justify-content-start justify-content-lg-center align-items-center gap-3"
+          >
             <li
               v-for="(item, i) in items"
               :key="i"

@@ -94,7 +94,7 @@ const breakpoints = {
   1024: { slidesPerView: 4 },
 };
 </script>
-3
+
 <style scoped lang="scss">
 .slider {
   padding-bottom: 20px;
@@ -157,11 +157,9 @@ const breakpoints = {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
   /* Ring Size: Must be larger than the dot (12px + 8px padding) */
   width: 20px;
   height: 20px;
-
   /* Dashed Border */
   border: 2px dashed $theme_o;
   border-radius: 50%;

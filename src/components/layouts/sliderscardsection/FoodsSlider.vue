@@ -55,11 +55,7 @@ import { ref } from "vue";
 import { Swiper, SwiperSlide } from "swiper/vue";
 import "swiper/css";
 import SecHeading from "../../ui/SecHeading.vue";
-import Fslid1 from "@/assets/images/Fslid1.png";
-import Fslid2 from "@/assets/images/Fslid2.png";
-import Fslid3 from "@/assets/images/Fslid3.png";
-import Fslid4 from "@/assets/images/Fslid4.png";
-import Fslid5 from "@/assets/images/Gal2.png";
+import { items } from "../../../data/foodsSlider.js";
 import nxt from "@/assets/images/nxt.png";
 import prev from "@/assets/images/prev.png";
 import GButton from "../../ui/GButton.vue";
@@ -79,39 +75,6 @@ function slidePrev() {
   swiperInstance.value?.slidePrev();
 }
 // Slider Data
-const items = [
-  {
-    title: "Coffee & Breakfast",
-    desc: "Specialty coffee, carefully sourced brewed for balance, clarity...",
-    cta: "VIEW COFFEE",
-    image: Fslid1,
-  },
-  {
-    title: "Lunch & Brunch",
-    desc: "Fresh, seasonal brunch dishes made to be enjoyed Taking a quiet moment.",
-    cta: "VIEW BRUNCH",
-    image: Fslid2,
-  },
-  {
-    title: "Coffee & Breakfast",
-    desc: "Specialty coffee, carefully sourced brewed for balance, clarity...",
-    cta: "VIEW COFFEE",
-    image: Fslid5,
-  },
-  {
-    title: "Bakery & Sweets",
-    desc:
-      "Simple, nourishing lunch plates that work just as well for a long catch-up as a quick.",
-    cta: "VIEW LUNCH",
-    image: Fslid3,
-  },
-  {
-    title: "Seasonal Specials",
-    desc: "Freshly baked pastries and small treats, made in-house or sourced.",
-    cta: "VIEW BAKERY",
-    image: Fslid4,
-  },
-];
 
 // Responsive
 const breakpoints = {

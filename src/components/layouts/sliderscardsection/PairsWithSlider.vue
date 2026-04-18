@@ -6,7 +6,11 @@
     </div>
     <div class="container slider position-relative">
       <!-- Left Arrow -->
-      <div v-if="showNavigation" class="nav-btn left" @click="slidePrev">
+      <div
+        v-if="showNavigation"
+        class="nav-btn d-lg-block d-md-none d-none left"
+        @click="slidePrev"
+      >
         <img :src="prev" />
       </div>
       <!-- Swiper -->
@@ -27,9 +31,18 @@
       </swiper>
 
       <!-- Right Arrow -->
-      <!-- {{ showNavigation }} -->
-      <div v-if="showNavigation" class="nav-btn right" @click="slideNext">
+      <div
+        v-if="showNavigation"
+        class="nav-btn d-lg-block d-md-none d-none right"
+        @click="slideNext"
+      >
         <img :src="nxt" />
+      </div>
+
+      <!-- mobile arrows -->
+      <div class="d-lg-none d-md-block d-flex justify-content-center gap-3">
+        <div class="nav-btn left" @click="slidePrev"><img :src="prev" /></div>
+        <div class="nav-btn right" @click="slideNext"><img :src="nxt" /></div>
       </div>
     </div>
   </div>
@@ -45,14 +58,11 @@ import "swiper/css/pagination";
 
 import prev from "@/assets/images/prev.png";
 import nxt from "@/assets/images/nxt.png";
-import pair1 from "@/assets/images/pair1.png";
-import pair2 from "@/assets/images/pair2.png";
-import pair3 from "@/assets/images/pair3.png";
-import pair4 from "@/assets/images/pair4.png";
 
 import { Navigation, Pagination } from "swiper/modules";
 const modules = [Navigation, Pagination];
 import PairsWithCard from "./PairsWithCard.vue";
+import { menuCategories } from "../../../data/menuCategories.js";
 
 const visibleSlides = ref(null);
 const swiperInstance = ref(null);
@@ -81,44 +91,6 @@ const breakpoints = {
   768: { slidesPerView: 2 },
   1024: { slidesPerView: 4 },
 };
-
-const menuCategories = [
-  {
-    title: "Flat White",
-    description: "Velvety espresso with softly steamed milk",
-    price: "£8.90",
-    image: pair1,
-    tags: ["Vegetarian"],
-  },
-  {
-    title: "Fresh Orange Juice",
-    description: "Cold-pressed, naturally bright and refreshing",
-    price: "£8.90",
-    image: pair2,
-    tags: ["Vegetarian", "Vegan"],
-  },
-  {
-    title: "Chicken Alfredo Linguine",
-    description: "Cold-pressed, naturally bright and refreshing",
-    price: "£8.90",
-    image: pair3,
-    tags: [],
-  },
-  {
-    title: "Cake Slices",
-    description: "Cold-pressed, naturally bright and refreshing",
-    price: "£8.90",
-    image: pair4,
-    tags: [],
-  },
-  {
-    title: "Flat White",
-    description: "Velvety espresso with softly steamed milk",
-    price: "£8.90",
-    image: pair1,
-    tags: ["Vegetarian"],
-  },
-];
 </script>
 
 <style scoped lang="scss">

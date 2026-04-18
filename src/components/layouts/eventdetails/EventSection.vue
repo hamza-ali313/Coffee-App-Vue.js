@@ -51,15 +51,19 @@
             </div>
             <h3 class="section-title mt-5">What You Will Experience</h3>
             <ul class="experience-list">
-              <li v-for="exp in eventData.experiences" :key="exp">
-                <i class="bi bi-check2"></i> {{ exp }}
+              <li
+                v-for="exp in eventData.experiences"
+                :key="exp"
+                class="align-items-center"
+              >
+                <i class="bi bi-check2"></i>
+                <p class="mb-0">{{ exp }}</p>
               </li>
             </ul>
             <EventPractical :practical="eventData.practical" />
           </div>
         </div>
       </div>
-
       <SecurePlace :price="eventData.price" />
     </div>
   </div>

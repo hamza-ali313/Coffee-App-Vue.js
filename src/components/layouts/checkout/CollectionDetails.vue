@@ -59,6 +59,8 @@ import "flatpickr/dist/flatpickr.min.css";
 import { onMounted, ref, computed } from "vue";
 import { useCheckoutStore } from "@/store/checkout.js";
 import { formatTime12h, formatDateReadable } from "../../../utils/formatters.js";
+import { onBeforeUnmount } from "vue";
+
 const checkoutStore = useCheckoutStore();
 const { collection } = storeToRefs(checkoutStore);
 
@@ -87,11 +89,17 @@ const formattedDate = computed(() => {
   return formatDateReadable(collection.value.date);
 });
 
+onBeforeUnmount(() => {
+  if (timePicker) timePicker.destroy();
+  if (datePicker) datePicker.destroy();
+});
+
 onMounted(() => {
   timePicker = flatpickr(timeInput.value, {
     enableTime: true,
     noCalendar: true,
     dateFormat: "H:i",
+    disableMobile: true,
     onChange: (_, dateStr) => {
       collection.value.time = dateStr; // "22:15"
       handleCollectionChange();
@@ -100,6 +108,7 @@ onMounted(() => {
 
   datePicker = flatpickr(dateInput.value, {
     dateFormat: "Y-m-d",
+    disableMobile: true,
     onChange: (_, dateStr) => {
       collection.value.date = dateStr;
     },
@@ -115,7 +124,7 @@ const openDate = () => datePicker.open();
   position: absolute;
   inset: 0;
   opacity: 0;
-  pointer-events: none;
+  cursor: pointer;
 }
 
 .flatpickr-calendar {

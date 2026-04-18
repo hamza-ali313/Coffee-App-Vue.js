@@ -7,7 +7,7 @@
 
     <div class="container">
       <div class="row">
-        <div class="col-lg-6 text-white hero-content">
+        <div class="col-12 col-md-7 col-lg-7 text-white hero-content">
           <h1 class="hero-title">{{ title }}</h1>
 
           <p class="hero-subtitle">{{ subtitle }}</p>
@@ -20,6 +20,7 @@
             <GButton
               v-if="primaryBtn"
               :btntxt="primaryBtn.text"
+              :icon="icon_g"
               @click="$emit('primary-click')"
               class=""
             />
@@ -27,6 +28,7 @@
             <OButton
               v-if="secondaryBtn"
               :btntxt="secondaryBtn.text"
+              :icon="icon_o"
               @click="$emit('secondary-click')"
             />
           </div>
@@ -37,7 +39,6 @@
 </template>
 
 <script setup>
-import Header from "./Header.vue";
 import MobileHeader from "./MobileHeader.vue";
 import GButton from "../ui/GButton.vue";
 import OButton from "../ui/OButton.vue";
@@ -51,6 +52,8 @@ defineProps({
   primaryBtn: Object,
   secondaryBtn: Object,
   innerbanclass: String,
+  icon_g: String,
+  icon_o: String,
 });
 
 defineEmits(["primary-click", "secondary-click"]);

@@ -26,14 +26,10 @@
     <!-- AMENITIES -->
 
     <Amenities :items="currentLocation.amenities" />
-
-    <!-- GETTING HERE -->
   </div>
-  <OrdersAhead
-    :steps="steps"
-    title="Getting here"
-    sub_title="At Dee our values shape everything we do"
-  />
+  <!-- <OrdersAhead -->
+  <!-- :steps="steps" title="Getting here" sub_title="At Dee our values shape everything we do" -->
+  <!-- /> -->
 </template>
 
 <script setup>
@@ -41,7 +37,7 @@ import { ref, computed } from "vue";
 
 import LocationDetails from "./LocationDetails.vue";
 import Amenities from "./Amenities.vue";
-import OrdersAhead from "../../layouts/OrdersAhead.vue";
+// import OrdersAhead from "../../layouts/OrdersAhead.vue";
 import { locations } from "../../../data/locations.js";
 import { steps } from "../../../data/gettinghere2.js";
 

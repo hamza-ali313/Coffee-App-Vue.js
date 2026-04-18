@@ -9,6 +9,8 @@
       iconColor="white"
       :primaryBtn="{ text: 'Order Ahead' }"
       :secondaryBtn="{ text: 'View Menu' }"
+      icon_g="bi-cart-check-fill"
+      icon_o="bi-egg-fried"
       @primary-click="exploreEvents"
       @secondary-click="buyTickets"
     />

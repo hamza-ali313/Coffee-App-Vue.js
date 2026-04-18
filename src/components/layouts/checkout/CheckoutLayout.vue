@@ -9,7 +9,7 @@
           <PaymentDetails />
           <div class="mt-4 text-start">
             <button class="o_btn menu-btn w-100" @click="placeOrder">
-              <span style="font-size: 2.5rem">Proceed to checkout</span>
+              <span>Proceed to checkout</span>
             </button>
           </div>
         </div>
@@ -111,7 +111,7 @@ const placeOrder = () => {
     }
 
     span {
-      font-size: 4.2rem !important;
+      font-size: 4.2rem;
       letter-spacing: 1px;
     }
   }

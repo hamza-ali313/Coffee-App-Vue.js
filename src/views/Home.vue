@@ -57,4 +57,5 @@ import MobileSmallTestimonial from "../components/layouts/MobileSmallTestimonial
 import Footer from "../components/layouts/Footer.vue";
 import CalenderWrapper from "../components/layouts/calender/CalenderWrapper.vue";
 import FilteredEventSection from "../components/layouts/FilteredEventSection.vue";
+import GButton from "../components/ui/GButton.vue";
 </script>

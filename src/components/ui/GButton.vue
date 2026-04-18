@@ -1,6 +1,6 @@
 <template>
   <button class="g_btn menu-btn" v-bind="$attrs" @click="handleClick">
-    <i v-if="icon" :class="icon"></i>
+    <i v-if="icon" :class="`bi ${icon}`"></i>
     <span>{{ btntxt }}</span>
   </button>
 </template>

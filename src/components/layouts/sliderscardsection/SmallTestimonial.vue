@@ -20,7 +20,7 @@
         </div>
       </div>
     </div>
-
+    
     <!-- Text -->
     <p class="testimonial-text">
       {{ data.text }}

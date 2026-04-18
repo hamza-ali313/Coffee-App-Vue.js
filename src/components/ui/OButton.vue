@@ -1,6 +1,6 @@
 <template>
   <button class="o_btn menu-btn" @click="$emit('click', $event)">
-    <i v-if="icon" :class="icon"></i>
+    <i v-if="icon" :class="`bi ${icon}`"></i>
     <span>{{ btntxt }}</span>
   </button>
 </template>

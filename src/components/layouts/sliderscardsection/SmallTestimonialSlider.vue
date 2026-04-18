@@ -39,56 +39,11 @@ import { Swiper, SwiperSlide } from "swiper/vue";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import SmallTestimonial from "./SmallTestimonial.vue";
-import user from "../../../assets/images/user.png";
+import { testimonials } from "../../../data/testimonials.js";
 const breakpoints = {
   768: { slidesPerView: 3 },
   1024: { slidesPerView: 4 },
 };
-// DATA
-const testimonials = [
-  {
-    name: "Jonathan Doe",
-    rating: 5,
-    text:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit... Lorem ipsum dolor sit amet, consectetur adipiscing elit... Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
-    image: user,
-  },
-  {
-    name: "Jonathan Doe",
-    rating: 5,
-    text:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit... Lorem ipsum dolor sit amet, consectetur adipiscing elit... Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
-    image: user,
-  },
-  {
-    name: "Jonathan Doe",
-    rating: 5,
-    text:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit... Lorem ipsum dolor sit amet, consectetur adipiscing elit... Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
-    image: user,
-  },
-  {
-    name: "Jonathan Doe",
-    rating: 4,
-    text:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit... Lorem ipsum dolor sit amet, consectetur adipiscing elit... Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
-    image: user,
-  },
-  {
-    name: "Jonathan Doe",
-    rating: 5,
-    text:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit... Lorem ipsum dolor sit amet, consectetur adipiscing elit... Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
-    image: user,
-  },
-  {
-    name: "Jonathan Doe",
-    rating: 4.5,
-    text:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit... Lorem ipsum dolor sit amet, consectetur adipiscing elit... Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
-    image: user,
-  },
-];
 </script>
 
 <style scoped lang="scss">

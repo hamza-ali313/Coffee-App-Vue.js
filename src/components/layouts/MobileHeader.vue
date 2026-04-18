@@ -55,7 +55,7 @@
                 <router-link class="nav-link mx-auto" to="/">Home</router-link>
               </li>
               <li class="nav-item text-nowrap w-100 text-center">
-                <router-link class="nav-link mx-auto" to="/FoodsDrinks">
+                <router-link class="nav-link mx-auto" to="/foods-drinks">
                   Food & Drinks
                 </router-link>
               </li>
@@ -129,7 +129,7 @@
               class="nav-item dropdown position-relative"
               @mouseenter="openMenu('food')"
             >
-              <router-link to="/FoodsDrinks" class="nav-link">
+              <router-link to="/foods-drinks" class="nav-link">
                 Food & Drinks
               </router-link>
 

@@ -39,7 +39,7 @@ import { useRouter } from "vue-router";
 const router = useRouter();
 
 const Seemenu = () => {
-  router.push("/FoodsDrinks");
+  router.push("/foods-drinks");
 };
 
 const visitus = () => {

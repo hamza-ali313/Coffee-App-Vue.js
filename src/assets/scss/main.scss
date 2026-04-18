@@ -405,8 +405,8 @@ h6 {
 
   p {
     margin: 0 0 20px 0;
-    width: 40%;
     font-size: 16px;
+    width: 80%;
     line-height: 22px;
   }
 
@@ -823,7 +823,6 @@ h6 {
         font-size: 24px;
       }
     }
-
     .submit-btn {
       background-image: $bg-o-btn !important;
       @include bg_no_repeat_cover_center;
@@ -1339,7 +1338,6 @@ label {
 
   .our_story p,
   .sec_heading p {
-    width: 60%;
     font-size: 20px;
     line-height: 30px;
   }
@@ -1512,12 +1510,17 @@ label {
   .hero-content {
     height: 843px;
     display: block;
+    padding: 50px 30px;
   }
 
   .mobile-logo img {
     width: 140px;
+    margin: 0 0 0 -20px;
   }
 
+  .addons-card .addon-item {
+    margin: 0 0px 10px 0px !important;
+  }
   .hero-title {
     font-size: 80px;
     text-align: center !important;
@@ -1526,13 +1529,13 @@ label {
 
   .hero-subtitle {
     font-size: 21px;
-    line-height: 25px;
+    line-height: 25px !important;
     text-align: center !important;
   }
 
   .hero-subtitle::before {
     top: -30px;
-    left: -40px;
+    left: -50px;
     width: 46px;
   }
 
@@ -1595,7 +1598,10 @@ label {
     background-image: url(/src/assets/images/mobilestorybg.png);
     padding: 164px 20px 430px 40px;
   }
-
+  .our_story.our_story-pg-sec {
+    background-image: url(/src/assets/images/mobourstory2.png);
+    padding: 124px 20px 430px 40px;
+}
   .footer-section .larg_f {
     font-size: 42px;
   }
@@ -1683,24 +1689,71 @@ label {
     right: -10px;
   }
 
+  .map-card{
+    margin: 40px 0 0 0;
+}
 
+.cart-drawer {
+  width: 360px !important;
 
+  .cart-summary .input_bg input.form-control[data-v-0530b41b] {
+    height: 0;
+    top: 19px;
+    left: 7px;
+  }
+}
   .slider {
     .nav-btn {
-      top: unset;
-      bottom: -100px;
+      // top: unset;
+      // bottom: -100px;
 
       &.left {
-        left: 130px;
+        // left: 130px;
       }
 
       &.right {
-        right: 130px;
+        // right: 130px;
       }
     }
   }
 
-  .menu-page .slider .nav-btn {
+  .cart-item { 
+      display: block !important;
+
+    .sec_heading h2 {
+        font-size: 52px !important;
+        text-align: start;
+        line-height: 42px !important;
+        margin: 0;
+    } 
+    
+    .img-box {
+      width: 100% !important;
+        margin: 4px auto 10px auto;
+        height: 100px !important;
+    }
+
+    .qty {
+      width: 100px;
+      gap: 0 !important;
+
+    button img {
+      width: 25px;
+    }
+    .bg-badge p {
+      font-size: 11px;
+  }
+  }
+
+  }
+  .flatpickr-input.flatpickr-mobile {
+  opacity: 0 !important;
+  position: absolute !important;
+}
+.checkout .o_btn.menu-btn span[data-v-0e78e6a7] {
+  font-size: 3.2rem !important;
+}
+.slider .nav-btn {
     position: unset;
     margin: 30px 0 0 0;
   }
@@ -1721,20 +1774,33 @@ label {
 
   // Inner Banner css Mobile
   .inner_banner .hero-content {
-    padding: 0 60px !important;
+    padding: 0 40px !important;
   }
 
   section.hero-section.inner_banner.FooddrinkMobilebanner {
     background-image: url(../images/FooddrinkMobilebanner.png) !important;
   }
+  section.hero-section.inner_banner.bannerourstory {
+    background-image: url(/src/assets/images/mobbanourstory.png) !important;
+}
 
+.food_for_every {
+  padding: 10px 0;
+}
+.food_for_every .row
+ {
+    flex-direction: column-reverse;
+    gap: 30px;
+}
   .nutri-f {
-    gap: 32px !important;
-    flex-wrap: wrap;
+    gap: 22px !important;
 
     .nutri {
       position: unset;
     }
+  }
+  .nutri::after {
+    display: none !important;
   }
 
   .product-header .controls .qty-box {
@@ -1770,7 +1836,7 @@ label {
   }
 
   body {
-    overflow: unset !important;
+    overflow: hidden !important;
     padding-right: unset !important;
   }
 
@@ -1779,8 +1845,11 @@ label {
 
     p {
       padding: 0 10px 0 0 !important;
-
     }
+
+    h2{
+        font-size: 72px !important;
+      }
   }
 
   .food_for_every .img_box img {
@@ -1795,8 +1864,25 @@ label {
   }
   .events-section {
     margin-bottom: 0 !important;
-  }
 
+    .main-card img[data-v-aa239865] {
+      object-position: 75% 55%;
+  }
+  
+  }
+  .our_local_comunity.ingrediantsource {
+    background: url(/src/assets/images/mobingrediantbg.png);
+    height: 1110px;
+
+}
+.our_story.coffee-philo {
+  background-image: url(/src/assets/images/mobcoffeephilosofy.png);
+  margin: 0 0 -300px 0;
+}
+.hero-section.inner_banner.choicesban {
+  background-image: url(/src/assets/images/mobourchoicesban.png) !important;
+  height:640px !important;
+}
   .main-card .sec_heading h2 {
     font-size: 115px;
     display: inline !important;
@@ -1823,7 +1909,7 @@ label {
     font-size: 8px;
   }
 
-.sec_heading h2[data-v-7a06f214] {
+.sec_heading h2 {
     font-size: 92px !important;
     line-height: 60px !important;
   }
@@ -1832,6 +1918,24 @@ label {
     font-size: 17px !important;
   }
 
+  .abs_leaf.leaf-2 {
+    width: 80px !important;
+}
+
+.abs_leaf {
+  width: 70px !important;
+}
+
+.faq-tabs {
+  // display: flex !important;
+  // overflow-x: scroll;
+  // flex-wrap: unset !important;
+  gap:2px !important;
+}
+
+.filtersec.sec_heading h2::after {
+  width: 45px;
+}
   .orderahead_pg .sec_heading::before {
     top: 0 !important;
   }
@@ -1912,6 +2016,36 @@ label {
   .events-wrapper {
     padding-top: 0 !important;
   }
+  .amenities {
+    .card-box {
+      background: unset;
+      border: unset;
+
+    }
+  .card-box {
+    .card-title {
+      padding: 0px 8px;
+    }
+    
+    .card-body {
+    background-color: unset;
+    padding: unset;
+    border-bottom-right-radius: unset;
+    border-bottom-left-radius: unset;
+     }
+   }
+  }
+  section.hero-section.inner_banner.locationban {
+    background-image: url(/src/assets/images/mobilebanlocation.png) !important;
+
+    button.o_btn {
+      display: none;
+    }
+}
+
+.amenity-pill {
+  background: #fff;
+}
 }
 
 
