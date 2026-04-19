@@ -44,7 +44,7 @@
     there’s something here to come back to.
   </p>
   <div class="text-center">
-    <GButton btntxt="explore the menu" icon="bi bi-list-task" />
+    <GButton btntxt="explore the menu" icon="bi bi-list-task" @click="Seemenu" />
   </div>
 </template>
 
@@ -60,6 +60,13 @@ import nxt from "@/assets/images/nxt.png";
 import prev from "@/assets/images/prev.png";
 import GButton from "../../ui/GButton.vue";
 import FoodCard from "./FoodCard.vue";
+
+import { useRouter } from "vue-router";
+const router = useRouter();
+
+const Seemenu = () => {
+  router.push("/foods-drinks");
+};
 
 const swiperInstance = ref(null);
 

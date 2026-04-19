@@ -1,8 +1,8 @@
 <template>
   <div class="container checkout py-5">
-    <div class="row g-5">
+    <div class="row g-5 checkout_">
       <!-- Left Info Panel -->
-      <div class="col-lg-6 col-md-6 col-sm-6">
+      <div class="col-12 col-lg-6 col-md-12 col-sm-12">
         <div class="info-section">
           <UserDetails class="mb-4" />
           <CollectionDetails class="mb-4" />
@@ -16,7 +16,7 @@
       </div>
 
       <!-- Right Summary Panel (Cart Summary) -->
-      <div class="col-lg-6 col-md-6 col-sm-6">
+      <div class="col-12 col-lg-6 col-md-12 col-sm-12">
         <div class="summary-section shadow-sm bg-white p-4 rounded-4">
           <div class="sec_heading d-flex align-items-center justify-content-between">
             <h2>Summary</h2>

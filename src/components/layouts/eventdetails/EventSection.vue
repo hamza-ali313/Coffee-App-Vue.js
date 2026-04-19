@@ -34,7 +34,7 @@
             <span><i class="bi bi-person"></i> {{ eventData.spotsLeft }} spots left</span>
           </div>
 
-          <div class="mb-5">
+          <div class="mb-lg-5 mb-md-mdtext-lg-start text-md-start text-center">
             <GButton btntxt="BOOK NOW" icon="bi bi-cart-plus" />
           </div>
           <div class="event-content">

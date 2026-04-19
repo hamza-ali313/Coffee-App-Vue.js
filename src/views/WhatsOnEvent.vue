@@ -8,7 +8,7 @@
       innerbanclass="eventBanner"
       :primaryBtn="{ text: 'Explore What’s On' }"
       :secondaryBtn="{ text: 'Get Tickets' }"
-      @primary-click="exploreEvents"
+      @primary-click="seemenu"
       @secondary-click="buyTickets"
       iconColor="white"
     />
@@ -70,8 +70,8 @@ import eventBanner from "@/assets/images/inbanevent.png";
 import { useRouter } from "vue-router";
 const router = useRouter();
 
-const exploreEvents = () => {
-  router.push("/faqs");
+const seemenu = () => {
+  router.push("/event-details");
 };
 
 const buyTickets = () => {

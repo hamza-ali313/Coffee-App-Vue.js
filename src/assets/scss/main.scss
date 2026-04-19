@@ -905,6 +905,11 @@ h6 {
   }
 }
 
+.hero-section.inner_banner.eventBanner {
+  .g_btn.menu-btn {
+    padding: 8px 15px !important;
+  }
+}
 // ==========================================
 // APP CONTAINER
 // ==========================================
@@ -1277,6 +1282,16 @@ label {
   }
 }
 
+.testimonial-card {
+  img {
+    width: 100%;
+  }
+  .steps-process .step-item .icon-wrapper[data-v-64442627]::after {
+    right: -20px;
+    width: 79px;
+  }
+  
+}
 
 
 
@@ -1417,15 +1432,90 @@ label {
   .hero-section {
     padding: 60px 20px;
   }
+  .hero-section.inner_banner.locationban {
+    background-position: revert !important;
+}
+.sec_heading h2 {
+  font-size: 90px;
+  line-height: 80px;
+}
+.checkout .o_btn.menu-btn[data-v-0e78e6a7] {
+  background-size: 100% 100%;
+  padding: 25px 42px;
+
+}
+.map-card[data-v-d29f248f] {
+  margin: 40px 0 0 0;
+}
+.footer-section {
+  padding: 110px 0 0 0;
+}
+.hero-section::before {
+  top: 180px;
+  width: 170px;
+}
+.hero-section[data-v-dac3eb76] {
+  background-position: left;
+}
+.nutri-f {
+  gap: 32px;
+}
+.addons-card .addon-item {
+  margin: 0px 0px 10px 0px;
+}
+.checkout_ {
+  flex-direction: column-reverse;
+}
+.inner_banner .hero-content {
+  padding: 40px 0 0px 70px !important;
+}
+.hero-section.inner_banner {
+  background-position: left;
+}
+.our_story.our_story-pg-sec {
+  padding: 244px 20px 430px 190px;
+  background-position: left;
+}
+.food_for_every .row
+ {
+    flex-direction: column-reverse;
+    gap: 30px;
+}
+.food_for_every {
+  padding: 40px 0;
+}
+.hero-section.inner_banner.eventBanner .g_btn.menu-btn {
+  padding: 18px 15px !important;
+}
+.sec_heading p {
+  // width: 75%;
+
+ }
+ .events-section p[data-v-aa239865] {
+  padding: 0 0px 0 0 !important;
+ }
+ .week-days {
+  font-size: 7px;
+}
+.divider-line img {
+  position: relative;
+  top: 73px;
+}
+.events-section[data-v-aa239865] {
+  margin-bottom: -140px !important;
+}
+.footer-section.negm
+ {
+    padding: 110px 0 0 0;
+}
 }
 
-.testimonial-card {
-  img {
-    width: 100%;
-  }
 
 
-}
+
+
+
+
 
 @media (max-width: 991px) {
   .our_story {
@@ -1636,23 +1726,38 @@ label {
       background-position: top !important;
     }
   }
-
+  .hero-section.inner_banner.eventBanner .g_btn.menu-btn {
+    padding: 18px 10px !important;
+}
   .visitus-sec {
     padding: 49px 20px 160px 10px !important;
+    height: 1240px;
+
+    .sec_heading { 
+        h3 {
+          width: 100% !important;
+        }
+        h2 {
+          font-size: 170px !important;
+        }
+    }
   }
 
-
+  .g_btn.menu-btn[data-v-eb784478] {
+    background-image: url(/src/assets/images/greenGbtn.png);
+    padding: 0px 19px;
+}
+// .hero-section.inner_banner.eventBanner {
+//   .g_btn.menu-btn {
+//     padding: 8px 15px !important;
+//   }
+// }
   .footer-section.bg_green {
-    padding: 100px 0 0 !important;
+    padding: 90px 0 0 !important;
+    margin: -1px 0 0 0;
+    background-color: unset;
   }
 
-  .visitus-sec .sec_heading h3 {
-    width: 100% !important;
-  }
-
-  .visitus-sec .sec_heading h2 {
-    font-size: 170px !important;
-  }
 
   .nav-btn.left img,
   .nav-btn.right img {
@@ -1696,11 +1801,16 @@ label {
 .cart-drawer {
   width: 360px !important;
 
-  .cart-summary .input_bg input.form-control[data-v-0530b41b] {
-    height: 0;
-    top: 19px;
-    left: 7px;
+  .cart-summary .input_bg input.form-control {
+    height: 0 !important;
+    top: 19px !important;
+    left: 7px !important;
+    font-size: 12px;
   }
+  .cart-summary .input_bg button {
+    top: 20% !important;
+    right: -23px !important;
+ }
 }
   .slider {
     .nav-btn {
@@ -1753,16 +1863,16 @@ label {
 .checkout .o_btn.menu-btn span[data-v-0e78e6a7] {
   font-size: 3.2rem !important;
 }
-.slider .nav-btn {
-    position: unset;
-    margin: 30px 0 0 0;
-  }
-
+.checkout_ {
+  flex-direction: column-reverse;
+}
   .slider.foodcard-slider .nav-btn {
     top: 50% !important;
     bottom: unset !important;
   }
-
+  .practical-item .text-box .value {
+    font-size: 14px;
+  }
   .menu-page .sec_heading {
     text-align: center;
     padding: 0 0 !important;
@@ -1771,7 +1881,10 @@ label {
   .menu-page .filters {
     flex-wrap: wrap;
   }
-
+  .product-header {
+    padding: 20px 10px;
+    margin: 20px 0 10px 0px;
+  }
   // Inner Banner css Mobile
   .inner_banner .hero-content {
     padding: 0 40px !important;
@@ -1915,9 +2028,11 @@ label {
   }
 
   .faq-item h2 {
-    font-size: 17px !important;
+    font-size: 15px !important;
   }
-
+  .get_involved_bg .container {
+    padding: 140px 20px;
+}
   .abs_leaf.leaf-2 {
     width: 80px !important;
 }

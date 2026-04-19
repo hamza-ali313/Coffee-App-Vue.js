@@ -7,7 +7,7 @@
     <div class="cart-drawer" :class="{ open: cart.isCartOpen }">
       <div class="sec_heading d-flex align-items-center justify-content-between">
         <h2>Summary</h2>
-        <p style="width: unset; margin: unset">
+        <p style="width: unset; margin: unset" class="text-end">
           {{ cart.items.length }} Items in your bag
         </p>
       </div>

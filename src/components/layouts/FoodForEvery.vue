@@ -2,12 +2,12 @@
   <div class="food_for_every">
     <div class="container">
       <div class="row align-items-center">
-        <div class="col-12 col-lg-6 col-md-6">
+        <div class="col-12 col-lg-6 col-md-12">
           <div class="img_box text-end">
             <img src="../../assets/images/foodforevery.png" />
           </div>
         </div>
-        <div class="col-12 col-lg-6 col-md-6">
+        <div class="col-12 col-lg-6 col-md-12">
           <div
             class="txt-sec w-100 w-lg-75 w-md-75 ps-lg-5 ps-md-5 text-center text-lg-start"
           >

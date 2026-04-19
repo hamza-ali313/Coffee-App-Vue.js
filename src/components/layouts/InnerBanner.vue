@@ -7,7 +7,7 @@
 
     <div class="container">
       <div class="row">
-        <div class="col-12 col-md-7 col-lg-7 text-white hero-content">
+        <div class="col-12 col-md-9 col-lg-7 text-white hero-content">
           <h1 class="hero-title">{{ title }}</h1>
 
           <p class="hero-subtitle">{{ subtitle }}</p>
@@ -15,7 +15,7 @@
           <p class="hero-text">{{ description }}</p>
 
           <div
-            class="d-block d-lg-flex d-md-flex justify-content-lg-start justify-content-md-start justify-content-center gap-3 mt-4"
+            class="d-block d-lg-flex d-md-flex justify-content-lg-start justify-content-md-start justify-content-center text-center gap-3 mt-4"
           >
             <GButton
               v-if="primaryBtn"

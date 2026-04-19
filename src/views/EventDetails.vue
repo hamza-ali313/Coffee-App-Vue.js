@@ -4,7 +4,7 @@
     <EventSection />
 
     <!-- More Special Events Section -->
-    <div class="pb-5">
+    <div class="pb-lg-5 pb-md-5">
       <div class="container">
         <SecHeading
           main_h="MORE SPECIAL EVENTS."

@@ -49,7 +49,7 @@
       :card2Image="img2"
     />
 
-    <Footer :negm="true" />
+    <Footer :negm="true" :hasBg="false" />
   </div>
 </template>
 
@@ -75,12 +75,11 @@ import { useRouter } from "vue-router";
 const router = useRouter();
 
 const exploreEvents = () => {
-  router.push("/faqs");
-  console.log("working");
+  router.push("/orderahead");
 };
 
 const buyTickets = () => {
-  router.push("/locations");
+  router.push("/foods-drinks");
 };
 </script>
 

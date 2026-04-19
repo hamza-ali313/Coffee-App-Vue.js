@@ -24,7 +24,7 @@
       </div>
       <!-- EVENT GRID -->
       <div class="row g-4">
-        <div v-for="event in filteredEvents" :key="event.id" class="col-md-4 col-lg-3">
+        <div v-for="event in filteredEvents" :key="event.id" class="col-md-6 col-lg-3">
           <EventCard v-bind="event" />
         </div>
       </div>

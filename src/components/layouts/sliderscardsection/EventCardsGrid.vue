@@ -26,7 +26,7 @@
       </div>
     </div>
     <div class="text-center mt-3">
-      <GButton btntxt="explore the menu" icon="bi bi-list-task" />
+      <GButton btntxt="explore what's on" icon="bi bi-list-task" @click="Seemenu" />
     </div>
   </div>
 </template>
@@ -35,5 +35,12 @@ import EventCard from "./EventCard.vue";
 import SecHeading from "../../ui/SecHeading.vue";
 import GButton from "../../ui/GButton.vue";
 import { events } from "../../../data/eventsdata.js";
+
+import { useRouter } from "vue-router";
+const router = useRouter();
+
+const Seemenu = () => {
+  router.push("/event-details");
+};
 </script>
 <style lang="scss"></style>

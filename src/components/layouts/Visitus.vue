@@ -29,8 +29,8 @@
       </div>
       <!-- BUTTONS -->
       <div class="d-flex gap-3 mt-4">
-        <GButton btntxt="See Our Menu" />
-        <OButton btntxt="Vist Us" />
+        <GButton btntxt="See Our Menu" @click="Seemenu" />
+        <OButton btntxt="Vist Us" @click="visitus" />
       </div>
     </div>
   </div>
@@ -40,6 +40,16 @@
 import GButton from "../ui/GButton.vue";
 import OButton from "../ui/OButton.vue";
 import leafImg from "../../assets/images/leaf.png";
+import { useRouter } from "vue-router";
+const router = useRouter();
+
+const Seemenu = () => {
+  router.push("/foods-drinks");
+};
+
+const visitus = () => {
+  router.push("/locations");
+};
 </script>
 
 <style scoped lang="scss">

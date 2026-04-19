@@ -13,7 +13,7 @@
             and the journey we’re on, we’d love to share our story with you.
           </p>
 
-          <OButton btntxt="get to know us" />
+          <OButton btntxt="get to know us" @click="btnevent" />
         </div>
       </div>
     </div>
@@ -22,6 +22,11 @@
 
 <script setup>
 import OButton from "../ui/OButton.vue";
+import { useRouter } from "vue-router";
+const router = useRouter();
+const btnevent = () => {
+  router.push("/our-story");
+};
 </script>
 
 <style scoped lang="scss">

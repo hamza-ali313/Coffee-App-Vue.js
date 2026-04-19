@@ -118,7 +118,7 @@
 
       <!-- Bottom -->
       <div
-        class="footer-bottom d-lg-flex d-sm-block justify-content-between mt-4 py-3 text-md-start text-center"
+        class="footer-bottom d-lg-flex d-sm-flex justify-content-between mt-4 py-3 text-md-start text-center"
       >
         <p>© 2026 Dee Café. Made with care for our community</p>
         <div>

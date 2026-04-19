@@ -8,8 +8,8 @@
       :bgImage="fooddrinksbanner"
       :primaryBtn="{ text: 'View Menu' }"
       :secondaryBtn="{ text: 'Order Ahead' }"
-      @primary-click="exploreEvents"
-      @secondary-click="buyTickets"
+      @primary-click="seemenu"
+      @secondary-click="orderahead"
       iconColor="white"
       innerbanclass="FooddrinkMobilebanner"
     />
@@ -28,12 +28,11 @@ import fooddrinksbanner from "@/assets/images/fooddrinksbanner.png";
 import { useRouter } from "vue-router";
 const router = useRouter();
 
-const exploreEvents = () => {
-  router.push("/faqs");
-  console.log("working");
+const seemenu = () => {
+  router.push("/item-details");
 };
 
-const buyTickets = () => {
-  router.push("/locations");
+const orderahead = () => {
+  router.push("/orderahead");
 };
 </script>
