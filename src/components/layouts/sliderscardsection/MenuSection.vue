@@ -42,7 +42,7 @@
 <script setup>
 import { ref, computed } from "vue";
 import MenuSlider from "./MenuSlider.vue";
-
+import crepes from "../../../assets/images/crepes.jpg";
 const filters = ["All", "Vegan", "Vegetarian", "Gluten Free", "Kids"];
 
 const activeFilter = ref("All");
@@ -477,7 +477,7 @@ const sections = ref([
         title: "Crêpes",
         subtitle: "Thin, soft crêpes made to order.",
         tags: ["Kids", "Vegetarian"],
-        image: "https://images.unsplash.com/photo-1587735347570-7aa2b57e7c1a",
+        image: crepes,
         items: [
           {
             name: "Classic Sugar & Lemon Crêpe",
