@@ -22,7 +22,7 @@
       @swiper="setSwiper"
     >
       <swiper-slide v-for="(cat, i) in props.menuCategories" :key="cat.title + cat.image">
-        <MenuCard :data="cat" />
+        <MenuCard :data="cat" @click='itemdetail'/>
       </swiper-slide>
     </swiper>
 
@@ -65,7 +65,12 @@ import nxt from "@/assets/images/nxt.png";
 import { Navigation, Pagination } from "swiper/modules";
 const modules = [Navigation, Pagination];
 import MenuCard from "./MenuCard.vue";
-
+import { useRouter } from "vue-router";
+  
+const router = useRouter();
+const itemdetail = () => {
+  router.push("/item-details");
+};
 const visibleSlides = ref(null);
 const swiperInstance = ref(null);
 function setSwiper(swiper) {
