@@ -35,12 +35,12 @@
     >
       <img :src="nxt" />
     </div>
+  </div>
 
-    <!-- mobile arrows -->
-    <div class="d-lg-none d-md-block d-flex justify-content-center gap-3">
-      <div class="nav-btn left" @click="slidePrev"><img :src="prev" /></div>
-      <div class="nav-btn right" @click="slideNext"><img :src="nxt" /></div>
-    </div>
+  <!-- mobile arrows -->
+  <div class="d-lg-none mt-3 d-md-flex d-flex justify-content-center gap-3">
+    <div class="nav-btn left" @click="slidePrev"><img :src="prev" /></div>
+    <div class="nav-btn right" @click="slideNext"><img :src="nxt" /></div>
   </div>
 </template>
 
