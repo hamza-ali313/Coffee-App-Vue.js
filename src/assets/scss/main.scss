@@ -1182,7 +1182,7 @@ button {
 
 .checkout {
   label {
-    margin-top: 6px;
+    margin-top: 10px;
   }
 }
 
@@ -1204,6 +1204,8 @@ label {
 
   .about-text p {
     line-height: 25px;
+    font-size: 15px;
+    font-family: 'TitilliumWeb-Regular';
   }
 }
 
@@ -1458,7 +1460,11 @@ label {
   background-position: left;
 }
 .nutri-f {
-  gap: 32px;
+  gap: 20px !important;
+  flex-wrap: wrap !important; 
+  .nutri {
+    position: unset !important;
+  }
 }
 .addons-card .addon-item {
   margin: 0px 0px 10px 0px !important;
@@ -1491,7 +1497,7 @@ label {
   // width: 75%;
 
  }
- .events-section p[data-v-aa239865] {
+ .events-section p {
   padding: 0 0px 0 0 !important;
  }
  .week-days {
@@ -1501,8 +1507,17 @@ label {
   position: relative;
   top: 73px;
 }
-.events-section[data-v-aa239865] {
+.events-section {
   margin-bottom: -140px !important;
+  .sec_heading h2 {
+    font-size: 80px;
+  }
+}
+.ingrediantsource {
+  .sec_heading p {
+    font-weight: 400;
+    width: 95%;
+  }
 }
 .footer-section.negm
  {
@@ -1754,7 +1769,7 @@ label {
 // }
   .footer-section.bg_green {
     padding: 90px 0 0 !important;
-    margin: -1px 0 0 0;
+    margin: -201px 0 0 0;
     background-color: unset;
   }
 
@@ -2031,12 +2046,14 @@ label {
     font-size: 15px !important;
   }
   .get_involved_bg .container {
-    padding: 140px 20px;
+    padding: 140px 20px !important;
 }
   .abs_leaf.leaf-2 {
     width: 80px !important;
 }
-
+.menu-page {
+  margin: 0 0 100px 0;
+}
 .abs_leaf {
   width: 70px !important;
 }
@@ -2088,9 +2105,11 @@ label {
       }
     }
   }
-
+  .footer-section.negm {
+    padding: 300x 0 0 0 !important;
+  }
   .footer-section {
-    padding: 150px 0 0 0;
+    padding: 150px 0 0 0 !important;
   }
 
   .dish-showcase {

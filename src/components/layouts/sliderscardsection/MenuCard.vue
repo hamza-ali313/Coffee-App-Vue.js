@@ -62,12 +62,13 @@ defineProps({
 
 /* CONTENT */
 .content {
-  padding: 45px 10px;
-  background-image: $bg-wavy;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  margin: -20px 0 0 0;
+  padding: 15px 10px 25px;
+  // background-image: $bg-wavy;
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  // background-position: center;
+  // margin: -20px 0 0 0;
+  background-color: #fff;
   position: relative;
 }
 

@@ -44,9 +44,9 @@
             <strong>{{ time }}</strong>
           </p>
         </div>
-        <div class="d-flex gap-3 mt-4">
-          <OButton btntxt="RSVP" />
-        </div>
+      </div>
+      <div class="d-flex gap-3 justify-content-end">
+        <OButton btntxt="RSVP" />
       </div>
     </div>
   </div>
@@ -108,7 +108,7 @@ defineProps({
 // Only component-specific overrides here
 
 .menu-btn {
-  padding: 21px 42px !important;
+  padding: 11px 42px !important;
   font-size: 38px;
 }
 </style>

@@ -14,7 +14,7 @@
       innerbanclass="FooddrinkMobilebanner"
     />
     <MenuSection />
-    <Footer :hasBg="false" />
+    <Footer :hasBg="true" />
   </div>
 </template>
 

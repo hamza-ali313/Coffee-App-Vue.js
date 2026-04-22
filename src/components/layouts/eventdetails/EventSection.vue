@@ -39,7 +39,7 @@
           </div>
           <div class="event-content">
             <div class="event-about">
-              <div class="row align-items-center">
+              <div class="row align-items-start">
                 <div class="about-text col-lg-6">
                   <h3 class="section-title">About This Event</h3>
                   <p>{{ eventData.about }}</p>
@@ -149,6 +149,10 @@ const eventData = ref({
       color: $theme_o;
       font-size: 20px;
     }
+  }
+  p {
+    font-size: 15px;
+    font-family: "TitilliumWeb-Regular";
   }
 }
 </style>

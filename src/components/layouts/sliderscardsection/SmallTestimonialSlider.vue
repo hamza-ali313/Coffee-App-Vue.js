@@ -16,22 +16,6 @@
         <SmallTestimonial :data="item" />
       </SwiperSlide>
     </Swiper>
-
-    <!-- 🔽 BOTTOM SLIDER (RIGHT DIRECTION) -->
-
-    <Swiper
-      :slides-per-view="4"
-      :modules="[Autoplay]"
-      :space-between="20"
-      :loop="true"
-      :speed="5000"
-      :breakpoints="breakpoints"
-      :allow-touch-move="true"
-    >
-      <SwiperSlide v-for="(item, index) in testimonials" :key="'bottom' + index">
-        <SmallTestimonial :data="item" />
-      </SwiperSlide>
-    </Swiper>
   </div>
 </template>
 <script setup>
