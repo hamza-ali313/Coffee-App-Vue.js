@@ -1450,7 +1450,7 @@ label {
   margin: 40px 0 0 0;
 }
 .footer-section {
-  padding: 110px 0 0 0;
+  padding: 240px 0 0 0;
 }
 .hero-section::before {
   top: 180px;
@@ -1522,6 +1522,12 @@ label {
 .footer-section.negm
  {
     padding: 110px 0 0 0;
+}
+.hero-section.inner_banner.eventBanner {
+  background-position: center;
+}
+.steps-process .step-item .icon-wrapper::after {
+  display: none;
 }
 }
 
@@ -2052,7 +2058,7 @@ label {
     width: 80px !important;
 }
 .menu-page {
-  margin: 0 0 100px 0;
+  padding: 40px 0 0 0  !important;
 }
 .abs_leaf {
   width: 70px !important;

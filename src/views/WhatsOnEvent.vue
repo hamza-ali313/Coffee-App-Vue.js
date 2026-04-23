@@ -56,7 +56,7 @@ import { ref } from "vue";
 const activeTab = ref("upcoming"); // default tab
 import EventsSection from "../components/layouts/EventsSection.vue";
 import bannerImg from "@/assets/images/mainevent.png";
-import img1 from "@/assets/images/event3.png";
+import img1 from "@/assets/images/event3-1.png";
 import img2 from "@/assets/images/event3.png";
 import GButton from "../components/ui/GButton.vue";
 import OButton from "../components/ui/OButton.vue";

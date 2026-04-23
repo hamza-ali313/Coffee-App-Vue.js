@@ -21,8 +21,9 @@
       <div class="row mt-5">
         <!-- Left -->
         <div class="col-lg-8 col-md-8 -sm-12 text-md-start text-center">
-          <img src="@/assets/images/footlogo.png" class="logo mb-3" />
-
+          <router-link to="/" style="background-image: none">
+            <img src="@/assets/images/footlogo.png" class="logo mb-3" />
+          </router-link>
           <p class="desc">
             A neighbourhood café offering high-quality coffee, fresh and brunch in a calm,
             nature-inspired setting.
