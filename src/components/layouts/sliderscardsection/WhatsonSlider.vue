@@ -1,7 +1,7 @@
 <template>
   <div class="slider event-slider container position-relative">
     <!-- Left Arrow -->
-    <div class="nav-btn left d-md-none d-lg-block d-none" @click="slidePrev">
+    <div class="nav-btn left d-md-none d-lg-none d-xl-block d-none" @click="slidePrev">
       <img :src="prev" />
     </div>
 
@@ -29,13 +29,13 @@
     </Swiper>
 
     <!-- Right Arrow -->
-    <div class="nav-btn right d-md-none d-lg-block d-none" @click="slideNext">
+    <div class="nav-btn right d-md-none d-lg-none d-xl-block d-none" @click="slideNext">
       <img :src="nxt" />
     </div>
   </div>
 
   <!-- Tabs arrows -->
-  <div class="d-flex d-lg-none d-md-flex mt-3 justify-content-center gap-3">
+  <div class="d-flex d-xl-none d-md-flex mt-3 justify-content-center gap-3">
     <div class="nav-btn left" @click="slidePrev"><img :src="prev" /></div>
     <div class="nav-btn right" @click="slideNext"><img :src="nxt" /></div>
   </div>

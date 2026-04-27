@@ -8,7 +8,7 @@
       <!-- Left Arrow -->
       <div
         v-if="showNavigation"
-        class="nav-btn d-lg-block d-md-none d-none left"
+        class="nav-btn d-xl-block d-md-none d-lg-none d-none left"
         @click="slidePrev"
       >
         <img :src="prev" />
@@ -33,7 +33,7 @@
       <!-- Right Arrow -->
       <div
         v-if="showNavigation"
-        class="nav-btn d-lg-block d-md-none d-none right"
+        class="nav-btn d-xl-block d-md-none d-lg-none d-none right"
         @click="slideNext"
       >
         <img :src="nxt" />
@@ -41,7 +41,7 @@
     </div>
 
     <!-- mobile arrows -->
-    <div class="text-center mt-2 d-lg-none d-md-flex d-flex justify-content-center gap-3">
+    <div class="text-center mt-2 d-xl-none d-md-flex d-flex justify-content-center gap-3">
       <div class="nav-btn left" @click="slidePrev"><img :src="prev" /></div>
       <div class="nav-btn right" @click="slideNext"><img :src="nxt" /></div>
     </div>

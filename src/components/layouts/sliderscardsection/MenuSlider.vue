@@ -3,7 +3,7 @@
     <!-- Left Arrow -->
     <div
       v-if="showNavigation"
-      class="nav-btn d-lg-block d-md-none d-none left"
+      class="nav-btn d-xl-block d-md-none d-lg-none d-none left"
       @click="slidePrev"
     >
       <img :src="prev" />
@@ -22,7 +22,7 @@
       @swiper="setSwiper"
     >
       <swiper-slide v-for="(cat, i) in props.menuCategories" :key="cat.title + cat.image">
-        <MenuCard :data="cat" @click='itemdetail'/>
+        <MenuCard :data="cat" @click="itemdetail" />
       </swiper-slide>
     </swiper>
 
@@ -30,7 +30,7 @@
     <!-- {{ showNavigation }} -->
     <div
       v-if="showNavigation"
-      class="nav-btn d-lg-block d-md-none d-none right"
+      class="nav-btn d-xl-block d-md-none d-lg-none d-none right"
       @click="slideNext"
     >
       <img :src="nxt" />
@@ -38,7 +38,7 @@
   </div>
 
   <!-- mobile arrows -->
-  <div class="d-lg-none mt-3 d-md-flex d-flex justify-content-center gap-3">
+  <div class="d-xl-none mt-3 d-md-flex d-flex justify-content-center gap-3">
     <div class="nav-btn left" @click="slidePrev"><img :src="prev" /></div>
     <div class="nav-btn right" @click="slideNext"><img :src="nxt" /></div>
   </div>
@@ -66,7 +66,7 @@ import { Navigation, Pagination } from "swiper/modules";
 const modules = [Navigation, Pagination];
 import MenuCard from "./MenuCard.vue";
 import { useRouter } from "vue-router";
-  
+
 const router = useRouter();
 const itemdetail = () => {
   router.push("/item-details");
@@ -94,7 +94,7 @@ function slidePrev() {
 }
 
 const breakpoints = {
-  320: { slidesPerView: 1, pagination: false, centeredSlides: true },
+  320: { slidesPerView: 1, pagination: false },
   768: { slidesPerView: 2 },
   1024: { slidesPerView: 4 },
 };

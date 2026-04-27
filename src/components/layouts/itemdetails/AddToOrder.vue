@@ -1,11 +1,11 @@
 <template>
   <div class="product-header container">
     <div class="row align-items-center">
-      <div class="sec_heading col-12 col-lg-6 mb-3 mb-lg-0">
+      <div class="sec_heading col-12 col-xl-6 mb-3 mb-lg-0">
         <h2>Avocado on Sourdough</h2>
       </div>
 
-      <div class="col-12 col-lg-6">
+      <div class="col-12 col-xl-6">
         <div class="controls row align-items-center">
           <!-- Quantity -->
           <div class="col-6 col-md-3 mb-2 mb-md-0">

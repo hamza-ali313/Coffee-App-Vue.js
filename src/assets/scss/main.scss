@@ -1373,11 +1373,11 @@ label {
 @media (min-width: 992px) and (max-width: 1399px) {
   .testi_slider {
     .nav-btn.left {
-      left: -30px;
+      left: 0px;
     }
 
     .nav-btn.right {
-      right: -30px;
+      right: 0px;
     }
   }
 
@@ -1398,6 +1398,17 @@ label {
       padding: 10px 20px !important;
     }
   }
+  .hero-section::before {
+    top: 190px;
+    width: 200px;
+  }
+  .o_btn.menu-btn {
+    padding: 21px 50px;
+}
+.nutri-f {
+  gap: 20px !important;
+  flex-wrap: wrap !important;
+}
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
@@ -1405,17 +1416,17 @@ label {
     font-size: 11px !important;
   }
 
-  .testi_slider {
-    .nav-btn.left {
-      left: 60px;
-      opacity: .6;
-    }
+  // .testi_slider {
+  //   .nav-btn.left {
+  //     left: 60px;
+  //     opacity: .6;
+  //   }
 
-    .nav-btn.right {
-      right: 60px;
-      opacity: .6;
-    }
-  }
+  //   .nav-btn.right {
+  //     right: 60px;
+  //     opacity: .6;
+  //   }
+  // }
 
   .testimonial-card {
     img {

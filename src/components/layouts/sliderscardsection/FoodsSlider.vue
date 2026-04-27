@@ -6,7 +6,7 @@
   />
   <div class="slider foodcard-slider container position-relative">
     <!-- Left Arrow -->
-    <div class="nav-btn left d-md-none d-lg-block" @click="slidePrev">
+    <div class="nav-btn left d-md-none d-lg-none d-xl-block" @click="slidePrev">
       <img :src="prev" />
     </div>
 
@@ -30,12 +30,12 @@
     </Swiper>
 
     <!-- Right Arrow -->
-    <div class="nav-btn right d-md-none d-lg-block" @click="slideNext">
+    <div class="nav-btn right d-md-none d-lg-none d-xl-block" @click="slideNext">
       <img :src="nxt" />
     </div>
   </div>
   <!-- Tabs arrows -->
-  <div class="d-none d-lg-none d-md-flex mt-3 justify-content-center gap-3">
+  <div class="d-none d-xl-none d-md-flex mt-3 justify-content-center gap-3">
     <div class="nav-btn left" @click="slidePrev"><img :src="prev" /></div>
     <div class="nav-btn right" @click="slideNext"><img :src="nxt" /></div>
   </div>

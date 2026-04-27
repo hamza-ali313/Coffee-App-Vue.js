@@ -21,7 +21,7 @@
 
       <!-- 2. MOBILE HEADER (Shown only on mobile/tablet) -->
       <div
-        class="mobile-header d-flex d-lg-none justify-content-between align-items-center py-3 px-3"
+        class="mobile-header d-flex d-xl-none justify-content-between align-items-center py-3 px-3"
       >
         <!-- Custom Toggle Button -->
         <button
@@ -113,7 +113,7 @@
 
       <!-- 3. Desktop NAVBAR -->
       <nav
-        class="navbar navbar-expand-lg py-2 d-none d-lg-block rounded-5 px-3 d-bg"
+        class="navbar navbar-expand-lg py-2 d-none d-xl-block rounded-5 px-3 d-bg"
         :style="{ backgroundImage: `url(${bgImage})` }"
       >
         <!-- NAV LINKS COLLAPSE (Works for both) -->
