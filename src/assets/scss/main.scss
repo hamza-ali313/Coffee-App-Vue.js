@@ -1309,7 +1309,16 @@ label {
 // Responsive Styles
 /* Tablet */
 
-@media (min-width: 1951px) and (max-width: 2500px) {
+@media (min-width: 2100px) and (max-width: 2500px) {
+  .visitus-sec {
+    padding: 169px 20px 730px 100px !important;
+  }
+  .visitus-sec::after {
+    height: 400px!important;
+  }
+}
+
+@media (min-width: 1951px) and (max-width: 2099px) {
   .visitus-sec {
     padding: 169px 20px 530px 100px !important;
   }
