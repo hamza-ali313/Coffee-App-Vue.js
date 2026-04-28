@@ -1,6 +1,7 @@
 // ==========================================
 // FONT FAMILY MIXINS
 // ==========================================
+@use "@/assets/scss/variables" as *;
 
 @mixin font-btn {
   font-family: $btn;

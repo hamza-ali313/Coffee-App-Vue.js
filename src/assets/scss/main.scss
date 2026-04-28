@@ -2,17 +2,15 @@
 // MAIN SCSS ENTRY POINT
 // ==========================================
 
-// 1. Import variables first
-@import "variables";
+@use "./variables" as *;
+@use "./fonts" as *;
+@use "./mixins" as *;
 
-// 2. Import font faces
-@import "fonts";
+@use "bootstrap/scss/bootstrap";
 
-// 3. Import mixins
-@import "mixins";
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
 // 4. Import Bootstrap
-@import "bootstrap/scss/bootstrap";
+
 @import "bootstrap-icons/font/bootstrap-icons.css";
 
 // ==========================================

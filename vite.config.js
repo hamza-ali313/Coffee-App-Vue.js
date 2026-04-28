@@ -15,9 +15,10 @@ export default defineConfig({
     preprocessorOptions: {
       scss: {
         additionalData: `
-          @import "@/assets/scss/variables";
-          @import "@/assets/scss/mixins";
-        `
+        @use "@/assets/scss/variables" as *;
+        @use "@/assets/scss/mixins" as *;
+        `,
+        quietDeps: true // 👈 hides bootstrap warnings
       }
     }
   }
