@@ -57,7 +57,7 @@
           <h5>Working</h5>
           <ul class="">
             <li>
-              <router-link to="/food-drinks">
+              <router-link to="/foods-drinks">
                 <p>Menu</p>
               </router-link>
             </li>

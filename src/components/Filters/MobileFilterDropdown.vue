@@ -33,7 +33,7 @@ const props = defineProps({
     required: true,
   },
   modelValue: {
-    type: Object,
+    type: String,
     default: null,
   },
 });
@@ -42,7 +42,7 @@ const emit = defineEmits(["update:modelValue"]);
 
 const selected = ref(props.modelValue || props.options[0]);
 
-const selectedLabel = computed(() => (selected.value ? selected : "Select"));
+const selectedLabel = computed(() => (selected.value ? selected.value : "Select"));
 
 function selectOption(option) {
   selected.value = option;
